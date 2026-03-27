@@ -1,6 +1,6 @@
 import express from 'express';
 import { authenticateToken, requireOwnershipOrAdmin, requireAdmin } from '../middleware/auth.js';
-import { getDB } from '../db/database.js';
+import { getDB, createConnection } from '../db/database.js';
 
 const router = express.Router();
 
@@ -14,8 +14,8 @@ router.get('/', authenticateToken, requireAdmin, async (req, res) => {
              h.Name as HostelName, h.WardenName, h.WardenContact
       FROM Allocation a
       JOIN Member m ON a.IdentificationNumber = m.IdentificationNumber
-      JOIN Room r ON a.RoomID = r.RoomID
-      JOIN Hostel h ON r.HostelID = h.HostelID
+      JOIN Room r ON a.RoomNumber = r.RoomNumber
+      JOIN Hostel h ON r.ShortCode = h.ShortCode
       ORDER BY 
         CASE WHEN a.AllocationStatus = 'Active' THEN 1 ELSE 2 END,
         CASE WHEN a.AllocationStatus = 'Active' THEN a.CheckInDate ELSE a.CheckOutDate END DESC
@@ -38,8 +38,8 @@ router.get('/member/:id', authenticateToken, requireOwnershipOrAdmin, async (req
     const allocations = await db.all(`
       SELECT a.*, r.RoomNumber, h.Name as HostelName, h.WardenName, h.WardenContact
       FROM Allocation a
-      JOIN Room r ON a.RoomID = r.RoomID
-      JOIN Hostel h ON r.HostelID = h.HostelID
+      JOIN Room r ON a.RoomNumber = r.RoomNumber
+      JOIN Hostel h ON r.ShortCode = h.ShortCode
       WHERE a.IdentificationNumber = ?
     `, [identificationNumber]);
     
@@ -50,42 +50,64 @@ router.get('/member/:id', authenticateToken, requireOwnershipOrAdmin, async (req
 });
 
 router.post('/', authenticateToken, requireAdmin, async (req, res) => {
+  let db;
   try {
-    const db = getDB();
-    const { IdentificationNumber, RoomID, CheckInDate, AllocatedBy } = req.body;
+    const { IdentificationNumber, RoomNumber, CheckInDate, AllocatedBy } = req.body;
     
+    // Open a fresh connection for this specific transaction to avoid collision on the shared connection
+    db = await createConnection();
+
+    // Start an immediate transaction to acquire the write lock early
+    await db.run('BEGIN IMMEDIATE TRANSACTION');
+
     // Check if member already has an active allocation
     const activeAlloc = await db.get('SELECT * FROM Allocation WHERE IdentificationNumber = ? AND AllocationStatus = "Active"', [IdentificationNumber]);
     if (activeAlloc) {
+      await db.run('ROLLBACK');
+      await db.close();
       return res.status(400).json({ error: 'User already has an active allocation' });
     }
 
     // Check room capacity
-    const room = await db.get('SELECT MaxCapacity, CurrentOccupancy, RoomStatus FROM Room WHERE RoomID = ?', [RoomID]);
-    if (!room) return res.status(404).json({ error: 'Room not found' });
+    const room = await db.get('SELECT MaxCapacity, CurrentOccupancy, RoomStatus FROM Room WHERE RoomNumber = ?', [RoomNumber]);
+    if (!room) {
+      await db.run('ROLLBACK');
+      await db.close();
+      return res.status(404).json({ error: 'Room not found' });
+    }
     
     if (room.RoomStatus !== 'Available') {
+      await db.run('ROLLBACK');
+      await db.close();
       return res.status(400).json({ error: 'Room is not available (Status: ' + room.RoomStatus + ')' });
     }
 
     if (room.CurrentOccupancy >= room.MaxCapacity) {
+      await db.run('ROLLBACK');
+      await db.close();
       return res.status(400).json({ error: 'Room is already at full capacity' });
     }
 
     const result = await db.run(
-      `INSERT INTO Allocation (IdentificationNumber, RoomID, CheckInDate, AllocatedBy, CreatedBy) VALUES (?, ?, ?, ?, ?)`,
-      [IdentificationNumber, RoomID, CheckInDate, AllocatedBy || null, req.user.username]
+      `INSERT INTO Allocation (IdentificationNumber, RoomNumber, CheckInDate, AllocatedBy, CreatedBy) VALUES (?, ?, ?, ?, ?)`,
+      [IdentificationNumber, RoomNumber, CheckInDate, AllocatedBy || null, req.user.username]
     );
 
     const newOccupancy = room.CurrentOccupancy + 1;
     const newStatus = newOccupancy >= room.MaxCapacity ? 'Occupied' : 'Available';
 
-    await db.run('UPDATE Room SET CurrentOccupancy = ?, RoomStatus = ? WHERE RoomID = ?', [newOccupancy, newStatus, RoomID]);
+    await db.run('UPDATE Room SET CurrentOccupancy = ?, RoomStatus = ? WHERE RoomNumber = ?', [newOccupancy, newStatus, RoomNumber]);
     
+    await db.run('COMMIT');
+    await db.close();
     res.json({ id: result.lastID });
   } catch (error) {
+    if (db) {
+      await db.run('ROLLBACK').catch(() => {});
+      await db.close().catch(() => {});
+    }
     console.error('Allocation Error:', error);
-    res.status(500).json({ error: 'Server error' });
+    res.status(500).json({ error: 'Server error: ' + error.message });
   }
 });
 
@@ -99,7 +121,7 @@ router.patch('/:id', authenticateToken, requireAdmin, async (req, res) => {
       [CheckOutDate || new Date().toISOString().split('T')[0], AllocationStatus || 'Completed', req.params.id]);
     
     // Decrement occupancy and always set status to Available since it now has space
-    await db.run('UPDATE Room SET CurrentOccupancy = MAX(0, CurrentOccupancy - 1), RoomStatus = "Available" WHERE RoomID = ?', [alloc.RoomID]);
+    await db.run('UPDATE Room SET CurrentOccupancy = MAX(0, CurrentOccupancy - 1), RoomStatus = "Available" WHERE RoomNumber = ?', [alloc.RoomNumber]);
     
     res.json({ message: 'Checked out successfully' });
   } catch (error) {

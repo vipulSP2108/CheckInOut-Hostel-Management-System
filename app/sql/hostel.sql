@@ -80,9 +80,9 @@ CREATE TABLE if not exists Member (
 -- TABLE: Hostel
 -- =============================================================================
 CREATE TABLE Hostel (
-    HostelID        INT             AUTO_INCREMENT          PRIMARY KEY,
-    Name            VARCHAR(100)    NOT NULL,               -- e.g. 'Aryabhatta Hostel', 'Narmada Hostel', 'Ramanujan Hostel'
-    ShortCode       VARCHAR(10)     NOT NULL    UNIQUE,     -- e.g. 'ABH', 'NRM', 'RJM'
+    ShortCode       VARCHAR(10)     NOT NULL    PRIMARY KEY, -- New PK
+    HostelID        INT             UNIQUE,                  -- Backup ID, auto-incremented via trigger
+    Name            VARCHAR(100)    NOT NULL    UNIQUE,      -- e.g. 'Aryabhatta Hostel', 'Narmada Hostel', 'Ramanujan Hostel'
     WardenName      VARCHAR(100)    NOT NULL,
     WardenContact   VARCHAR(20),
     Address         VARCHAR(255)    NOT NULL,
@@ -125,10 +125,10 @@ CREATE TABLE RoomType (
 -- TABLE: Room
 -- =============================================================================
 CREATE TABLE Room (
-    RoomID          INT             AUTO_INCREMENT          PRIMARY KEY,
-    HostelID        INT             NOT NULL,
+    RoomNumber      VARCHAR(20)     NOT NULL    PRIMARY KEY, -- New PK
+    RoomID          INT             UNIQUE,                  -- Backup ID, auto-incremented via trigger
+    ShortCode       VARCHAR(10)     NOT NULL,                -- FK to Hostel
     RoomTypeID      INT             NOT NULL,
-    RoomNumber      VARCHAR(20)     NOT NULL,
     Floor           TINYINT         NOT NULL,
 
     MaxCapacity     TINYINT         NOT NULL,
@@ -142,12 +142,11 @@ CREATE TABLE Room (
     CreatedAt       DATETIME        NOT NULL    DEFAULT CURRENT_TIMESTAMP,
     UpdatedAt       DATETIME                    ON UPDATE CURRENT_TIMESTAMP,
 
-    FOREIGN KEY (HostelID)   REFERENCES Hostel(HostelID)     ON DELETE RESTRICT ON UPDATE CASCADE,
+    FOREIGN KEY (ShortCode)  REFERENCES Hostel(ShortCode)    ON DELETE RESTRICT ON UPDATE CASCADE,
     FOREIGN KEY (RoomTypeID) REFERENCES RoomType(RoomTypeID) ON DELETE RESTRICT ON UPDATE CASCADE,
 
     CONSTRAINT chk_room_max_capacity CHECK (MaxCapacity BETWEEN 1 AND 4),
-    CONSTRAINT chk_room_occupancy_valid CHECK (CurrentOccupancy >= 0 AND CurrentOccupancy <= MaxCapacity),
-    CONSTRAINT chk_room_number_unique_per_hostel UNIQUE (HostelID, RoomNumber)
+    CONSTRAINT chk_room_occupancy_valid CHECK (CurrentOccupancy >= 0 AND CurrentOccupancy <= MaxCapacity)
 );
 
 -- =============================================================================
@@ -156,7 +155,7 @@ CREATE TABLE Room (
 CREATE TABLE Allocation (
     AllocationID    INT             AUTO_INCREMENT          PRIMARY KEY,
     IdentificationNumber VARCHAR(50) NOT NULL,
-    RoomID          INT             NOT NULL,
+    RoomNumber      VARCHAR(20)     NOT NULL,                -- Migration to RoomNumber
 
     CheckInDate     DATE            NOT NULL,
     CheckOutDate    DATE            DEFAULT NULL,
@@ -175,7 +174,7 @@ CREATE TABLE Allocation (
     CreatedBy       VARCHAR(100)    DEFAULT NULL,
 
     FOREIGN KEY (IdentificationNumber) REFERENCES Member(IdentificationNumber) ON DELETE RESTRICT ON UPDATE CASCADE,
-    FOREIGN KEY (RoomID) REFERENCES Room(RoomID) ON DELETE RESTRICT ON UPDATE CASCADE,
+    FOREIGN KEY (RoomNumber) REFERENCES Room(RoomNumber) ON DELETE RESTRICT ON UPDATE CASCADE,
 
     CONSTRAINT chk_checkout_after_checkin CHECK (CheckOutDate IS NULL OR CheckOutDate >= CheckInDate)
 );
@@ -195,7 +194,7 @@ CREATE TABLE FurnitureType (
 CREATE TABLE FurnitureItem (
     FurnitureItemID INT AUTO_INCREMENT PRIMARY KEY,
     FurnitureTypeID INT NOT NULL,
-    RoomID          INT NOT NULL,
+    RoomNumber      VARCHAR(20)     NOT NULL,                -- Migration to RoomNumber
     SerialNumber    VARCHAR(50)     DEFAULT NULL,
     FurnitureCondition ENUM('New', 'Good', 'Fair', 'Damaged', 'Needs Repair', 'Out of Service') NOT NULL DEFAULT 'Good',
     LastCheckedDate DATE            DEFAULT NULL,
@@ -203,7 +202,7 @@ CREATE TABLE FurnitureItem (
     CreatedAt       DATETIME        NOT NULL    DEFAULT CURRENT_TIMESTAMP,
     UpdatedAt       DATETIME                    ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (FurnitureTypeID) REFERENCES FurnitureType(FurnitureTypeID) ON DELETE RESTRICT ON UPDATE CASCADE,
-    FOREIGN KEY (RoomID) REFERENCES Room(RoomID) ON DELETE RESTRICT ON UPDATE CASCADE
+    FOREIGN KEY (RoomNumber) REFERENCES Room(RoomNumber) ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 -- =============================================================================
@@ -221,7 +220,7 @@ CREATE TABLE ComplaintCategory (
 CREATE TABLE Complaint (
     ComplaintID     INT             AUTO_INCREMENT          PRIMARY KEY,
     IdentificationNumber VARCHAR(50) NOT NULL,
-    RoomID          INT             DEFAULT NULL,
+    RoomNumber      VARCHAR(20)     DEFAULT NULL,            -- Migration to RoomNumber
     CategoryID      INT             NOT NULL,
     Description     TEXT            NOT NULL,
     Severity        ENUM('Low', 'Medium', 'High', 'Critical') NOT NULL DEFAULT 'Medium',
@@ -231,7 +230,7 @@ CREATE TABLE Complaint (
     AssignedTo      VARCHAR(100)    DEFAULT NULL,
     ResolutionRemarks TEXT          DEFAULT NULL,
     FOREIGN KEY (IdentificationNumber) REFERENCES Member(IdentificationNumber) ON DELETE RESTRICT ON UPDATE CASCADE,
-    FOREIGN KEY (RoomID)      REFERENCES Room(RoomID)         ON DELETE SET NULL ON UPDATE CASCADE,
+    FOREIGN KEY (RoomNumber)   REFERENCES Room(RoomNumber)     ON DELETE SET NULL ON UPDATE CASCADE,
     FOREIGN KEY (CategoryID)  REFERENCES ComplaintCategory(CategoryID) ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT chk_description_not_empty CHECK (TRIM(Description) <> '')
 );
@@ -266,9 +265,9 @@ CREATE TABLE QRScanLog (
     Location        VARCHAR(100)    DEFAULT NULL,
     Remarks         TEXT            DEFAULT NULL,
     IdentificationNumber VARCHAR(50) DEFAULT NULL,
-    RoomID          INT             DEFAULT NULL,
+    RoomNumber      VARCHAR(20)     DEFAULT NULL,            -- Migration to RoomNumber
     FOREIGN KEY (IdentificationNumber) REFERENCES Member(IdentificationNumber) ON DELETE SET NULL,
-    FOREIGN KEY (RoomID)   REFERENCES Room(RoomID)   ON DELETE SET NULL
+    FOREIGN KEY (RoomNumber) REFERENCES Room(RoomNumber) ON DELETE SET NULL
 );
 
 -- =============================================================================
@@ -276,14 +275,14 @@ CREATE TABLE QRScanLog (
 -- =============================================================================
 CREATE TABLE MaintenanceRequest (
     RequestID       INT             AUTO_INCREMENT          PRIMARY KEY,
-    RoomID          INT             NOT NULL,
+    RoomNumber      VARCHAR(20)     NOT NULL,                -- Migration to RoomNumber
     RequestedBy     VARCHAR(50)     NOT NULL, -- IdentificationNumber
     Description     TEXT            NOT NULL,
     RequestDate     DATETIME        NOT NULL    DEFAULT CURRENT_TIMESTAMP,
     CompletedDate   DATETIME        DEFAULT NULL,
     Status          ENUM('Pending', 'In Progress', 'Completed', 'Rejected') NOT NULL DEFAULT 'Pending',
     AssignedTo      VARCHAR(100)    DEFAULT NULL,
-    FOREIGN KEY (RoomID)      REFERENCES Room(RoomID)       ON DELETE RESTRICT,
+    FOREIGN KEY (RoomNumber)  REFERENCES Room(RoomNumber)    ON DELETE RESTRICT,
     FOREIGN KEY (RequestedBy) REFERENCES Member(IdentificationNumber) ON DELETE RESTRICT
 );
 
@@ -303,6 +302,24 @@ CREATE TABLE IF NOT EXISTS AuditLog (
 -- =============================================================================
 -- TRIGGERS
 -- =============================================================================
+
+-- Auto-increment triggers for backup IDs
+CREATE TRIGGER IF NOT EXISTS trg_Hostel_ID_Insert
+AFTER INSERT ON Hostel
+FOR EACH ROW
+WHEN NEW.HostelID IS NULL
+BEGIN
+    UPDATE Hostel SET HostelID = (SELECT IFNULL(MAX(HostelID), 0) + 1 FROM Hostel) WHERE ShortCode = NEW.ShortCode;
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_Room_ID_Insert
+AFTER INSERT ON Room
+FOR EACH ROW
+WHEN NEW.RoomID IS NULL
+BEGIN
+    UPDATE Room SET RoomID = (SELECT IFNULL(MAX(RoomID), 0) + 1 FROM Room) WHERE RoomNumber = NEW.RoomNumber;
+END;
+
 CREATE TRIGGER IF NOT EXISTS trg_Member_Update
 AFTER UPDATE ON Member
 BEGIN
@@ -323,7 +340,7 @@ CREATE TRIGGER IF NOT EXISTS trg_Room_Update
 AFTER UPDATE ON Room
 BEGIN
     INSERT INTO AuditLog (TableName, ActionType, RecordID, OldData, NewData)
-    VALUES ('Room', 'UPDATE', CAST(OLD.RoomID AS TEXT), 
+    VALUES ('Room', 'UPDATE', NEW.RoomNumber, 
             'Status:' || OLD.RoomStatus || ', Occupied:' || OLD.CurrentOccupancy, 
             'Status:' || NEW.RoomStatus || ', Occupied:' || NEW.CurrentOccupancy);
 END;
@@ -333,7 +350,7 @@ AFTER INSERT ON Allocation
 BEGIN
     INSERT INTO AuditLog (TableName, ActionType, RecordID, OldData, NewData)
     VALUES ('Allocation', 'INSERT', CAST(NEW.AllocationID AS TEXT), NULL, 
-            'IDNo:' || NEW.IdentificationNumber || ', RoomID:' || NEW.RoomID);
+            'IDNo:' || NEW.IdentificationNumber || ', Room:' || NEW.RoomNumber);
 END;
 
 -- =============================================================================
@@ -341,17 +358,12 @@ END;
 -- =============================================================================
 CREATE INDEX IF NOT EXISTS idx_members_list          ON Member(IdentificationNumber, Email);
 
-CREATE INDEX IF NOT EXISTS idx_allocations_full      ON Allocation(CheckInDate DESC, IdentificationNumber, RoomID);
+CREATE INDEX IF NOT EXISTS idx_allocations_full      ON Allocation(CheckInDate DESC, IdentificationNumber, RoomNumber);
 
-CREATE INDEX IF NOT EXISTS idx_rooms_status          ON Room(HostelID);
+CREATE INDEX IF NOT EXISTS idx_rooms_status          ON Room(ShortCode);
 
 CREATE INDEX IF NOT EXISTS idx_complaints_full       ON Complaint(IdentificationNumber);
 
 CREATE INDEX IF NOT EXISTS idx_visitors_full         ON Visitor(IdentificationNumber);
 
 CREATE INDEX IF NOT EXISTS idx_maintenance_full      ON MaintenanceRequest(RequestedBy);
-
-
-
-
-

@@ -122,3 +122,9 @@ export function getDB() {
   if (!db) throw new Error('Database not initialized');
   return db;
 }
+
+export async function createConnection() {
+  const connection = await open({ filename: './hostel.db', driver: sqlite3.Database });
+  await connection.exec('PRAGMA foreign_keys = ON');
+  return connection;
+}

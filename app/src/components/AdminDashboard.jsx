@@ -123,7 +123,7 @@ export default function AdminDashboard({ onLogout }) {
   const [roomTypes,    setRoomTypes]    = useState([]);
 
   const [memberForm,  setMemberForm]  = useState({ Name:'', Email:'', ContactNumber:'', Department:'', YearOfStudy:'', PurposeOfStay:'Resident Student', IdentificationNumber:'', Gender:'Male', Age:'', DateOfBirth:'', AllocatedDate:'', createLogin:false, Username:'', Password:'' });
-  const [allocForm,   setAllocForm]   = useState({ IdentificationNumber:'', RoomID:'', CheckInDate:new Date().toISOString().slice(0,10), AllocatedBy:'' });
+  const [allocForm,   setAllocForm]   = useState({ IdentificationNumber:'', RoomNumber:'', CheckInDate:new Date().toISOString().slice(0,10), AllocatedBy:'' });
   const [upForm,      setUpForm]      = useState({ Status:'', AssignedTo:'', ResolutionRemarks:'', qrCode:'' });
   const [feeForm,     setFeeForm]     = useState({ IdentificationNumber:'', FeeCategoryID:'', AmountPaid:'', PaymentDate:new Date().toISOString().slice(0,10), Status:'Paid' });
   const [gateScan,    setGateScan]    = useState({ qrCode:'', result:null });
@@ -437,7 +437,7 @@ export default function AdminDashboard({ onLogout }) {
                 <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mt-0.5">Floor-wise Inventory</p>
               </div>
             </div>
-            <AddBtn label="Add Room" onClick={() => { setRoomForm(p => ({ ...p, HostelID: curHostel?.HostelID })); setModal('addRoom'); }} />
+            <AddBtn label="Add Room" onClick={() => { setRoomForm(p => ({ ...p, HostelID: curHostel?.HostelID, ShortCode: curHostel?.ShortCode })); setModal('addRoom'); }} />
           </div>
 
           <div className="space-y-12">
@@ -450,9 +450,9 @@ export default function AdminDashboard({ onLogout }) {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
                   {hostelRooms.filter(r => r.Floor === floor).sort((a,b)=>a.RoomNumber.localeCompare(b.RoomNumber)).map(r => {
-                    const occupants = allocations.filter(a => a.RoomID === r.RoomID && a.AllocationStatus === 'Active');
+                    const occupants = allocations.filter(a => a.RoomNumber === r.RoomNumber && a.AllocationStatus === 'Active');
                     return (
-                      <div key={r.RoomID} 
+                      <div key={r.RoomNumber} 
                         onClick={() => { setSelectedRoom(r); setModal('roomDetails'); }}
                         className={`bg-white dark:bg-slate-900 rounded-2xl p-4 border transition-all shadow-sm cursor-pointer hover:ring-2 hover:ring-indigo-500/20 ${r.RoomStatus==='Available'?'border-emerald-100 dark:border-emerald-900/30 hover:shadow-emerald-100/50':'border-slate-100 dark:border-slate-700 hover:shadow-indigo-100/50'}`}>
                         <div className="flex justify-between items-start mb-3">
@@ -499,9 +499,9 @@ export default function AdminDashboard({ onLogout }) {
 
     // Summary View: Hostel Cards
     const summary = hostels.map(h => {
-      const hRooms = list.filter(r => r.HostelID === h.HostelID);
+      const hRooms = list.filter(r => r.ShortCode === h.ShortCode);
       return {
-        id: h.HostelID,
+        id: h.ShortCode,
         name: h.Name,
         shortCode: h.ShortCode,
         availableRooms: hRooms.filter(r => r.RoomStatus === 'Available').length,
@@ -1170,9 +1170,9 @@ export default function AdminDashboard({ onLogout }) {
               <option key={m.IdentificationNumber} value={m.IdentificationNumber}>{m.Name}</option>
             ))}
           </Sel>
-          <Sel label="Select Available Room *" value={allocForm.RoomID} onChange={e=>setAllocForm(p=>({...p,RoomID:e.target.value}))}>
+          <Sel label="Select Available Room *" value={allocForm.RoomNumber} onChange={e=>setAllocForm(p=>({...p,RoomNumber:e.target.value}))}>
             <option value="">Choose vacant room...</option>
-            {rooms.filter(r=>r.RoomStatus==='Available').map(r=><option key={r.RoomID} value={r.RoomID}>{r.HostelName} — Room {r.RoomNumber} ({r.TypeName})</option>)}
+            {rooms.filter(r=>r.RoomStatus==='Available').map(r=><option key={r.RoomNumber} value={r.RoomNumber}>{r.HostelName} — Room {r.RoomNumber} ({r.TypeName})</option>)}
           </Sel>
           <div className="grid grid-cols-2 gap-4">
             <Inp label="Expected Check-In *" type="date" value={allocForm.CheckInDate} onChange={e=>setAllocForm(p=>({...p,CheckInDate:e.target.value}))}/>
@@ -1316,7 +1316,7 @@ export default function AdminDashboard({ onLogout }) {
                 <Users size={14}/> Assigned Residents ({selectedRoom.CurrentOccupancy} / {selectedRoom.MaxCapacity})
               </p>
               <div className="space-y-3">
-                {allocations.filter(a => a.RoomID === selectedRoom.RoomID && a.AllocationStatus === 'Active').map(occ => (
+                {allocations.filter(a => a.RoomNumber === selectedRoom.RoomNumber && a.AllocationStatus === 'Active').map(occ => (
                   <div key={occ.AllocationID} className="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 p-4 rounded-2xl shadow-sm hover:border-indigo-200 transition-all group">
                     <div className="flex justify-between items-start">
                       <div>

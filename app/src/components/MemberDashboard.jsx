@@ -73,9 +73,9 @@ export default function MemberDashboard({ storedIdentificationNumber, onLogout }
   const [wardens, setWardens] = useState([]);
 
   // Forms
-  const [compForm, setCompForm] = useState({ CategoryID:'', Description:'', Severity:'Medium', RoomID:'' });
+  const [compForm, setCompForm] = useState({ CategoryID:'', Description:'', Severity:'Medium', RoomNumber:'' });
   const [visForm, setVisForm] = useState({ VisitorName:'', VisitorContact:'', Relation:'', Purpose:'', InDateTime:new Date().toISOString().slice(0,16) });
-  const [maintForm, setMaintForm] = useState({ Description:'', RoomID:'' });
+  const [maintForm, setMaintForm] = useState({ Description:'', RoomNumber:'' });
   const [cpForm, setCpForm] = useState({ oldPassword:'', newPassword:'', confirmPassword:'' });
 
   const fetchAll = useCallback(async () => {
@@ -96,9 +96,9 @@ export default function MemberDashboard({ storedIdentificationNumber, onLogout }
       setMember(m); setAllocations(a); setComplaints(c); setVisitors(v); setFees(f); setMaintenance(mx);
       setCompCats(cats); setFeeCats(fcats); setFurniture(furn||[]); setWardens(h||[]);
       
-      const activeRoom = a.find(x => x.AllocationStatus === 'Active')?.RoomID || '';
-      setCompForm(p => ({...p, RoomID: activeRoom}));
-      setMaintForm(p => ({...p, RoomID: activeRoom}));
+      const activeRoom = a.find(x => x.AllocationStatus === 'Active')?.RoomNumber || '';
+      setCompForm(p => ({...p, RoomNumber: activeRoom}));
+      setMaintForm(p => ({...p, RoomNumber: activeRoom}));
     } catch(e) {
       console.error(e);
       setError(e.toString());
@@ -507,7 +507,7 @@ export default function MemberDashboard({ storedIdentificationNumber, onLogout }
           <option value="">Select category...</option>
           {compCats.map(c=><option key={c.CategoryID} value={c.CategoryID}>{c.CategoryName}</option>)}
         </Sel>
-        <Inp label="Specific Room (Optional)" value={compForm.RoomID} disabled className="bg-gray-100 text-gray-500" placeholder="Auto-filled active room" />
+        <Inp label="Specific Room (Optional)" value={compForm.RoomNumber} disabled className="bg-gray-100 text-gray-500" placeholder="Auto-filled active room" />
         <Sel label="Severity *" value={compForm.Severity} onChange={e=>setCompForm(p=>({...p,Severity:e.target.value}))}>
           <option>Low</option><option>Medium</option><option>High</option><option>Critical</option>
         </Sel>
@@ -530,7 +530,7 @@ export default function MemberDashboard({ storedIdentificationNumber, onLogout }
 
       <Modal show={modal==='maintenance'} onClose={()=>setModal(null)} title="Request Maintenance">
         <div className="bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 p-4 rounded-xl mb-6 text-sm flex items-start gap-3 border border-blue-100 dark:border-blue-800"><Wrench size={18} className="mt-0.5"/><p><strong>Note:</strong> Maintenance requests are typically fulfilled within 24-48 hours. Urgent issues should be reported to the warden immediately.</p></div>
-        <Inp label="Room ID" value={maintForm.RoomID} disabled className="bg-gray-100 text-gray-500" placeholder="Auto-filled active room" />
+        <Inp label="Room Number" value={maintForm.RoomNumber} disabled className="bg-gray-100 text-gray-500" placeholder="Auto-filled active room" />
         <Txa label="Issue Details *" value={maintForm.Description} onChange={e=>setMaintForm(p=>({...p,Description:e.target.value}))} placeholder="Describe the maintenance required..."/>
         <button onClick={handleNewMaintenance} disabled={!maintForm.Description} className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-3.5 rounded-xl transition-all shadow-md disabled:opacity-50 mt-4">Submit Request</button>
       </Modal>

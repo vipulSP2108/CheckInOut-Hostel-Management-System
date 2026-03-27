@@ -11,7 +11,7 @@ router.get('/', authenticateToken, async (req, res) => {
     const rooms = await db.all(`
       SELECT r.*, h.Name as HostelName, rt.TypeName, rt.BaseCapacity 
       FROM Room r
-      JOIN Hostel h ON r.HostelID = h.HostelID
+      JOIN Hostel h ON r.ShortCode = h.ShortCode
       JOIN RoomType rt ON r.RoomTypeID = rt.RoomTypeID
     `);
     res.json(rooms);
@@ -33,28 +33,43 @@ router.get('/types', authenticateToken, async (req, res) => {
 
 // Add a new room
 router.post('/', authenticateToken, requireAdmin, async (req, res) => {
-  const { HostelID, RoomTypeID, RoomNumber, Floor } = req.body;
-  if (!HostelID || !RoomTypeID || !RoomNumber || Floor === undefined) {
+  const { HostelID, ShortCode, RoomTypeID, RoomNumber, Floor } = req.body;
+  if ((!HostelID && !ShortCode) || !RoomTypeID || Floor === undefined) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
   try {
     const db = getDB();
     const [hostel, rt] = await Promise.all([
-      db.get('SELECT ShortCode FROM Hostel WHERE HostelID = ?', [HostelID]),
+      db.get('SELECT ShortCode FROM Hostel WHERE HostelID = ? OR ShortCode = ?', [HostelID, ShortCode]),
       db.get('SELECT TypeName, BaseCapacity FROM RoomType WHERE RoomTypeID = ?', [RoomTypeID])
     ]);
 
     if (!hostel || !rt) return res.status(404).json({ error: 'Hostel or Room Type not found' });
 
-    const QRCode = `ROOM-${hostel.ShortCode}-${RoomNumber}-${Math.random().toString(36).slice(7).toUpperCase()}`;
+    // Generate RoomNumber format (A-Z)(0-9)(0-9)(0-9) if not correctly formatted
+    // (ShortCode)(Floor)(RoomNo)
+    let finalRoomNumber = RoomNumber;
+    if (!finalRoomNumber || !/^[A-Z][0-9]{3}$/.test(finalRoomNumber)) {
+        // Auto-generate: find next room number for this floor
+        const lastRoom = await db.get('SELECT RoomNumber FROM Room WHERE ShortCode = ? AND Floor = ? ORDER BY RoomNumber DESC LIMIT 1', [hostel.ShortCode, Floor]);
+        let nextNo = 1;
+        if (lastRoom) {
+            const match = lastRoom.RoomNumber.match(/(\d{2})$/);
+            if (match) nextNo = parseInt(match[1]) + 1;
+        }
+        const roomNoStr = nextNo.toString().padStart(2, '0');
+        finalRoomNumber = `${hostel.ShortCode}${Floor}${roomNoStr}`;
+    }
+
+    const QRCode = `ROOM-${hostel.ShortCode}-${finalRoomNumber}-${Math.random().toString(36).slice(7).toUpperCase()}`;
 
     await db.run('BEGIN TRANSACTION');
     try {
-      const result = await db.run(
-        `INSERT INTO Room (HostelID, RoomTypeID, RoomNumber, Floor, MaxCapacity, CurrentOccupancy, QRCode, RoomStatus) 
+      await db.run(
+        `INSERT INTO Room (ShortCode, RoomTypeID, RoomNumber, Floor, MaxCapacity, CurrentOccupancy, QRCode, RoomStatus) 
          VALUES (?, ?, ?, ?, ?, 0, ?, 'Available')`,
-        [HostelID, RoomTypeID, RoomNumber, Floor, rt.BaseCapacity, QRCode]
+        [hostel.ShortCode, RoomTypeID, finalRoomNumber, Floor, rt.BaseCapacity, QRCode]
       );
 
       const col = {
@@ -65,18 +80,18 @@ router.post('/', authenticateToken, requireAdmin, async (req, res) => {
       }[rt.TypeName] || 'NumSingleRooms';
 
       await db.run(
-        `UPDATE Hostel SET ${col} = ${col} + 1, TotalRooms = TotalRooms + 1, TotalCapacity = TotalCapacity + ? WHERE HostelID = ?`,
-        [rt.BaseCapacity, HostelID]
+        `UPDATE Hostel SET ${col} = ${col} + 1, TotalRooms = TotalRooms + 1, TotalCapacity = TotalCapacity + ? WHERE ShortCode = ?`,
+        [rt.BaseCapacity, hostel.ShortCode]
       );
 
       await db.run('COMMIT');
-      res.status(201).json({ message: 'Room created successfully', RoomID: result.lastID });
+      res.status(201).json({ message: 'Room created successfully', RoomNumber: finalRoomNumber });
     } catch (e) {
       await db.run('ROLLBACK');
       throw e;
     }
   } catch (error) {
-    res.status(500).json({ error: error.message.includes('UNIQUE') ? 'Room number already exists' : 'Server error' });
+    res.status(500).json({ error: error.message.includes('UNIQUE') ? 'Room number already exists' : 'Server error: ' + error.message });
   }
 });
 

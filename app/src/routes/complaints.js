@@ -21,7 +21,7 @@ router.get('/', authenticateToken, requireAdmin, async (req, res) => {
       SELECT c.*, m.Name as MemberName, r.RoomNumber, cat.CategoryName 
       FROM Complaint c
       JOIN Member m ON c.IdentificationNumber = m.IdentificationNumber
-      LEFT JOIN Room r ON c.RoomID = r.RoomID
+      LEFT JOIN Room r ON c.RoomNumber = r.RoomNumber
       JOIN ComplaintCategory cat ON c.CategoryID = cat.CategoryID
       ORDER BY 
         CASE WHEN Status = 'Open' THEN 1 WHEN Status = 'In Progress' THEN 2 ELSE 3 END,
@@ -45,7 +45,7 @@ router.get('/member/:id', authenticateToken, requireOwnershipOrAdmin, async (req
     const complaints = await db.all(`
       SELECT c.*, r.RoomNumber, cat.CategoryName 
       FROM Complaint c
-      LEFT JOIN Room r ON c.RoomID = r.RoomID
+      LEFT JOIN Room r ON c.RoomNumber = r.RoomNumber
       JOIN ComplaintCategory cat ON c.CategoryID = cat.CategoryID
       WHERE c.IdentificationNumber = ?
     `, [identificationNumber]);
@@ -59,15 +59,15 @@ router.get('/member/:id', authenticateToken, requireOwnershipOrAdmin, async (req
 router.post('/', authenticateToken, async (req, res) => {
   try {
     const db = getDB();
-    const { RoomID, CategoryID, Description, Severity } = req.body;
+    const { RoomNumber, CategoryID, Description, Severity } = req.body;
     const IdentificationNumber = req.user.role === 'Admin' ? req.body.IdentificationNumber : req.user.identificationNumber;
     const result = await db.run(
-      `INSERT INTO Complaint (IdentificationNumber, RoomID, CategoryID, Description, Severity) VALUES (?, ?, ?, ?, ?)`,
-      [IdentificationNumber, RoomID || null, CategoryID, Description, Severity || 'Medium']
+      `INSERT INTO Complaint (IdentificationNumber, RoomNumber, CategoryID, Description, Severity) VALUES (?, ?, ?, ?, ?)`,
+      [IdentificationNumber, RoomNumber || null, CategoryID, Description, Severity || 'Medium']
     );
     res.status(201).json({ id: result.lastID });
   } catch (error) {
-    res.status(500).json({ error: 'Server error' });
+    res.status(500).json({ error: 'Server error: ' + error.message });
   }
 });
 

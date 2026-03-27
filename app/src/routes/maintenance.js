@@ -11,7 +11,7 @@ router.get('/', authenticateToken, requireAdmin, async (req, res) => {
       SELECT mr.*, m.Name as RequestedByName, r.RoomNumber 
       FROM MaintenanceRequest mr
       JOIN Member m ON mr.RequestedBy = m.IdentificationNumber
-      JOIN Room r ON mr.RoomID = r.RoomID
+      JOIN Room r ON mr.RoomNumber = r.RoomNumber
       ORDER BY 
         CASE WHEN Status = 'Pending' THEN 1 WHEN Status = 'In Progress' THEN 2 ELSE 3 END,
         CASE WHEN Status IN ('Pending', 'In Progress') THEN RequestDate ELSE CompletedDate END DESC
@@ -34,7 +34,7 @@ router.get('/member/:id', authenticateToken, requireOwnershipOrAdmin, async (req
     const requests = await db.all(`
       SELECT mr.*, r.RoomNumber 
       FROM MaintenanceRequest mr
-      JOIN Room r ON mr.RoomID = r.RoomID
+      JOIN Room r ON mr.RoomNumber = r.RoomNumber
       WHERE mr.RequestedBy = ?
     `, [identificationNumber]);
     res.json(requests);
@@ -46,12 +46,12 @@ router.get('/member/:id', authenticateToken, requireOwnershipOrAdmin, async (req
 router.post('/', authenticateToken, async (req, res) => {
   try {
     const db = getDB();
-    const { RoomID, Description } = req.body;
+    const { RoomNumber, Description } = req.body;
     const RequestedBy = req.user.role === 'Admin' ? req.body.RequestedBy : req.user.identificationNumber;
-    const result = await db.run('INSERT INTO MaintenanceRequest (RoomID,RequestedBy,Description) VALUES(?,?,?)', [RoomID, RequestedBy, Description]);
+    const result = await db.run('INSERT INTO MaintenanceRequest (RoomNumber,RequestedBy,Description) VALUES(?,?,?)', [RoomNumber, RequestedBy, Description]);
     res.status(201).json({ id: result.lastID });
   } catch (error) {
-    res.status(500).json({ error: 'Server error' });
+    res.status(500).json({ error: 'Server error: ' + error.message });
   }
 });
 

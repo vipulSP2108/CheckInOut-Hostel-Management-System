@@ -29,7 +29,7 @@ router.post('/gate', authenticateToken, requireAdmin, async (req, res) => {
     }
     
     // Find active room info to return
-    const alloc = await db.get('SELECT r.RoomNumber, h.Name FROM Allocation a JOIN Room r ON a.RoomID = r.RoomID JOIN Hostel h ON r.HostelID = h.HostelID WHERE a.IdentificationNumber = ? AND a.AllocationStatus="Active"', [member.IdentificationNumber]);
+    const alloc = await db.get('SELECT r.RoomNumber, h.Name FROM Allocation a JOIN Room r ON a.RoomNumber = r.RoomNumber JOIN Hostel h ON r.ShortCode = h.ShortCode WHERE a.IdentificationNumber = ? AND a.AllocationStatus="Active"', [member.IdentificationNumber]);
 
     // Log the scan
     await db.run('INSERT INTO QRScanLog (ScanType, QRCode, ScannedBy, Location, IdentificationNumber) VALUES (?, ?, ?, ?, ?)', ['Member', qrCode, req.user.username, 'Main Gate', member.IdentificationNumber]);
@@ -85,8 +85,8 @@ router.post('/maintenance', authenticateToken, requireAdmin, async (req, res) =>
         return res.status(403).json({ error: `Room ${room.RoomNumber} is currently occupied! Policy strictly requires you scan the resident's personal QR to authorize closure, not the generic Room QR.` });
       }
 
-      const pendingTickets = await db.all('SELECT * FROM MaintenanceRequest WHERE RoomID = ? AND Status IN ("Pending", "In Progress")', [room.RoomID]);
-      const pendingComplaints = await db.all('SELECT * FROM Complaint WHERE RoomID = ? AND Status NOT IN ("Resolved", "Closed")', [room.RoomID]);
+      const pendingTickets = await db.all('SELECT * FROM MaintenanceRequest WHERE RoomNumber = ? AND Status IN ("Pending", "In Progress")', [room.RoomNumber]);
+      const pendingComplaints = await db.all('SELECT * FROM Complaint WHERE RoomNumber = ? AND Status NOT IN ("Resolved", "Closed")', [room.RoomNumber]);
       
       if (pendingTickets.length === 0 && pendingComplaints.length === 0) {
         return res.status(404).json({ error: `Vacant Room ${room.RoomNumber} has no pending work orders or complaints waiting for closure!` });
@@ -101,7 +101,7 @@ router.post('/maintenance', authenticateToken, requireAdmin, async (req, res) =>
         await db.run('UPDATE Complaint SET Status = "Closed", ResolvedDate = CURRENT_TIMESTAMP WHERE ComplaintID = ?', [c.ComplaintID]);
       }
 
-      await db.run('INSERT INTO QRScanLog (ScanType, QRCode, ScannedBy, Location) VALUES (?, ?, ?, ?)', ['Room', qrCode, req.user.username, 'Room QR - Unified Verification']);
+      await db.run('INSERT INTO QRScanLog (ScanType, QRCode, ScannedBy, Location, RoomNumber) VALUES (?, ?, ?, ?, ?)', ['Room', qrCode, req.user.username, 'Room QR - Unified Verification', room.RoomNumber]);
 
       return res.json({ 
         success: true, 
