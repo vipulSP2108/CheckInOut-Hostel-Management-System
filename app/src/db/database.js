@@ -9,6 +9,8 @@ let db;
 export async function initDB() {
   db = await open({ filename: './hostel.db', driver: sqlite3.Database });
   await db.exec('PRAGMA foreign_keys = ON');
+  await db.exec('PRAGMA journal_mode = WAL');
+  await db.exec('PRAGMA busy_timeout = 5000');
 
   // Load and sanitize user's sql/hostel.sql file dynamically
   const sqlPath = path.join(process.cwd(), 'sql', 'hostel.sql');
@@ -126,5 +128,7 @@ export function getDB() {
 export async function createConnection() {
   const connection = await open({ filename: './hostel.db', driver: sqlite3.Database });
   await connection.exec('PRAGMA foreign_keys = ON');
+  await connection.exec('PRAGMA journal_mode = WAL');
+  await connection.exec('PRAGMA busy_timeout = 5000');
   return connection;
 }

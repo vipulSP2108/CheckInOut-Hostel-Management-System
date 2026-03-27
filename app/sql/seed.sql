@@ -149,7 +149,7 @@ INSERT INTO Room (ShortCode, RoomTypeID, RoomNumber, Floor, MaxCapacity, Current
 ('H', 1, 'H202', 2, 1, 0, 'ROOM-H-H202-QR0117', 'Occupied'),
 ('H', 3, 'H303', 3, 3, 2, 'ROOM-H-H303-QR0118', 'Occupied'),
 ('H', 2, 'H304', 3, 2, 1, 'ROOM-H-H304-QR0119', 'Occupied'),
-('H', 4, 'H305', 3, 4, 1, 'ROOM-H-H305-QR0120', 'Occupied')
+('H', 4, 'H305', 3, 4, 1, 'ROOM-H-H305-QR0120', 'Occupied');
 
 -- ==========================================
 -- 4. MEMBERS (150 Members generated)
