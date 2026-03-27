@@ -1,20 +1,32 @@
-const API_URL = 'http://127.0.0.1:3000/api';
+// scripts/stress-test.cjs
+const fs = require('fs');
+const path = require('path');
+const { API_URL, TEST_USERS, STRESS_TEST } = require('./constants.cjs');
+
+const LOG_FILE = path.join(__dirname, 'logs', 'stress-test.log');
+
+function log(message) {
+    const time = new Date().toISOString();
+    const entry = `[${time}] ${message}\n`;
+    fs.appendFileSync(LOG_FILE, entry);
+    console.log(message);
+}
 
 async function runTest() {
-    console.log('--- STARTING GATE RUSH STRESS TEST (100+ req/sec) ---');
+    const { TOTAL_REQUESTS, CONCURRENCY, QR_CODE } = STRESS_TEST;
+    log('--- STARTING GATE RUSH STRESS TEST ---');
+    log(`[PARAM] Total Requests: ${TOTAL_REQUESTS} | Concurrency: ${CONCURRENCY} | QR Code: ${QR_CODE}`);
     
     // 1. Login
+    const adminUser = TEST_USERS[0]; 
     const loginRes = await fetch(`${API_URL}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username: 'admin', password: 'admin123' })
+        body: JSON.stringify(adminUser)
     });
     const cookie = loginRes.headers.get('set-cookie');
     
-    const TOTAL_REQUESTS = 500;
-    const CONCURRENCY = 50; 
-    
-    console.log(`Sending ${TOTAL_REQUESTS} requests with CONCURRENCY=${CONCURRENCY}...`);
+    log(`Sending ${TOTAL_REQUESTS} requests with CONCURRENCY=${CONCURRENCY}...`);
     
     const startTime = Date.now();
     let completed = 0;
@@ -30,7 +42,7 @@ async function runTest() {
                     'Content-Type': 'application/json',
                     'Cookie': cookie
                 },
-                body: JSON.stringify({ qrCode: 'MEM-QR-0001' })
+                body: JSON.stringify({ qrCode: QR_CODE })
             });
             if (!res.ok) {
                 const errBody = await res.json().catch(() => ({}));
@@ -38,7 +50,7 @@ async function runTest() {
             }
             latencies.push(Date.now() - reqStart);
         } catch (e) {
-            if (errors === 0) console.error(`\n[FIRST ERROR]: ${e.message}`);
+            if (errors === 0) log(`\n[FIRST ERROR]: ${e.message}`);
             errors++;
         } finally {
             completed++;
@@ -56,20 +68,20 @@ async function runTest() {
     }
     
     const totalTime = (Date.now() - startTime) / 1000;
-    const avgLatency = latencies.reduce((a, b) => a + b, 0) / latencies.length;
+    const avgLatency = latencies.reduce((a, b) => a + b, 0) / (latencies.length || 1);
     const throughput = completed / totalTime;
 
-    console.log('\n--- STRESS TEST RESULTS ---');
-    console.log(`Total Time: ${totalTime.toFixed(2)}s`);
-    console.log(`Throughput: ${throughput.toFixed(2)} req/sec`);
-    console.log(`Average Latency: ${avgLatency.toFixed(2)}ms`);
-    console.log(`Errors: ${errors}`);
+    log('\n--- STRESS TEST RESULTS ---');
+    log(`Total Time: ${totalTime.toFixed(2)}s`);
+    log(`Throughput: ${throughput.toFixed(2)} req/sec`);
+    log(`Average Latency: ${avgLatency.toFixed(2)}ms`);
+    log(`Errors: ${errors}`);
     
     if (errors === 0 && throughput > 50) {
-        console.log('VERIFICATION: SUCCESS - System handled high load with zero errors.');
+        log('VERIFICATION: SUCCESS - System handled high load with zero errors.');
     } else if (errors > 0) {
-        console.warn('VERIFICATION: WARNING - Errors detected under load. Check busy_timeout settings.');
+        log('VERIFICATION: WARNING - Errors detected under load.');
     }
 }
 
-runTest().catch(console.error);
+runTest().catch(e => log(`FATAL ERROR: ${e.message}`));

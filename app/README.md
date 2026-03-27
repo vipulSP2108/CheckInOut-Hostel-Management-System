@@ -69,11 +69,23 @@ Simulates 500 QR gate scans at a concurrency level of 50 to measure throughput a
 node scripts/stress-test.cjs
 ```
 
-#### 4. Unified Multi-Scenario Stress Test 🆕
-Comprehensive load testing for critical system endpoints (Member Polling, Scans, Auth, Maintenance).
+#### 4. Parallel Unified Stress Test 🆕
+Comprehensive load testing for critical system endpoints (Member Polling, Scans, Auth, Maintenance, and Complaint Write) running **simultaneously**.
 ```bash
 node scripts/unified-stress-test.cjs
 ```
+
+### Centralized Configuration
+All test parameters (URLs, user accounts, concurrency levels, etc.) are managed in `scripts/constants.cjs`. You can modify this file to:
+- Add more `TEST_USERS` or `MEMBER_IDS`.
+- Adjust `STRESS_CONFIG` for higher volumes.
+- Change `COMPLAINT_CONFIG` categories and rooms.
+
+### Execution Logs
+Each test run automatically generates a detailed log in the `scripts/logs/` directory:
+- `unified-stress.log`: Parallel scenario benchmarks.
+- `race-test.log`: Concurrency validation history.
+- `stress-test.log`: High-volume gate rush results.
 
 ---
 
