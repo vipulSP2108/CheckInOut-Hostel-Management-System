@@ -1,0 +1,1859 @@
+2026-03-21T13:34:57.444Z anonymous GET / 304  - 52.170 ms
+2026-03-21T13:34:57.942Z anonymous GET /src/main.jsx 304  - 0.122 ms
+2026-03-21T13:34:57.956Z anonymous GET /@react-refresh 304  - 0.621 ms
+2026-03-21T13:34:58.192Z anonymous GET /src/index.css 304  - 0.215 ms
+2026-03-21T13:34:58.194Z anonymous GET /src/App.jsx 304  - 0.101 ms
+2026-03-21T13:34:58.224Z anonymous GET /@vite/client 200  - 284.091 ms
+2026-03-21T13:34:58.240Z anonymous GET /src/components/Login.jsx 304  - 15.045 ms
+2026-03-21T13:34:58.243Z anonymous GET /src/ThemeContext.jsx 304  - 17.416 ms
+2026-03-21T13:34:58.246Z anonymous GET /node_modules/vite/dist/client/env.mjs 304  - 0.728 ms
+2026-03-21T13:34:58.308Z anonymous GET /src/components/MemberDashboard.jsx 304  - 67.500 ms
+2026-03-21T13:34:58.340Z anonymous GET /src/components/AdminDashboard.jsx 304  - 114.033 ms
+2026-03-21T13:34:58.351Z anonymous GET /src/components/QRCameraScanner.jsx 304  - 1.632 ms
+2026-03-21T13:34:58.603Z 2022001 GET /api/allocations/member/2022001 304  - 10.523 ms
+2026-03-21T13:34:58.603Z 2022001 GET /api/fees/member/2022001 304  - 7.142 ms
+2026-03-21T13:34:58.605Z 2022001 GET /api/complaints/member/2022001 304  - 10.723 ms
+2026-03-21T13:34:58.605Z 2022001 GET /api/members/2022001 304  - 19.203 ms
+2026-03-21T13:34:58.606Z 2022001 GET /api/visitors/member/2022001 304  - 8.901 ms
+2026-03-21T13:34:58.607Z 2022001 GET /api/furniture/member/2022001 500 24 - 11.837 ms
+2026-03-21T13:34:58.614Z 2022001 GET /api/maintenance/member/2022001 304  - 5.631 ms
+2026-03-21T13:34:58.614Z 2022001 GET /api/complaints/categories 304  - 5.083 ms
+2026-03-21T13:34:58.615Z 2022001 GET /api/hostels/wardens 304  - 4.895 ms
+2026-03-21T13:34:58.616Z 2022001 GET /api/fees/categories 304  - 4.261 ms
+2026-03-21T13:35:08.239Z anonymous POST /api/auth/logout 200 37 - 1.138 ms
+2026-03-21T13:35:11.477Z anonymous POST /api/auth/login 200 63 - 133.569 ms
+2026-03-21T13:35:11.504Z admin GET /api/complaints 200 31784 - 9.290 ms
+2026-03-21T13:35:11.508Z admin GET /api/visitors 200 10672 - 9.533 ms
+2026-03-21T13:35:11.510Z admin GET /api/rooms 200 34900 - 10.356 ms
+2026-03-21T13:35:11.514Z admin GET /api/allocations 200 62248 - 13.061 ms
+2026-03-21T13:35:11.517Z admin GET /api/members 200 68451 - 15.717 ms
+2026-03-21T13:35:11.519Z admin GET /api/maintenance 200 12537 - 16.384 ms
+2026-03-21T13:35:11.526Z admin GET /api/fees 200 198 - 5.542 ms
+2026-03-21T13:35:11.527Z admin GET /api/complaints/categories 304  - 5.292 ms
+2026-03-21T13:35:11.528Z admin GET /api/fees/categories 304  - 4.482 ms
+2026-03-21T13:35:11.529Z admin GET /api/hostels 200 2829 - 5.286 ms
+2026-03-21T13:35:11.529Z admin GET /api/rooms/types 200 1126 - 4.899 ms
+2026-03-21T13:35:11.530Z admin GET /api/stats 200 216 - 4.404 ms
+2026-03-21T13:35:11.534Z admin GET /api/scans 200 11916 - 3.264 ms
+2026-03-21T13:35:11.536Z admin GET /api/furniture 200 55315 - 4.270 ms
+2026-03-21T13:35:28.099Z admin PATCH /api/complaints/35 200 21 - 8.241 ms
+2026-03-21T13:35:28.116Z admin GET /api/members 304  - 12.656 ms
+2026-03-21T13:35:28.121Z admin GET /api/allocations 304  - 12.823 ms
+2026-03-21T13:35:28.125Z admin GET /api/rooms 304  - 17.393 ms
+2026-03-21T13:35:28.127Z admin GET /api/complaints 200 31791 - 16.950 ms
+2026-03-21T13:35:28.128Z admin GET /api/fees 304  - 17.032 ms
+2026-03-21T13:35:28.130Z admin GET /api/visitors 304  - 17.009 ms
+2026-03-21T13:35:28.137Z admin GET /api/maintenance 304  - 15.121 ms
+2026-03-21T13:35:28.138Z admin GET /api/complaints/categories 304  - 6.246 ms
+2026-03-21T13:35:28.140Z admin GET /api/fees/categories 304  - 6.511 ms
+2026-03-21T13:35:28.142Z admin GET /api/furniture 304  - 6.514 ms
+2026-03-21T13:35:28.143Z admin GET /api/scans 304  - 6.495 ms
+2026-03-21T13:35:28.144Z admin GET /api/stats 200 216 - 8.933 ms
+2026-03-21T13:35:28.145Z admin GET /api/rooms/types 304  - 6.333 ms
+2026-03-21T13:35:28.146Z admin GET /api/hostels 304  - 1.632 ms
+2026-03-21T13:35:54.209Z admin POST /api/scans/gate 404 46 - 4.832 ms
+2026-03-21T13:36:02.516Z admin POST /api/scans/maintenance 404 100 - 3.873 ms
+2026-03-21T13:36:06.934Z anonymous GET /member 200  - 22.580 ms
+2026-03-21T13:36:07.030Z anonymous GET /src/main.jsx 200  - 0.942 ms
+2026-03-21T13:36:07.092Z anonymous GET /@react-refresh 200  - 23.826 ms
+2026-03-21T13:36:07.094Z anonymous GET /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=d284e924 200  - 0.253 ms
+2026-03-21T13:36:07.102Z anonymous GET /src/index.css 200  - 0.366 ms
+2026-03-21T13:36:07.103Z anonymous GET /src/App.jsx 200  - 0.226 ms
+2026-03-21T13:36:07.114Z anonymous GET /@vite/client 200  - 37.499 ms
+2026-03-21T13:36:07.180Z anonymous GET /node_modules/.vite/deps/chunk-S73QDKPN.js?v=d284e924 200  - 0.597 ms
+2026-03-21T13:36:07.247Z anonymous GET /node_modules/.vite/deps/chunk-G3PMV62Z.js?v=d284e924 200  - 17.127 ms
+2026-03-21T13:36:07.560Z anonymous GET /node_modules/.vite/deps/react.js?v=d284e924 200  - 1.026 ms
+2026-03-21T13:36:07.563Z anonymous GET /src/components/Login.jsx 200  - 0.786 ms
+2026-03-21T13:36:07.744Z anonymous GET /src/ThemeContext.jsx 200  - 0.582 ms
+2026-03-21T13:36:07.835Z anonymous GET /node_modules/.vite/deps/react-dom_client.js?v=d284e924 200  - 3.533 ms
+2026-03-21T13:36:07.884Z anonymous GET /src/components/MemberDashboard.jsx 200  - 3.562 ms
+2026-03-21T13:36:08.629Z anonymous GET /src/components/AdminDashboard.jsx 200  - 3.946 ms
+2026-03-21T13:36:08.723Z anonymous GET /node_modules/vite/dist/client/env.mjs 200  - 0.714 ms
+2026-03-21T13:36:08.814Z anonymous GET /node_modules/.vite/deps/react-qr-code.js?v=d284e924 200  - 1.442 ms
+2026-03-21T13:36:08.967Z anonymous GET /node_modules/.vite/deps/react-router-dom.js?v=d284e924 200  - 2.562 ms
+2026-03-21T13:36:09.109Z anonymous GET /src/components/QRCameraScanner.jsx 200  - 0.640 ms
+2026-03-21T13:36:09.117Z anonymous GET /node_modules/.vite/deps/chunk-Z5AKTONR.js?v=d284e924 200  - 0.868 ms
+2026-03-21T13:36:09.279Z anonymous GET /node_modules/.vite/deps/html5-qrcode.js?v=d284e924 200  - 5.377 ms
+2026-03-21T13:36:10.436Z anonymous GET /node_modules/.vite/deps/lucide-react.js?v=d284e924 200  - 6.557 ms
+2026-03-21T13:36:10.825Z 2023001 GET /api/furniture/member/2023001 200 2 - 10.379 ms
+2026-03-21T13:36:10.825Z 2023001 GET /api/visitors/member/2023001 200 2 - 3.028 ms
+2026-03-21T13:36:10.825Z 2023001 GET /api/fees/member/2023001 200 2 - 1.742 ms
+2026-03-21T13:36:10.825Z 2023001 GET /api/complaints/member/2023001 200 2 - 4.913 ms
+2026-03-21T13:36:10.825Z 2023001 GET /api/allocations/member/2023001 200 2 - 6.521 ms
+2026-03-21T13:36:10.826Z 2023001 GET /api/members/2023001 404 28 - 8.511 ms
+2026-03-21T13:36:10.931Z 2023001 GET /api/maintenance/member/2023001 200 2 - 7.696 ms
+2026-03-21T13:36:10.932Z 2023001 GET /api/complaints/categories 200 1099 - 6.401 ms
+2026-03-21T13:36:10.932Z 2023001 GET /api/fees/categories 200 577 - 5.487 ms
+2026-03-21T13:36:10.933Z 2023001 GET /api/hostels/wardens 200 741 - 4.159 ms
+2026-03-21T13:36:19.878Z admin POST /api/scans/gate 404 46 - 1.845 ms
+2026-03-21T13:36:26.240Z anonymous POST /api/auth/logout 200 37 - 1.122 ms
+2026-03-21T13:36:28.989Z anonymous POST /api/auth/login 401 31 - 0.874 ms
+2026-03-21T13:37:06.271Z anonymous POST /api/auth/login 200 72 - 130.161 ms
+2026-03-21T13:37:06.581Z 2022047 GET /api/members/2022047 200 449 - 1.986 ms
+2026-03-21T13:37:06.622Z 2022047 GET /api/fees/member/2022047 200 2 - 3.184 ms
+2026-03-21T13:37:06.622Z 2022047 GET /api/complaints/member/2022047 200 293 - 7.240 ms
+2026-03-21T13:37:06.623Z 2022047 GET /api/visitors/member/2022047 200 2 - 5.495 ms
+2026-03-21T13:37:06.623Z 2022047 GET /api/allocations/member/2022047 200 391 - 10.598 ms
+2026-03-21T13:37:06.623Z 2022047 GET /api/maintenance/member/2022047 200 221 - 2.876 ms
+2026-03-21T13:37:06.625Z 2022047 GET /api/furniture/member/2022047 500 24 - 3.441 ms
+2026-03-21T13:37:06.632Z 2022047 GET /api/complaints/categories 304  - 1.010 ms
+2026-03-21T13:37:06.644Z 2022047 GET /api/fees/categories 304  - 1.548 ms
+2026-03-21T13:37:06.645Z 2022047 GET /api/hostels/wardens 304  - 1.052 ms
+2026-03-21T13:37:16.305Z admin POST /api/scans/maintenance 200 110 - 7.154 ms
+2026-03-21T13:37:16.317Z admin GET /api/members 304  - 8.653 ms
+2026-03-21T13:37:16.322Z admin GET /api/rooms 304  - 10.677 ms
+2026-03-21T13:37:16.326Z admin GET /api/allocations 304  - 14.626 ms
+2026-03-21T13:37:16.327Z admin GET /api/fees 304  - 13.937 ms
+2026-03-21T13:37:16.330Z admin GET /api/visitors 304  - 14.988 ms
+2026-03-21T13:37:16.335Z admin GET /api/complaints 304  - 22.868 ms
+2026-03-21T13:37:16.338Z admin GET /api/maintenance 200 12552 - 20.230 ms
+2026-03-21T13:37:16.347Z admin GET /api/complaints/categories 304  - 10.000 ms
+2026-03-21T13:37:16.348Z admin GET /api/fees/categories 304  - 8.474 ms
+2026-03-21T13:37:16.349Z admin GET /api/scans 200 12135 - 5.819 ms
+2026-03-21T13:37:16.350Z admin GET /api/stats 304  - 9.373 ms
+2026-03-21T13:37:16.355Z admin GET /api/furniture 304  - 12.381 ms
+2026-03-21T13:37:16.357Z admin GET /api/hostels 304  - 12.392 ms
+2026-03-21T13:37:16.358Z admin GET /api/rooms/types 304  - 2.151 ms
+2026-03-21T13:37:24.794Z admin POST /api/scans/gate 200 100 - 3.552 ms
+2026-03-21T13:37:24.807Z admin GET /api/members 304  - 8.939 ms
+2026-03-21T13:37:24.809Z admin GET /api/rooms 304  - 9.396 ms
+2026-03-21T13:37:24.814Z admin GET /api/allocations 304  - 13.352 ms
+2026-03-21T13:37:24.815Z admin GET /api/visitors 304  - 12.112 ms
+2026-03-21T13:37:24.817Z admin GET /api/complaints 304  - 14.503 ms
+2026-03-21T13:37:24.817Z admin GET /api/fees 304  - 13.536 ms
+2026-03-21T13:37:24.822Z admin GET /api/maintenance 304  - 12.068 ms
+2026-03-21T13:37:24.823Z admin GET /api/complaints/categories 304  - 12.010 ms
+2026-03-21T13:37:24.826Z admin GET /api/fees/categories 304  - 7.799 ms
+2026-03-21T13:37:24.827Z admin GET /api/stats 304  - 7.468 ms
+2026-03-21T13:37:24.830Z admin GET /api/furniture 304  - 9.755 ms
+2026-03-21T13:37:24.831Z admin GET /api/scans 200 12334 - 7.438 ms
+2026-03-21T13:37:24.832Z admin GET /api/hostels 304  - 4.618 ms
+2026-03-21T13:37:24.832Z admin GET /api/rooms/types 304  - 4.316 ms
+2026-03-21T13:37:39.790Z admin PATCH /api/maintenance/1 200 21 - 4.091 ms
+2026-03-21T13:37:39.805Z admin GET /api/members 304  - 11.104 ms
+2026-03-21T13:37:39.807Z admin GET /api/rooms 304  - 10.826 ms
+2026-03-21T13:37:39.811Z admin GET /api/allocations 304  - 13.116 ms
+2026-03-21T13:37:39.813Z admin GET /api/complaints 304  - 14.033 ms
+2026-03-21T13:37:39.814Z admin GET /api/visitors 304  - 14.044 ms
+2026-03-21T13:37:39.815Z admin GET /api/fees 304  - 13.736 ms
+2026-03-21T13:37:39.820Z admin GET /api/maintenance 200 12556 - 12.469 ms
+2026-03-21T13:37:39.821Z admin GET /api/complaints/categories 304  - 11.940 ms
+2026-03-21T13:37:39.822Z admin GET /api/fees/categories 304  - 5.972 ms
+2026-03-21T13:37:39.827Z admin GET /api/furniture 304  - 8.713 ms
+2026-03-21T13:37:39.828Z admin GET /api/scans 304  - 9.077 ms
+2026-03-21T13:37:39.829Z admin GET /api/stats 200 216 - 11.460 ms
+2026-03-21T13:37:39.829Z admin GET /api/hostels 304  - 6.926 ms
+2026-03-21T13:37:39.830Z admin GET /api/rooms/types 304  - 5.599 ms
+2026-03-21T13:38:20.460Z anonymous POST /api/auth/logout 200 37 - 1.140 ms
+2026-03-21T13:38:44.736Z anonymous POST /api/auth/logout 200 37 - 1.678 ms
+2026-03-21T13:38:51.003Z anonymous POST /api/auth/login 200 63 - 129.317 ms
+2026-03-21T13:38:51.042Z admin GET /api/rooms 304  - 10.904 ms
+2026-03-21T13:38:51.046Z admin GET /api/allocations 304  - 10.465 ms
+2026-03-21T13:38:51.046Z admin GET /api/fees 304  - 6.893 ms
+2026-03-21T13:38:51.048Z admin GET /api/complaints 304  - 10.543 ms
+2026-03-21T13:38:51.049Z admin GET /api/visitors 304  - 10.508 ms
+2026-03-21T13:38:51.052Z admin GET /api/members 304  - 15.413 ms
+2026-03-21T13:38:51.055Z admin GET /api/maintenance 304  - 11.700 ms
+2026-03-21T13:38:51.063Z admin GET /api/complaints/categories 304  - 9.883 ms
+2026-03-21T13:38:51.065Z admin GET /api/fees/categories 304  - 6.489 ms
+2026-03-21T13:38:51.069Z admin GET /api/furniture 304  - 8.191 ms
+2026-03-21T13:38:51.071Z admin GET /api/scans 304  - 8.875 ms
+2026-03-21T13:38:51.072Z admin GET /api/stats 304  - 12.494 ms
+2026-03-21T13:38:51.075Z admin GET /api/hostels 304  - 11.006 ms
+2026-03-21T13:38:51.076Z admin GET /api/rooms/types 304  - 3.336 ms
+2026-03-21T13:39:23.008Z anonymous GET /src/index.css?t=1774100362865 200  - 65.589 ms
+2026-03-21T13:39:23.056Z anonymous GET /src/components/Login.jsx?t=1774100362865 200  - 114.501 ms
+2026-03-21T13:39:23.098Z anonymous GET /src/components/Login.jsx?t=1774100362865 200  - 0.693 ms
+2026-03-21T13:39:23.103Z anonymous GET /src/index.css?t=1774100362865 200  - 0.307 ms
+2026-03-21T13:39:27.651Z anonymous GET /src/index.css?t=1774100367607 200  - 36.165 ms
+2026-03-21T13:39:27.669Z anonymous GET /src/components/Login.jsx?t=1774100367607 200  - 55.280 ms
+2026-03-21T13:39:27.677Z anonymous GET /src/components/Login.jsx?t=1774100367607 200  - 0.555 ms
+2026-03-21T13:39:27.678Z anonymous GET /src/index.css?t=1774100367607 200  - 0.370 ms
+2026-03-21T13:39:50.839Z anonymous GET /src/components/Login.jsx?t=1774100390773 200  - 57.223 ms
+2026-03-21T13:39:50.862Z anonymous GET /src/index.css?t=1774100390773 200  - 78.245 ms
+2026-03-21T13:39:50.882Z anonymous GET /src/components/Login.jsx?t=1774100390773 200  - 0.795 ms
+2026-03-21T13:39:50.884Z anonymous GET /src/index.css?t=1774100390773 200  - 0.295 ms
+2026-03-21T13:41:21.695Z admin DELETE /api/members/2020085 200 43 - 49.309 ms
+2026-03-21T13:41:21.781Z admin GET /api/members 200 67994 - 11.815 ms
+2026-03-21T13:41:21.784Z admin GET /api/rooms 304  - 12.853 ms
+2026-03-21T13:41:21.788Z admin GET /api/allocations 200 61734 - 15.460 ms
+2026-03-21T13:41:21.790Z admin GET /api/complaints 200 31471 - 15.851 ms
+2026-03-21T13:41:21.793Z admin GET /api/visitors 304  - 20.149 ms
+2026-03-21T13:41:21.795Z admin GET /api/fees 304  - 19.705 ms
+2026-03-21T13:41:21.804Z admin GET /api/maintenance 304  - 8.162 ms
+2026-03-21T13:41:21.804Z admin GET /api/complaints/categories 304  - 7.550 ms
+2026-03-21T13:41:21.806Z admin GET /api/fees/categories 304  - 7.671 ms
+2026-03-21T13:41:21.807Z admin GET /api/hostels 304  - 5.945 ms
+2026-03-21T13:41:21.815Z admin GET /api/furniture 304  - 12.201 ms
+2026-03-21T13:41:21.818Z admin GET /api/stats 200 215 - 17.527 ms
+2026-03-21T13:41:21.819Z admin GET /api/scans 304  - 14.642 ms
+2026-03-21T13:41:21.820Z admin GET /api/rooms/types 304  - 3.599 ms
+2026-03-21T13:42:25.264Z anonymous GET /admin 200  - 20.780 ms
+2026-03-21T13:42:25.316Z anonymous GET /src/main.jsx?t=1774100390773 200  - 0.748 ms
+2026-03-21T13:42:25.319Z anonymous GET /@react-refresh 304  - 0.237 ms
+2026-03-21T13:42:25.342Z anonymous GET /@vite/client 200  - 21.587 ms
+2026-03-21T13:42:25.343Z anonymous GET /src/index.css?t=1774100390773 200  - 0.448 ms
+2026-03-21T13:42:25.347Z anonymous GET /src/App.jsx?t=1774100390773 200  - 0.289 ms
+2026-03-21T13:42:25.349Z anonymous GET /node_modules/vite/dist/client/env.mjs 304  - 0.237 ms
+2026-03-21T13:42:25.352Z anonymous GET /src/components/Login.jsx?t=1774100390773 200  - 0.690 ms
+2026-03-21T13:42:25.354Z anonymous GET /src/ThemeContext.jsx 304  - 0.649 ms
+2026-03-21T13:42:25.356Z anonymous GET /src/components/AdminDashboard.jsx 304  - 0.118 ms
+2026-03-21T13:42:25.357Z anonymous GET /src/components/MemberDashboard.jsx 304  - 0.075 ms
+2026-03-21T13:42:25.364Z anonymous GET /src/components/QRCameraScanner.jsx 304  - 0.108 ms
+2026-03-21T13:42:25.616Z admin GET /api/rooms 304  - 20.580 ms
+2026-03-21T13:42:25.621Z admin GET /api/allocations 200 61734 - 15.412 ms
+2026-03-21T13:42:25.623Z admin GET /api/fees 304  - 12.670 ms
+2026-03-21T13:42:25.627Z admin GET /api/members 200 67994 - 19.457 ms
+2026-03-21T13:42:25.631Z admin GET /api/complaints 200 31471 - 19.957 ms
+2026-03-21T13:42:25.633Z admin GET /api/visitors 304  - 20.106 ms
+2026-03-21T13:42:25.642Z admin GET /api/maintenance 200 12556 - 13.856 ms
+2026-03-21T13:42:25.642Z admin GET /api/fees/categories 304  - 7.359 ms
+2026-03-21T13:42:25.643Z admin GET /api/complaints/categories 304  - 9.065 ms
+2026-03-21T13:42:25.646Z admin GET /api/furniture 304  - 9.905 ms
+2026-03-21T13:42:25.648Z admin GET /api/hostels 304  - 8.756 ms
+2026-03-21T13:42:25.649Z admin GET /api/stats 200 215 - 11.332 ms
+2026-03-21T13:42:25.651Z anonymous GET /favicon.ico 404  - 0.265 ms
+2026-03-21T13:42:25.652Z admin GET /api/scans 200 12334 - 5.563 ms
+2026-03-21T13:42:25.653Z admin GET /api/rooms/types 304  - 3.004 ms
+2026-03-21T13:42:26.808Z anonymous GET /admin 304  - 4.237 ms
+2026-03-21T13:42:26.822Z anonymous GET /@vite/client 304  - 0.403 ms
+2026-03-21T13:42:26.826Z anonymous GET /src/main.jsx?t=1774100390773 304  - 0.274 ms
+2026-03-21T13:42:26.827Z anonymous GET /@react-refresh 304  - 0.229 ms
+2026-03-21T13:42:26.829Z anonymous GET /node_modules/vite/dist/client/env.mjs 304  - 0.142 ms
+2026-03-21T13:42:26.830Z anonymous GET /src/index.css?t=1774100390773 304  - 0.205 ms
+2026-03-21T13:42:26.832Z anonymous GET /src/App.jsx?t=1774100390773 304  - 0.201 ms
+2026-03-21T13:42:26.834Z anonymous GET /src/components/Login.jsx?t=1774100390773 304  - 0.237 ms
+2026-03-21T13:42:26.835Z anonymous GET /src/components/AdminDashboard.jsx 304  - 0.088 ms
+2026-03-21T13:42:26.836Z anonymous GET /src/components/MemberDashboard.jsx 304  - 0.185 ms
+2026-03-21T13:42:26.837Z anonymous GET /src/ThemeContext.jsx 304  - 0.219 ms
+2026-03-21T13:42:26.841Z anonymous GET /src/components/QRCameraScanner.jsx 304  - 0.090 ms
+2026-03-21T13:42:26.918Z admin GET /api/complaints 304  - 8.814 ms
+2026-03-21T13:42:26.919Z admin GET /api/visitors 304  - 9.106 ms
+2026-03-21T13:42:26.920Z admin GET /api/fees 304  - 8.697 ms
+2026-03-21T13:42:26.924Z admin GET /api/members 304  - 18.707 ms
+2026-03-21T13:42:26.926Z admin GET /api/rooms 304  - 18.686 ms
+2026-03-21T13:42:26.928Z admin GET /api/allocations 304  - 20.305 ms
+2026-03-21T13:42:26.935Z admin GET /api/maintenance 304  - 5.816 ms
+2026-03-21T13:42:26.936Z admin GET /api/complaints/categories 304  - 5.470 ms
+2026-03-21T13:42:26.936Z admin GET /api/fees/categories 304  - 5.287 ms
+2026-03-21T13:42:26.937Z admin GET /api/stats 304  - 4.931 ms
+2026-03-21T13:42:26.939Z admin GET /api/furniture 304  - 6.409 ms
+2026-03-21T13:42:26.942Z admin GET /api/scans 304  - 8.385 ms
+2026-03-21T13:42:26.942Z admin GET /api/hostels 304  - 2.910 ms
+2026-03-21T13:42:26.943Z admin GET /api/rooms/types 304  - 2.157 ms
+2026-03-21T13:42:30.472Z anonymous POST /api/auth/logout 200 37 - 0.423 ms
+2026-03-21T13:42:34.521Z anonymous POST /api/auth/login 200 72 - 130.472 ms
+2026-03-21T13:42:34.541Z 2022047 GET /api/members/2022047 200 449 - 9.534 ms
+2026-03-21T13:42:34.542Z 2022047 GET /api/allocations/member/2022047 200 391 - 6.079 ms
+2026-03-21T13:42:34.543Z 2022047 GET /api/complaints/member/2022047 200 293 - 5.703 ms
+2026-03-21T13:42:34.543Z 2022047 GET /api/fees/member/2022047 200 2 - 3.493 ms
+2026-03-21T13:42:34.544Z 2022047 GET /api/maintenance/member/2022047 200 236 - 3.214 ms
+2026-03-21T13:42:34.544Z 2022047 GET /api/visitors/member/2022047 200 2 - 5.299 ms
+2026-03-21T13:42:34.548Z 2022047 GET /api/complaints/categories 304  - 2.998 ms
+2026-03-21T13:42:34.548Z 2022047 GET /api/fees/categories 304  - 2.332 ms
+2026-03-21T13:42:34.549Z 2022047 GET /api/hostels/wardens 200 741 - 1.949 ms
+2026-03-21T13:42:34.550Z 2022047 GET /api/furniture/member/2022047 500 24 - 4.266 ms
+2026-03-21T13:43:32.488Z 2022047 POST /api/visitors 201 9 - 9.492 ms
+2026-03-21T13:43:32.509Z 2022047 GET /api/members/2022047 304  - 12.238 ms
+2026-03-21T13:43:32.513Z 2022047 GET /api/complaints/member/2022047 304  - 9.609 ms
+2026-03-21T13:43:32.514Z 2022047 GET /api/visitors/member/2022047 200 252 - 8.685 ms
+2026-03-21T13:43:32.516Z 2022047 GET /api/allocations/member/2022047 304  - 13.193 ms
+2026-03-21T13:43:32.518Z 2022047 GET /api/fees/member/2022047 304  - 11.383 ms
+2026-03-21T13:43:32.519Z 2022047 GET /api/furniture/member/2022047 500 24 - 18.832 ms
+2026-03-21T13:43:32.524Z 2022047 GET /api/maintenance/member/2022047 304  - 6.235 ms
+2026-03-21T13:43:32.524Z 2022047 GET /api/complaints/categories 304  - 4.320 ms
+2026-03-21T13:43:32.525Z 2022047 GET /api/fees/categories 304  - 3.609 ms
+2026-03-21T13:43:32.526Z 2022047 GET /api/hostels/wardens 304  - 2.979 ms
+2026-03-21T13:43:46.130Z anonymous GET /admin 200  - 9.188 ms
+2026-03-21T13:43:46.152Z anonymous GET /src/main.jsx?t=1774100390773 200  - 0.776 ms
+2026-03-21T13:43:46.154Z anonymous GET /@react-refresh 304  - 0.305 ms
+2026-03-21T13:43:46.155Z anonymous GET /src/App.jsx?t=1774100390773 200  - 0.343 ms
+2026-03-21T13:43:46.155Z anonymous GET /@vite/client 304  - 0.116 ms
+2026-03-21T13:43:46.168Z anonymous GET /src/index.css?t=1774100390773 304  - 0.446 ms
+2026-03-21T13:43:46.170Z anonymous GET /src/components/MemberDashboard.jsx 304  - 0.494 ms
+2026-03-21T13:43:46.173Z anonymous GET /node_modules/vite/dist/client/env.mjs 304  - 0.228 ms
+2026-03-21T13:43:46.175Z anonymous GET /src/components/Login.jsx?t=1774100390773 304  - 0.271 ms
+2026-03-21T13:43:46.179Z anonymous GET /src/components/AdminDashboard.jsx 304  - 0.293 ms
+2026-03-21T13:43:46.182Z anonymous GET /src/ThemeContext.jsx 304  - 0.986 ms
+2026-03-21T13:43:46.188Z anonymous GET /src/components/QRCameraScanner.jsx 304  - 0.170 ms
+2026-03-21T13:43:46.429Z admin GET /api/rooms 304  - 16.890 ms
+2026-03-21T13:43:46.435Z admin GET /api/allocations 304  - 19.482 ms
+2026-03-21T13:43:46.437Z admin GET /api/complaints 304  - 17.587 ms
+2026-03-21T13:43:46.439Z admin GET /api/visitors 200 10948 - 16.899 ms
+2026-03-21T13:43:46.445Z admin GET /api/members 304  - 27.734 ms
+2026-03-21T13:43:46.446Z admin GET /api/fees 304  - 21.933 ms
+2026-03-21T13:43:46.457Z admin GET /api/complaints/categories 304  - 8.136 ms
+2026-03-21T13:43:46.460Z admin GET /api/maintenance 304  - 11.335 ms
+2026-03-21T13:43:46.460Z admin GET /api/fees/categories 304  - 9.820 ms
+2026-03-21T13:43:46.463Z admin GET /api/stats 200 215 - 10.679 ms
+2026-03-21T13:43:46.469Z admin GET /api/furniture 304  - 15.517 ms
+2026-03-21T13:43:46.471Z admin GET /api/scans 304  - 15.516 ms
+2026-03-21T13:43:46.473Z admin GET /api/rooms/types 304  - 8.360 ms
+2026-03-21T13:43:46.474Z admin GET /api/hostels 304  - 7.930 ms
+2026-03-21T13:43:53.476Z admin PATCH /api/visitors/41 200 21 - 5.547 ms
+2026-03-21T13:43:53.485Z admin GET /api/members 304  - 7.346 ms
+2026-03-21T13:43:53.488Z admin GET /api/rooms 304  - 8.793 ms
+2026-03-21T13:43:53.489Z admin GET /api/fees 304  - 5.803 ms
+2026-03-21T13:43:53.490Z admin GET /api/complaints 304  - 8.727 ms
+2026-03-21T13:43:53.491Z admin GET /api/visitors 200 10970 - 8.815 ms
+2026-03-21T13:43:53.493Z admin GET /api/allocations 304  - 13.099 ms
+2026-03-21T13:43:53.498Z admin GET /api/maintenance 304  - 11.534 ms
+2026-03-21T13:43:53.501Z admin GET /api/complaints/categories 304  - 7.434 ms
+2026-03-21T13:43:53.503Z admin GET /api/fees/categories 304  - 8.295 ms
+2026-03-21T13:43:53.504Z admin GET /api/stats 304  - 8.019 ms
+2026-03-21T13:43:53.507Z admin GET /api/furniture 304  - 8.442 ms
+2026-03-21T13:43:53.508Z admin GET /api/scans 304  - 7.495 ms
+2026-03-21T13:43:53.509Z admin GET /api/hostels 304  - 4.647 ms
+2026-03-21T13:43:53.510Z admin GET /api/rooms/types 304  - 1.638 ms
+2026-03-21T13:43:55.255Z admin PATCH /api/visitors/21 200 21 - 2.816 ms
+2026-03-21T13:43:55.269Z admin GET /api/members 304  - 12.353 ms
+2026-03-21T13:43:55.271Z admin GET /api/visitors 200 10992 - 6.753 ms
+2026-03-21T13:43:55.271Z admin GET /api/fees 304  - 6.685 ms
+2026-03-21T13:43:55.273Z admin GET /api/complaints 304  - 10.812 ms
+2026-03-21T13:43:55.275Z admin GET /api/rooms 304  - 15.374 ms
+2026-03-21T13:43:55.278Z admin GET /api/allocations 304  - 17.327 ms
+2026-03-21T13:43:55.292Z admin GET /api/complaints/categories 304  - 9.813 ms
+2026-03-21T13:43:55.294Z admin GET /api/maintenance 304  - 13.602 ms
+2026-03-21T13:43:55.298Z admin GET /api/furniture 304  - 10.428 ms
+2026-03-21T13:43:55.299Z admin GET /api/scans 304  - 10.019 ms
+2026-03-21T13:43:55.299Z admin GET /api/fees/categories 304  - 15.306 ms
+2026-03-21T13:43:55.300Z admin GET /api/stats 304  - 14.282 ms
+2026-03-21T13:43:55.307Z admin GET /api/hostels 304  - 2.688 ms
+2026-03-21T13:43:55.307Z admin GET /api/rooms/types 304  - 1.691 ms
+2026-03-21T13:45:15.868Z 2022047 POST /api/complaints 201 10 - 9.421 ms
+2026-03-21T13:45:15.889Z 2022047 GET /api/members/2022047 304  - 11.634 ms
+2026-03-21T13:45:15.892Z 2022047 GET /api/allocations/member/2022047 304  - 8.765 ms
+2026-03-21T13:45:15.892Z 2022047 GET /api/maintenance/member/2022047 304  - 4.678 ms
+2026-03-21T13:45:15.893Z 2022047 GET /api/visitors/member/2022047 200 274 - 7.757 ms
+2026-03-21T13:45:15.894Z 2022047 GET /api/fees/member/2022047 304  - 7.043 ms
+2026-03-21T13:45:15.895Z 2022047 GET /api/complaints/member/2022047 200 588 - 10.257 ms
+2026-03-21T13:45:15.900Z 2022047 GET /api/furniture/member/2022047 500 24 - 10.205 ms
+2026-03-21T13:45:15.901Z 2022047 GET /api/complaints/categories 304  - 3.942 ms
+2026-03-21T13:45:15.902Z 2022047 GET /api/fees/categories 304  - 3.550 ms
+2026-03-21T13:45:15.903Z 2022047 GET /api/hostels/wardens 304  - 3.413 ms
+2026-03-21T13:45:34.637Z anonymous GET /admin 304  - 7.392 ms
+2026-03-21T13:45:34.658Z anonymous GET /@vite/client 304  - 0.297 ms
+2026-03-21T13:45:34.659Z anonymous GET /src/main.jsx?t=1774100390773 304  - 0.233 ms
+2026-03-21T13:45:34.660Z anonymous GET /@react-refresh 304  - 0.126 ms
+2026-03-21T13:45:34.666Z anonymous GET /src/index.css?t=1774100390773 304  - 0.686 ms
+2026-03-21T13:45:34.668Z anonymous GET /src/App.jsx?t=1774100390773 304  - 0.491 ms
+2026-03-21T13:45:34.671Z anonymous GET /node_modules/vite/dist/client/env.mjs 304  - 0.201 ms
+2026-03-21T13:45:34.675Z anonymous GET /src/components/Login.jsx?t=1774100390773 304  - 2.051 ms
+2026-03-21T13:45:34.677Z anonymous GET /src/components/AdminDashboard.jsx 304  - 0.431 ms
+2026-03-21T13:45:34.678Z anonymous GET /src/components/MemberDashboard.jsx 304  - 0.096 ms
+2026-03-21T13:45:34.684Z anonymous GET /src/ThemeContext.jsx 304  - 0.745 ms
+2026-03-21T13:45:34.688Z anonymous GET /src/components/QRCameraScanner.jsx 304  - 0.226 ms
+2026-03-21T13:45:34.866Z admin GET /api/allocations 304  - 15.122 ms
+2026-03-21T13:45:34.872Z admin GET /api/members 304  - 13.970 ms
+2026-03-21T13:45:34.875Z admin GET /api/rooms 304  - 20.618 ms
+2026-03-21T13:45:34.877Z admin GET /api/complaints 200 31791 - 16.424 ms
+2026-03-21T13:45:34.880Z admin GET /api/visitors 304  - 18.147 ms
+2026-03-21T13:45:34.880Z admin GET /api/fees 304  - 18.023 ms
+2026-03-21T13:45:34.887Z admin GET /api/maintenance 304  - 9.030 ms
+2026-03-21T13:45:34.888Z admin GET /api/fees/categories 304  - 5.518 ms
+2026-03-21T13:45:34.888Z admin GET /api/stats 200 216 - 5.247 ms
+2026-03-21T13:45:34.889Z admin GET /api/complaints/categories 304  - 8.242 ms
+2026-03-21T13:45:34.894Z admin GET /api/furniture 304  - 9.667 ms
+2026-03-21T13:45:34.894Z admin GET /api/rooms/types 304  - 9.244 ms
+2026-03-21T13:45:34.895Z admin GET /api/scans 304  - 5.722 ms
+2026-03-21T13:45:34.896Z admin GET /api/hostels 304  - 5.370 ms
+2026-03-21T13:45:36.620Z anonymous POST /api/auth/logout 200 37 - 0.405 ms
+2026-03-21T13:45:39.887Z anonymous POST /api/auth/login 200 72 - 131.623 ms
+2026-03-21T13:45:39.924Z 2022047 GET /api/members/2022047 200 449 - 7.799 ms
+2026-03-21T13:45:39.925Z 2022047 GET /api/allocations/member/2022047 200 391 - 7.259 ms
+2026-03-21T13:45:39.926Z 2022047 GET /api/complaints/member/2022047 200 588 - 7.289 ms
+2026-03-21T13:45:39.927Z 2022047 GET /api/visitors/member/2022047 200 274 - 7.156 ms
+2026-03-21T13:45:39.927Z 2022047 GET /api/fees/member/2022047 200 2 - 5.317 ms
+2026-03-21T13:45:39.927Z 2022047 GET /api/maintenance/member/2022047 200 236 - 4.022 ms
+2026-03-21T13:45:39.932Z 2022047 GET /api/complaints/categories 304  - 3.784 ms
+2026-03-21T13:45:39.932Z 2022047 GET /api/furniture/member/2022047 500 24 - 2.857 ms
+2026-03-21T13:45:39.933Z 2022047 GET /api/hostels/wardens 304  - 2.042 ms
+2026-03-21T13:45:39.933Z 2022047 GET /api/fees/categories 304  - 2.900 ms
+2026-03-21T13:45:53.728Z anonymous POST /api/auth/login 200 72 - 128.531 ms
+2026-03-21T13:45:53.816Z 2022047 GET /api/members/2022047 304  - 1.197 ms
+2026-03-21T13:45:53.830Z 2022047 GET /api/allocations/member/2022047 304  - 1.051 ms
+2026-03-21T13:45:53.830Z 2022047 GET /api/furniture/member/2022047 500 24 - 2.289 ms
+2026-03-21T13:45:53.843Z 2022047 GET /api/complaints/member/2022047 200 588 - 1.249 ms
+2026-03-21T13:45:53.874Z 2022047 GET /api/visitors/member/2022047 200 274 - 1.710 ms
+2026-03-21T13:45:53.880Z 2022047 GET /api/fees/member/2022047 304  - 5.117 ms
+2026-03-21T13:45:53.881Z 2022047 GET /api/maintenance/member/2022047 200 236 - 5.050 ms
+2026-03-21T13:45:53.881Z 2022047 GET /api/hostels/wardens 304  - 4.388 ms
+2026-03-21T13:45:53.882Z 2022047 GET /api/complaints/categories 304  - 3.709 ms
+2026-03-21T13:45:53.882Z 2022047 GET /api/fees/categories 304  - 3.013 ms
+2026-03-21T13:46:26.608Z anonymous POST /api/auth/logout 200 37 - 1.185 ms
+2026-03-21T13:46:33.934Z anonymous POST /api/auth/login 200 63 - 129.294 ms
+2026-03-21T13:46:33.959Z admin GET /api/complaints 200 31791 - 9.355 ms
+2026-03-21T13:46:33.962Z admin GET /api/visitors 200 10992 - 8.536 ms
+2026-03-21T13:46:33.962Z admin GET /api/fees 304  - 4.762 ms
+2026-03-21T13:46:33.964Z admin GET /api/rooms 304  - 8.011 ms
+2026-03-21T13:46:33.967Z admin GET /api/members 304  - 10.258 ms
+2026-03-21T13:46:33.970Z admin GET /api/allocations 304  - 15.385 ms
+2026-03-21T13:46:33.979Z admin GET /api/maintenance 304  - 7.863 ms
+2026-03-21T13:46:33.980Z admin GET /api/fees/categories 304  - 6.070 ms
+2026-03-21T13:46:33.983Z admin GET /api/furniture 304  - 6.950 ms
+2026-03-21T13:46:33.985Z admin GET /api/scans 304  - 7.868 ms
+2026-03-21T13:46:33.985Z admin GET /api/complaints/categories 304  - 13.041 ms
+2026-03-21T13:46:33.986Z admin GET /api/stats 200 216 - 11.783 ms
+2026-03-21T13:46:33.989Z admin GET /api/rooms/types 304  - 1.925 ms
+2026-03-21T13:46:33.990Z admin GET /api/hostels 304  - 1.942 ms
+2026-03-21T13:46:46.259Z admin POST /api/scans/gate 200 100 - 5.184 ms
+2026-03-21T13:46:46.273Z admin GET /api/members 304  - 10.665 ms
+2026-03-21T13:46:46.277Z admin GET /api/rooms 304  - 11.070 ms
+2026-03-21T13:46:46.278Z admin GET /api/maintenance 304  - 8.370 ms
+2026-03-21T13:46:46.278Z admin GET /api/fees 304  - 10.456 ms
+2026-03-21T13:46:46.280Z admin GET /api/complaints 304  - 11.620 ms
+2026-03-21T13:46:46.284Z admin GET /api/allocations 304  - 16.742 ms
+2026-03-21T13:46:46.289Z admin GET /api/visitors 304  - 15.051 ms
+2026-03-21T13:46:46.293Z admin GET /api/complaints/categories 304  - 7.142 ms
+2026-03-21T13:46:46.293Z admin GET /api/fees/categories 304  - 5.235 ms
+2026-03-21T13:46:46.297Z admin GET /api/furniture 304  - 5.076 ms
+2026-03-21T13:46:46.298Z admin GET /api/scans 200 12533 - 5.493 ms
+2026-03-21T13:46:46.299Z admin GET /api/stats 304  - 7.638 ms
+2026-03-21T13:46:46.301Z admin GET /api/hostels 304  - 7.099 ms
+2026-03-21T13:46:46.302Z admin GET /api/rooms/types 304  - 1.607 ms
+2026-03-21T13:46:52.687Z admin POST /api/scans/maintenance 200 110 - 7.454 ms
+2026-03-21T13:46:52.704Z admin GET /api/members 304  - 10.625 ms
+2026-03-21T13:46:52.708Z admin GET /api/rooms 304  - 11.068 ms
+2026-03-21T13:46:52.708Z admin GET /api/fees 304  - 7.891 ms
+2026-03-21T13:46:52.711Z admin GET /api/complaints 200 31810 - 12.278 ms
+2026-03-21T13:46:52.712Z admin GET /api/visitors 304  - 12.630 ms
+2026-03-21T13:46:52.715Z admin GET /api/allocations 304  - 17.218 ms
+2026-03-21T13:46:52.721Z admin GET /api/maintenance 304  - 15.659 ms
+2026-03-21T13:46:52.726Z admin GET /api/complaints/categories 304  - 8.702 ms
+2026-03-21T13:46:52.728Z admin GET /api/fees/categories 304  - 5.648 ms
+2026-03-21T13:46:52.730Z admin GET /api/furniture 304  - 6.456 ms
+2026-03-21T13:46:52.732Z admin GET /api/scans 200 12752 - 6.867 ms
+2026-03-21T13:46:52.733Z admin GET /api/stats 200 216 - 9.176 ms
+2026-03-21T13:46:52.735Z admin GET /api/hostels 304  - 8.394 ms
+2026-03-21T13:46:52.736Z admin GET /api/rooms/types 304  - 1.851 ms
+2026-03-21T13:47:45.536Z admin PATCH /api/maintenance/1 200 21 - 7.037 ms
+2026-03-21T13:47:45.558Z admin GET /api/members 304  - 12.560 ms
+2026-03-21T13:47:45.562Z admin GET /api/rooms 304  - 11.540 ms
+2026-03-21T13:47:45.563Z admin GET /api/fees 304  - 8.015 ms
+2026-03-21T13:47:45.564Z admin GET /api/complaints 304  - 11.706 ms
+2026-03-21T13:47:45.565Z admin GET /api/visitors 304  - 11.677 ms
+2026-03-21T13:47:45.568Z admin GET /api/allocations 304  - 17.209 ms
+2026-03-21T13:47:45.573Z admin GET /api/maintenance 200 12574 - 13.904 ms
+2026-03-21T13:47:45.577Z admin GET /api/complaints/categories 304  - 7.807 ms
+2026-03-21T13:47:45.578Z admin GET /api/fees/categories 304  - 6.903 ms
+2026-03-21T13:47:45.581Z admin GET /api/furniture 304  - 6.005 ms
+2026-03-21T13:47:45.582Z admin GET /api/scans 304  - 6.031 ms
+2026-03-21T13:47:45.583Z admin GET /api/stats 304  - 9.424 ms
+2026-03-21T13:47:45.585Z admin GET /api/hostels 304  - 5.905 ms
+2026-03-21T13:47:45.586Z admin GET /api/rooms/types 304  - 2.040 ms
+2026-03-21T13:48:11.708Z admin DELETE /api/members/2021018 200 43 - 16.913 ms
+2026-03-21T13:48:11.843Z admin GET /api/members 200 67537 - 12.666 ms
+2026-03-21T13:48:11.848Z admin GET /api/rooms 304  - 14.500 ms
+2026-03-21T13:48:11.852Z admin GET /api/allocations 200 61214 - 16.505 ms
+2026-03-21T13:48:11.855Z admin GET /api/complaints 200 31488 - 17.067 ms
+2026-03-21T13:48:11.857Z admin GET /api/fees 304  - 16.810 ms
+2026-03-21T13:48:11.858Z admin GET /api/visitors 200 10725 - 17.591 ms
+2026-03-21T13:48:11.871Z admin GET /api/maintenance 200 12323 - 12.043 ms
+2026-03-21T13:48:11.873Z admin GET /api/complaints/categories 304  - 10.808 ms
+2026-03-21T13:48:11.875Z admin GET /api/furniture 304  - 7.954 ms
+2026-03-21T13:48:11.876Z admin GET /api/scans 200 12555 - 8.285 ms
+2026-03-21T13:48:11.877Z admin GET /api/fees/categories 304  - 12.662 ms
+2026-03-21T13:48:11.878Z admin GET /api/stats 200 215 - 11.592 ms
+2026-03-21T13:48:11.882Z admin GET /api/hostels 304  - 2.554 ms
+2026-03-21T13:48:11.882Z admin GET /api/rooms/types 304  - 1.900 ms
+2026-03-21T13:48:13.534Z anonymous GET /admin 304  - 7.830 ms
+2026-03-21T13:48:13.569Z anonymous GET /@react-refresh 304  - 0.297 ms
+2026-03-21T13:48:13.571Z anonymous GET /src/main.jsx?t=1774100390773 304  - 0.398 ms
+2026-03-21T13:48:13.572Z anonymous GET /@vite/client 304  - 0.244 ms
+2026-03-21T13:48:13.579Z anonymous GET /src/index.css?t=1774100390773 304  - 1.195 ms
+2026-03-21T13:48:13.582Z anonymous GET /src/App.jsx?t=1774100390773 304  - 0.419 ms
+2026-03-21T13:48:13.584Z anonymous GET /node_modules/vite/dist/client/env.mjs 304  - 0.164 ms
+2026-03-21T13:48:13.588Z anonymous GET /src/components/AdminDashboard.jsx 304  - 0.223 ms
+2026-03-21T13:48:13.590Z anonymous GET /src/components/Login.jsx?t=1774100390773 304  - 0.523 ms
+2026-03-21T13:48:13.591Z anonymous GET /src/components/MemberDashboard.jsx 304  - 0.515 ms
+2026-03-21T13:48:13.594Z anonymous GET /src/ThemeContext.jsx 304  - 0.359 ms
+2026-03-21T13:48:13.600Z anonymous GET /src/components/QRCameraScanner.jsx 304  - 0.239 ms
+2026-03-21T13:48:13.816Z admin GET /api/complaints 304  - 9.717 ms
+2026-03-21T13:48:13.819Z admin GET /api/allocations 304  - 17.350 ms
+2026-03-21T13:48:13.821Z admin GET /api/visitors 304  - 10.538 ms
+2026-03-21T13:48:13.824Z admin GET /api/rooms 304  - 23.886 ms
+2026-03-21T13:48:13.825Z admin GET /api/fees 304  - 17.042 ms
+2026-03-21T13:48:13.828Z admin GET /api/members 304  - 24.408 ms
+2026-03-21T13:48:13.838Z admin GET /api/maintenance 304  - 8.325 ms
+2026-03-21T13:48:13.839Z admin GET /api/complaints/categories 304  - 8.021 ms
+2026-03-21T13:48:13.840Z admin GET /api/fees/categories 304  - 8.501 ms
+2026-03-21T13:48:13.843Z admin GET /api/furniture 304  - 9.337 ms
+2026-03-21T13:48:13.844Z admin GET /api/scans 304  - 8.954 ms
+2026-03-21T13:48:13.844Z admin GET /api/stats 304  - 11.846 ms
+2026-03-21T13:48:13.849Z admin GET /api/hostels 304  - 2.297 ms
+2026-03-21T13:48:13.850Z admin GET /api/rooms/types 304  - 1.884 ms
+2026-03-21T13:48:49.274Z anonymous POST /api/auth/logout 200 37 - 1.566 ms
+2026-03-21T13:48:59.849Z anonymous POST /api/auth/login 200 72 - 127.159 ms
+2026-03-21T13:48:59.880Z 2022027 GET /api/members/2022027 200 462 - 10.220 ms
+2026-03-21T13:48:59.881Z 2022027 GET /api/allocations/member/2022027 200 394 - 8.761 ms
+2026-03-21T13:48:59.882Z 2022027 GET /api/maintenance/member/2022027 200 221 - 3.542 ms
+2026-03-21T13:48:59.882Z 2022027 GET /api/visitors/member/2022027 200 240 - 5.433 ms
+2026-03-21T13:48:59.882Z 2022027 GET /api/fees/member/2022027 200 2 - 4.838 ms
+2026-03-21T13:48:59.883Z 2022027 GET /api/complaints/member/2022027 200 297 - 7.774 ms
+2026-03-21T13:48:59.887Z 2022027 GET /api/furniture/member/2022027 500 24 - 3.761 ms
+2026-03-21T13:48:59.888Z 2022027 GET /api/complaints/categories 304  - 3.487 ms
+2026-03-21T13:48:59.888Z 2022027 GET /api/fees/categories 304  - 3.048 ms
+2026-03-21T13:48:59.889Z 2022027 GET /api/hostels/wardens 304  - 2.725 ms
+2026-03-21T13:49:41.382Z admin POST /api/scans/gate 200 108 - 5.921 ms
+2026-03-21T13:49:41.401Z admin GET /api/allocations 304  - 12.987 ms
+2026-03-21T13:49:41.404Z admin GET /api/rooms 304  - 12.346 ms
+2026-03-21T13:49:41.405Z admin GET /api/fees 304  - 7.735 ms
+2026-03-21T13:49:41.408Z admin GET /api/complaints 304  - 12.668 ms
+2026-03-21T13:49:41.410Z admin GET /api/visitors 304  - 13.737 ms
+2026-03-21T13:49:41.414Z admin GET /api/members 304  - 19.085 ms
+2026-03-21T13:49:41.419Z admin GET /api/maintenance 304  - 17.135 ms
+2026-03-21T13:49:41.422Z admin GET /api/complaints/categories 304  - 7.392 ms
+2026-03-21T13:49:41.423Z admin GET /api/fees/categories 304  - 6.529 ms
+2026-03-21T13:49:41.425Z admin GET /api/stats 304  - 7.805 ms
+2026-03-21T13:49:41.427Z admin GET /api/furniture 304  - 7.611 ms
+2026-03-21T13:49:41.430Z admin GET /api/scans 200 12754 - 8.696 ms
+2026-03-21T13:49:41.431Z admin GET /api/hostels 304  - 6.958 ms
+2026-03-21T13:49:41.431Z admin GET /api/rooms/types 304  - 3.235 ms
+2026-03-21T13:49:49.499Z admin POST /api/scans/maintenance 200 116 - 3.911 ms
+2026-03-21T13:49:49.512Z admin GET /api/members 304  - 8.964 ms
+2026-03-21T13:49:49.516Z admin GET /api/rooms 304  - 10.297 ms
+2026-03-21T13:49:49.519Z admin GET /api/allocations 304  - 11.608 ms
+2026-03-21T13:49:49.521Z admin GET /api/complaints 200 31507 - 13.308 ms
+2026-03-21T13:49:49.524Z admin GET /api/visitors 304  - 14.554 ms
+2026-03-21T13:49:49.529Z admin GET /api/fees 304  - 15.298 ms
+2026-03-21T13:49:49.531Z admin GET /api/maintenance 200 12338 - 11.996 ms
+2026-03-21T13:49:49.532Z admin GET /api/complaints/categories 304  - 6.939 ms
+2026-03-21T13:49:49.533Z admin GET /api/fees/categories 304  - 5.573 ms
+2026-03-21T13:49:49.535Z admin GET /api/stats 200 215 - 5.599 ms
+2026-03-21T13:49:49.540Z admin GET /api/furniture 304  - 9.457 ms
+2026-03-21T13:49:49.541Z admin GET /api/scans 200 12973 - 7.695 ms
+2026-03-21T13:49:49.542Z admin GET /api/hostels 304  - 6.450 ms
+2026-03-21T13:49:49.543Z admin GET /api/rooms/types 304  - 5.957 ms
+2026-03-21T13:49:59.889Z admin PATCH /api/maintenance/43 200 21 - 3.786 ms
+2026-03-21T13:49:59.903Z admin GET /api/members 304  - 10.793 ms
+2026-03-21T13:49:59.906Z admin GET /api/rooms 304  - 11.963 ms
+2026-03-21T13:49:59.907Z admin GET /api/fees 304  - 6.551 ms
+2026-03-21T13:49:59.908Z admin GET /api/complaints 304  - 10.316 ms
+2026-03-21T13:49:59.909Z admin GET /api/visitors 304  - 9.695 ms
+2026-03-21T13:49:59.913Z admin GET /api/allocations 304  - 15.859 ms
+2026-03-21T13:49:59.916Z admin GET /api/maintenance 200 12342 - 12.303 ms
+2026-03-21T13:49:59.919Z admin GET /api/complaints/categories 304  - 5.027 ms
+2026-03-21T13:49:59.919Z admin GET /api/fees/categories 304  - 4.588 ms
+2026-03-21T13:49:59.923Z admin GET /api/furniture 304  - 5.712 ms
+2026-03-21T13:49:59.925Z admin GET /api/scans 304  - 6.847 ms
+2026-03-21T13:49:59.926Z admin GET /api/stats 200 215 - 9.438 ms
+2026-03-21T13:49:59.930Z admin GET /api/hostels 304  - 9.988 ms
+2026-03-21T13:49:59.931Z admin GET /api/rooms/types 304  - 2.711 ms
+2026-03-21T13:51:16.868Z anonymous POST /api/auth/logout 200 37 - 9.093 ms
+2026-03-21T13:51:18.785Z anonymous POST /api/auth/login 200 72 - 150.664 ms
+2026-03-21T13:51:18.807Z 2022047 GET /api/members/2022047 304  - 9.578 ms
+2026-03-21T13:51:18.808Z 2022047 GET /api/allocations/member/2022047 304  - 6.127 ms
+2026-03-21T13:51:18.809Z 2022047 GET /api/complaints/member/2022047 200 607 - 5.737 ms
+2026-03-21T13:51:18.812Z 2022047 GET /api/visitors/member/2022047 304  - 4.673 ms
+2026-03-21T13:51:18.813Z 2022047 GET /api/fees/member/2022047 304  - 7.210 ms
+2026-03-21T13:51:18.813Z 2022047 GET /api/complaints/categories 304  - 7.228 ms
+2026-03-21T13:51:18.817Z 2022047 GET /api/fees/categories 304  - 3.256 ms
+2026-03-21T13:51:18.818Z 2022047 GET /api/maintenance/member/2022047 304  - 2.972 ms
+2026-03-21T13:51:18.819Z 2022047 GET /api/hostels/wardens 304  - 2.660 ms
+2026-03-21T13:51:18.820Z 2022047 GET /api/furniture/member/2022047 500 24 - 4.045 ms
+2026-03-21T13:51:23.623Z anonymous POST /api/auth/logout 200 37 - 0.739 ms
+2026-03-21T13:51:25.669Z anonymous POST /api/auth/login 200 63 - 130.257 ms
+2026-03-21T13:51:25.696Z admin GET /api/rooms 304  - 7.393 ms
+2026-03-21T13:51:25.700Z admin GET /api/allocations 200 61214 - 8.993 ms
+2026-03-21T13:51:25.703Z admin GET /api/members 200 67537 - 10.493 ms
+2026-03-21T13:51:25.704Z admin GET /api/visitors 200 10725 - 10.050 ms
+2026-03-21T13:51:25.705Z admin GET /api/fees 304  - 10.011 ms
+2026-03-21T13:51:25.707Z admin GET /api/complaints 200 31507 - 13.283 ms
+2026-03-21T13:51:25.708Z admin GET /api/maintenance 200 12342 - 10.855 ms
+2026-03-21T13:51:25.717Z admin GET /api/complaints/categories 304  - 7.757 ms
+2026-03-21T13:51:25.718Z admin GET /api/fees/categories 304  - 6.810 ms
+2026-03-21T13:51:25.719Z admin GET /api/stats 200 215 - 7.191 ms
+2026-03-21T13:51:25.722Z admin GET /api/furniture 304  - 8.958 ms
+2026-03-21T13:51:25.724Z admin GET /api/scans 200 12973 - 10.361 ms
+2026-03-21T13:51:25.725Z admin GET /api/hostels 304  - 10.027 ms
+2026-03-21T13:51:25.726Z admin GET /api/rooms/types 304  - 3.206 ms
+2026-03-21T13:53:41.642Z anonymous POST /api/auth/logout 200 37 - 1.411 ms
+2026-03-21T13:53:53.085Z anonymous POST /api/auth/login 200 63 - 130.744 ms
+2026-03-21T13:53:53.113Z admin GET /api/rooms 304  - 8.430 ms
+2026-03-21T13:53:53.117Z admin GET /api/allocations 304  - 9.636 ms
+2026-03-21T13:53:53.120Z admin GET /api/members 304  - 11.855 ms
+2026-03-21T13:53:53.121Z admin GET /api/fees 304  - 10.297 ms
+2026-03-21T13:53:53.122Z admin GET /api/visitors 304  - 10.509 ms
+2026-03-21T13:53:53.123Z admin GET /api/complaints 304  - 14.002 ms
+2026-03-21T13:53:53.124Z admin GET /api/maintenance 304  - 9.842 ms
+2026-03-21T13:53:53.130Z admin GET /api/complaints/categories 304  - 5.701 ms
+2026-03-21T13:53:53.130Z admin GET /api/fees/categories 304  - 5.016 ms
+2026-03-21T13:53:53.131Z admin GET /api/stats 304  - 5.060 ms
+2026-03-21T13:53:53.133Z admin GET /api/furniture 304  - 6.000 ms
+2026-03-21T13:53:53.135Z admin GET /api/scans 304  - 6.353 ms
+2026-03-21T13:53:53.135Z admin GET /api/hostels 304  - 6.270 ms
+2026-03-21T13:53:53.136Z admin GET /api/rooms/types 304  - 2.437 ms
+2026-03-21T13:54:29.633Z 2022047 GET /api/furniture/member/2022047 500 24 - 21.765 ms
+2026-03-21T13:54:29.636Z 2022047 GET /api/allocations/member/2022047 304  - 17.428 ms
+2026-03-21T13:54:29.637Z 2022047 GET /api/fees/member/2022047 304  - 14.809 ms
+2026-03-21T13:54:29.638Z 2022047 GET /api/complaints/member/2022047 304  - 18.369 ms
+2026-03-21T13:54:29.639Z 2022047 GET /api/visitors/member/2022047 304  - 18.496 ms
+2026-03-21T13:54:29.640Z 2022047 GET /api/members/2022047 304  - 22.971 ms
+2026-03-21T13:54:29.645Z 2022047 GET /api/maintenance/member/2022047 304  - 4.950 ms
+2026-03-21T13:54:29.646Z 2022047 GET /api/complaints/categories 304  - 3.682 ms
+2026-03-21T13:54:29.647Z 2022047 GET /api/fees/categories 304  - 3.193 ms
+2026-03-21T13:54:29.647Z 2022047 GET /api/hostels/wardens 304  - 2.733 ms
+2026-03-21T13:56:05.152Z admin PATCH /api/maintenance/2 200 21 - 8.809 ms
+2026-03-21T13:56:05.174Z admin GET /api/rooms 304  - 14.935 ms
+2026-03-21T13:56:05.180Z admin GET /api/allocations 304  - 16.063 ms
+2026-03-21T13:56:05.181Z admin GET /api/fees 304  - 11.366 ms
+2026-03-21T13:56:05.183Z admin GET /api/complaints 304  - 15.657 ms
+2026-03-21T13:56:05.184Z admin GET /api/visitors 304  - 15.496 ms
+2026-03-21T13:56:05.188Z admin GET /api/members 304  - 22.207 ms
+2026-03-21T13:56:05.195Z admin GET /api/maintenance 200 12354 - 19.457 ms
+2026-03-21T13:56:05.200Z admin GET /api/complaints/categories 304  - 11.221 ms
+2026-03-21T13:56:05.201Z admin GET /api/fees/categories 304  - 9.508 ms
+2026-03-21T13:56:05.206Z admin GET /api/furniture 304  - 8.002 ms
+2026-03-21T13:56:05.208Z admin GET /api/scans 304  - 8.392 ms
+2026-03-21T13:56:05.208Z admin GET /api/stats 200 215 - 11.237 ms
+2026-03-21T13:56:05.209Z admin GET /api/hostels 304  - 7.513 ms
+2026-03-21T13:56:05.210Z admin GET /api/rooms/types 304  - 6.382 ms
+2026-03-21T13:56:31.548Z admin PATCH /api/maintenance/10 200 21 - 7.185 ms
+2026-03-21T13:56:31.563Z admin GET /api/rooms 304  - 8.673 ms
+2026-03-21T13:56:31.569Z admin GET /api/allocations 304  - 12.902 ms
+2026-03-21T13:56:31.570Z admin GET /api/fees 304  - 9.829 ms
+2026-03-21T13:56:31.571Z admin GET /api/complaints 304  - 13.369 ms
+2026-03-21T13:56:31.573Z admin GET /api/visitors 304  - 14.476 ms
+2026-03-21T13:56:31.578Z admin GET /api/members 304  - 20.461 ms
+2026-03-21T13:56:31.581Z admin GET /api/maintenance 200 12379 - 16.086 ms
+2026-03-21T13:56:31.585Z admin GET /api/complaints/categories 304  - 6.847 ms
+2026-03-21T13:56:31.586Z admin GET /api/fees/categories 304  - 5.684 ms
+2026-03-21T13:56:31.590Z admin GET /api/furniture 304  - 5.800 ms
+2026-03-21T13:56:31.590Z admin GET /api/stats 200 215 - 7.868 ms
+2026-03-21T13:56:31.592Z admin GET /api/hostels 304  - 7.406 ms
+2026-03-21T13:56:31.593Z admin GET /api/scans 304  - 6.126 ms
+2026-03-21T13:56:31.593Z admin GET /api/rooms/types 304  - 2.337 ms
+2026-03-21T13:57:00.716Z admin PATCH /api/maintenance/21 200 21 - 6.325 ms
+2026-03-21T13:57:00.740Z admin GET /api/rooms 304  - 16.722 ms
+2026-03-21T13:57:00.745Z admin GET /api/allocations 304  - 13.953 ms
+2026-03-21T13:57:00.746Z admin GET /api/fees 304  - 9.563 ms
+2026-03-21T13:57:00.747Z admin GET /api/visitors 304  - 12.155 ms
+2026-03-21T13:57:00.752Z admin GET /api/members 304  - 19.161 ms
+2026-03-21T13:57:00.755Z admin GET /api/complaints 304  - 20.432 ms
+2026-03-21T13:57:00.759Z admin GET /api/maintenance 200 12392 - 18.711 ms
+2026-03-21T13:57:00.765Z admin GET /api/complaints/categories 304  - 9.546 ms
+2026-03-21T13:57:00.767Z admin GET /api/fees/categories 304  - 5.193 ms
+2026-03-21T13:57:00.769Z admin GET /api/furniture 304  - 5.044 ms
+2026-03-21T13:57:00.770Z admin GET /api/scans 304  - 4.974 ms
+2026-03-21T13:57:00.770Z admin GET /api/stats 200 215 - 7.215 ms
+2026-03-21T13:57:00.774Z admin GET /api/hostels 304  - 7.934 ms
+2026-03-21T13:57:00.775Z admin GET /api/rooms/types 304  - 2.253 ms
+2026-03-21T13:57:23.612Z admin PATCH /api/maintenance/22 200 21 - 5.701 ms
+2026-03-21T13:57:23.628Z admin GET /api/members 304  - 12.697 ms
+2026-03-21T13:57:23.633Z admin GET /api/allocations 304  - 13.190 ms
+2026-03-21T13:57:23.635Z admin GET /api/rooms 304  - 16.635 ms
+2026-03-21T13:57:23.638Z admin GET /api/complaints 304  - 16.915 ms
+2026-03-21T13:57:23.639Z admin GET /api/visitors 304  - 16.736 ms
+2026-03-21T13:57:23.640Z admin GET /api/fees 304  - 16.051 ms
+2026-03-21T13:57:23.644Z admin GET /api/maintenance 200 12415 - 14.172 ms
+2026-03-21T13:57:23.650Z admin GET /api/complaints/categories 304  - 9.080 ms
+2026-03-21T13:57:23.650Z admin GET /api/fees/categories 304  - 5.340 ms
+2026-03-21T13:57:23.653Z admin GET /api/furniture 304  - 5.255 ms
+2026-03-21T13:57:23.654Z admin GET /api/scans 304  - 5.345 ms
+2026-03-21T13:57:23.654Z admin GET /api/stats 200 215 - 7.389 ms
+2026-03-21T13:57:23.656Z admin GET /api/hostels 304  - 6.663 ms
+2026-03-21T13:57:23.656Z admin GET /api/rooms/types 304  - 2.018 ms
+2026-03-21T13:58:03.741Z admin POST /api/fees 201 8 - 12.997 ms
+2026-03-21T13:58:03.759Z admin GET /api/members 304  - 10.278 ms
+2026-03-21T13:58:03.763Z admin GET /api/allocations 304  - 11.642 ms
+2026-03-21T13:58:03.765Z admin GET /api/visitors 304  - 8.516 ms
+2026-03-21T13:58:03.766Z admin GET /api/complaints 304  - 12.256 ms
+2026-03-21T13:58:03.767Z admin GET /api/fees 200 379 - 11.709 ms
+2026-03-21T13:58:03.768Z admin GET /api/rooms 304  - 15.606 ms
+2026-03-21T13:58:03.771Z admin GET /api/maintenance 304  - 10.932 ms
+2026-03-21T13:58:03.779Z admin GET /api/complaints/categories 304  - 10.327 ms
+2026-03-21T13:58:03.782Z admin GET /api/fees/categories 304  - 10.368 ms
+2026-03-21T13:58:03.785Z admin GET /api/furniture 304  - 10.045 ms
+2026-03-21T13:58:03.786Z admin GET /api/stats 304  - 12.591 ms
+2026-03-21T13:58:03.788Z admin GET /api/scans 304  - 10.451 ms
+2026-03-21T13:58:03.789Z admin GET /api/hostels 304  - 8.476 ms
+2026-03-21T13:58:03.789Z admin GET /api/rooms/types 304  - 2.971 ms
+2026-03-21T13:58:16.309Z admin POST /api/fees 201 8 - 5.343 ms
+2026-03-21T13:58:16.321Z admin GET /api/members 304  - 8.771 ms
+2026-03-21T13:58:16.324Z admin GET /api/rooms 304  - 9.329 ms
+2026-03-21T13:58:16.325Z admin GET /api/visitors 304  - 6.636 ms
+2026-03-21T13:58:16.326Z admin GET /api/complaints 304  - 9.275 ms
+2026-03-21T13:58:16.327Z admin GET /api/fees 200 572 - 9.030 ms
+2026-03-21T13:58:16.329Z admin GET /api/allocations 304  - 13.219 ms
+2026-03-21T13:58:16.334Z admin GET /api/maintenance 304  - 11.734 ms
+2026-03-21T13:58:16.336Z admin GET /api/complaints/categories 304  - 6.172 ms
+2026-03-21T13:58:16.337Z admin GET /api/fees/categories 304  - 5.418 ms
+2026-03-21T13:58:16.339Z admin GET /api/stats 304  - 6.016 ms
+2026-03-21T13:58:16.341Z admin GET /api/furniture 304  - 6.677 ms
+2026-03-21T13:58:16.343Z admin GET /api/scans 304  - 7.362 ms
+2026-03-21T13:58:16.345Z admin GET /api/hostels 304  - 7.144 ms
+2026-03-21T13:58:16.345Z admin GET /api/rooms/types 304  - 1.803 ms
+2026-03-21T13:58:56.998Z admin PATCH /api/maintenance/44 200 21 - 5.476 ms
+2026-03-21T13:58:57.013Z admin GET /api/members 304  - 11.006 ms
+2026-03-21T13:58:57.016Z admin GET /api/rooms 304  - 11.865 ms
+2026-03-21T13:58:57.017Z admin GET /api/fees 304  - 7.881 ms
+2026-03-21T13:58:57.019Z admin GET /api/complaints 304  - 11.616 ms
+2026-03-21T13:58:57.019Z admin GET /api/visitors 304  - 11.618 ms
+2026-03-21T13:58:57.023Z admin GET /api/allocations 304  - 16.880 ms
+2026-03-21T13:58:57.031Z admin GET /api/maintenance 200 12440 - 17.389 ms
+2026-03-21T13:58:57.034Z admin GET /api/complaints/categories 304  - 10.605 ms
+2026-03-21T13:58:57.035Z admin GET /api/fees/categories 304  - 9.737 ms
+2026-03-21T13:58:57.036Z admin GET /api/stats 200 214 - 7.891 ms
+2026-03-21T13:58:57.039Z admin GET /api/furniture 304  - 7.425 ms
+2026-03-21T13:58:57.042Z admin GET /api/scans 304  - 8.588 ms
+2026-03-21T13:58:57.043Z admin GET /api/hostels 304  - 6.182 ms
+2026-03-21T13:58:57.044Z admin GET /api/rooms/types 304  - 3.436 ms
+2026-03-21T14:00:03.781Z admin PATCH /api/maintenance/8 200 21 - 7.179 ms
+2026-03-21T14:00:03.797Z admin GET /api/members 304  - 10.864 ms
+2026-03-21T14:00:03.800Z admin GET /api/rooms 304  - 10.868 ms
+2026-03-21T14:00:03.803Z admin GET /api/allocations 304  - 12.980 ms
+2026-03-21T14:00:03.805Z admin GET /api/visitors 304  - 12.039 ms
+2026-03-21T14:00:03.805Z admin GET /api/fees 304  - 11.690 ms
+2026-03-21T14:00:03.806Z admin GET /api/complaints 304  - 15.027 ms
+2026-03-21T14:00:03.809Z admin GET /api/maintenance 200 12459 - 10.671 ms
+2026-03-21T14:00:03.817Z admin GET /api/complaints/categories 304  - 7.112 ms
+2026-03-21T14:00:03.817Z admin GET /api/fees/categories 304  - 4.716 ms
+2026-03-21T14:00:03.819Z admin GET /api/furniture 304  - 5.039 ms
+2026-03-21T14:00:03.820Z admin GET /api/scans 304  - 5.052 ms
+2026-03-21T14:00:03.821Z admin GET /api/stats 200 214 - 7.155 ms
+2026-03-21T14:00:03.823Z admin GET /api/hostels 304  - 6.556 ms
+2026-03-21T14:00:03.823Z admin GET /api/rooms/types 304  - 1.458 ms
+2026-03-21T14:03:33.114Z 2022047 POST /api/complaints 201 10 - 7.206 ms
+2026-03-21T14:03:33.129Z 2022047 GET /api/members/2022047 304  - 6.867 ms
+2026-03-21T14:03:33.131Z 2022047 GET /api/allocations/member/2022047 304  - 7.620 ms
+2026-03-21T14:03:33.132Z 2022047 GET /api/maintenance/member/2022047 304  - 4.780 ms
+2026-03-21T14:03:33.132Z 2022047 GET /api/visitors/member/2022047 304  - 7.188 ms
+2026-03-21T14:03:33.133Z 2022047 GET /api/fees/member/2022047 304  - 6.588 ms
+2026-03-21T14:03:33.133Z 2022047 GET /api/complaints/member/2022047 200 897 - 8.940 ms
+2026-03-21T14:03:33.137Z 2022047 GET /api/complaints/categories 304  - 7.401 ms
+2026-03-21T14:03:33.138Z 2022047 GET /api/fees/categories 304  - 3.946 ms
+2026-03-21T14:03:33.139Z 2022047 GET /api/hostels/wardens 304  - 2.117 ms
+2026-03-21T14:03:33.139Z 2022047 GET /api/furniture/member/2022047 500 24 - 4.516 ms
+2026-03-21T14:03:42.757Z anonymous POST /api/auth/logout 200 37 - 0.680 ms
+2026-03-21T14:03:47.969Z anonymous POST /api/auth/login 200 63 - 130.669 ms
+2026-03-21T14:03:47.996Z admin GET /api/complaints 200 31822 - 6.851 ms
+2026-03-21T14:03:48.000Z admin GET /api/allocations 304  - 8.642 ms
+2026-03-21T14:03:48.000Z admin GET /api/fees 200 572 - 6.110 ms
+2026-03-21T14:03:48.002Z admin GET /api/visitors 304  - 8.720 ms
+2026-03-21T14:03:48.004Z admin GET /api/members 304  - 10.818 ms
+2026-03-21T14:03:48.006Z admin GET /api/rooms 304  - 13.923 ms
+2026-03-21T14:03:48.013Z admin GET /api/complaints/categories 304  - 16.307 ms
+2026-03-21T14:03:48.024Z admin GET /api/maintenance 200 12459 - 15.295 ms
+2026-03-21T14:03:48.025Z admin GET /api/fees/categories 304  - 13.779 ms
+2026-03-21T14:03:48.032Z admin GET /api/furniture 304  - 14.568 ms
+2026-03-21T14:03:48.032Z admin GET /api/stats 200 215 - 17.940 ms
+2026-03-21T14:03:48.036Z admin GET /api/hostels 304  - 16.420 ms
+2026-03-21T14:03:48.046Z admin GET /api/scans 304  - 18.603 ms
+2026-03-21T14:03:48.048Z admin GET /api/rooms/types 304  - 14.543 ms
+2026-03-21T14:03:58.036Z admin GET /api/members 304  - 10.237 ms
+2026-03-21T14:03:58.038Z admin GET /api/rooms 304  - 10.563 ms
+2026-03-21T14:03:58.041Z admin GET /api/allocations 304  - 12.545 ms
+2026-03-21T14:03:58.043Z admin GET /api/complaints 304  - 12.889 ms
+2026-03-21T14:03:58.047Z admin GET /api/visitors 304  - 15.178 ms
+2026-03-21T14:03:58.047Z admin GET /api/fees 304  - 14.199 ms
+2026-03-21T14:03:58.050Z admin GET /api/complaints/categories 304  - 11.555 ms
+2026-03-21T14:03:58.050Z admin GET /api/fees/categories 304  - 4.843 ms
+2026-03-21T14:03:58.053Z admin GET /api/maintenance 304  - 4.798 ms
+2026-03-21T14:03:58.053Z admin GET /api/stats 304  - 4.174 ms
+2026-03-21T14:03:58.057Z admin GET /api/furniture 304  - 5.714 ms
+2026-03-21T14:03:58.058Z admin GET /api/hostels 304  - 5.957 ms
+2026-03-21T14:03:58.059Z admin GET /api/scans 304  - 4.902 ms
+2026-03-21T14:03:58.059Z admin GET /api/rooms/types 304  - 4.329 ms
+2026-03-21T14:03:58.703Z admin GET /api/complaints 304  - 9.630 ms
+2026-03-21T14:03:58.705Z admin GET /api/visitors 304  - 9.578 ms
+2026-03-21T14:03:58.705Z admin GET /api/fees 304  - 9.050 ms
+2026-03-21T14:03:58.709Z admin GET /api/members 304  - 20.172 ms
+2026-03-21T14:03:58.711Z admin GET /api/rooms 304  - 20.981 ms
+2026-03-21T14:03:58.714Z admin GET /api/allocations 304  - 22.328 ms
+2026-03-21T14:03:58.724Z admin GET /api/maintenance 304  - 8.577 ms
+2026-03-21T14:03:58.724Z admin GET /api/fees/categories 304  - 4.359 ms
+2026-03-21T14:03:58.725Z admin GET /api/complaints/categories 304  - 7.752 ms
+2026-03-21T14:03:58.728Z admin GET /api/furniture 304  - 5.940 ms
+2026-03-21T14:03:58.728Z admin GET /api/stats 304  - 6.970 ms
+2026-03-21T14:03:58.731Z admin GET /api/scans 304  - 8.644 ms
+2026-03-21T14:03:58.732Z admin GET /api/hostels 304  - 3.245 ms
+2026-03-21T14:03:58.733Z admin GET /api/rooms/types 304  - 2.763 ms
+2026-03-21T14:04:43.506Z admin POST /api/rooms 201 52 - 12.593 ms
+2026-03-21T14:04:43.522Z admin GET /api/rooms 200 35191 - 10.984 ms
+2026-03-21T14:04:43.528Z admin GET /api/members 304  - 12.340 ms
+2026-03-21T14:04:43.528Z admin GET /api/fees 304  - 8.352 ms
+2026-03-21T14:04:43.530Z admin GET /api/complaints 304  - 12.161 ms
+2026-03-21T14:04:43.531Z admin GET /api/visitors 304  - 11.827 ms
+2026-03-21T14:04:43.534Z admin GET /api/allocations 304  - 17.019 ms
+2026-03-21T14:04:43.540Z admin GET /api/maintenance 304  - 15.913 ms
+2026-03-21T14:04:43.544Z admin GET /api/complaints/categories 304  - 9.563 ms
+2026-03-21T14:04:43.545Z admin GET /api/fees/categories 304  - 7.309 ms
+2026-03-21T14:04:43.548Z admin GET /api/furniture 304  - 5.479 ms
+2026-03-21T14:04:43.548Z admin GET /api/stats 200 215 - 7.148 ms
+2026-03-21T14:04:43.550Z admin GET /api/scans 304  - 7.374 ms
+2026-03-21T14:04:43.551Z admin GET /api/hostels 200 2829 - 6.106 ms
+2026-03-21T14:04:43.552Z admin GET /api/rooms/types 304  - 3.152 ms
+2026-03-21T14:04:55.288Z admin GET /api/allocations 304  - 14.648 ms
+2026-03-21T14:04:55.292Z admin GET /api/complaints 304  - 15.486 ms
+2026-03-21T14:04:55.294Z admin GET /api/rooms 304  - 13.544 ms
+2026-03-21T14:04:55.297Z admin GET /api/members 304  - 17.665 ms
+2026-03-21T14:04:55.297Z admin GET /api/visitors 304  - 19.833 ms
+2026-03-21T14:04:55.299Z admin GET /api/fees 304  - 17.479 ms
+2026-03-21T14:04:55.304Z admin GET /api/maintenance 304  - 5.852 ms
+2026-03-21T14:04:55.306Z admin GET /api/complaints/categories 304  - 6.650 ms
+2026-03-21T14:04:55.307Z admin GET /api/fees/categories 304  - 6.101 ms
+2026-03-21T14:04:55.308Z admin GET /api/stats 304  - 6.397 ms
+2026-03-21T14:04:55.311Z admin GET /api/furniture 304  - 8.279 ms
+2026-03-21T14:04:55.313Z admin GET /api/scans 304  - 8.387 ms
+2026-03-21T14:04:55.313Z admin GET /api/hostels 304  - 5.234 ms
+2026-03-21T14:04:55.314Z admin GET /api/rooms/types 304  - 2.701 ms
+2026-03-21T14:04:59.193Z admin PATCH /api/visitors/19 200 21 - 5.649 ms
+2026-03-21T14:04:59.207Z admin GET /api/rooms 304  - 9.167 ms
+2026-03-21T14:04:59.209Z admin GET /api/visitors 200 10747 - 6.788 ms
+2026-03-21T14:04:59.209Z admin GET /api/fees 304  - 6.212 ms
+2026-03-21T14:04:59.213Z admin GET /api/members 304  - 16.700 ms
+2026-03-21T14:04:59.217Z admin GET /api/allocations 304  - 17.458 ms
+2026-03-21T14:04:59.218Z admin GET /api/complaints 304  - 17.780 ms
+2026-03-21T14:04:59.227Z admin GET /api/maintenance 304  - 7.837 ms
+2026-03-21T14:04:59.228Z admin GET /api/complaints/categories 304  - 6.953 ms
+2026-03-21T14:04:59.229Z admin GET /api/fees/categories 304  - 6.917 ms
+2026-03-21T14:04:59.230Z admin GET /api/furniture 304  - 5.965 ms
+2026-03-21T14:04:59.231Z admin GET /api/scans 304  - 5.746 ms
+2026-03-21T14:04:59.232Z admin GET /api/stats 304  - 8.504 ms
+2026-03-21T14:04:59.234Z admin GET /api/hostels 304  - 2.265 ms
+2026-03-21T14:04:59.235Z admin GET /api/rooms/types 304  - 1.229 ms
+2026-03-21T14:05:01.275Z admin PATCH /api/visitors/5 200 21 - 4.015 ms
+2026-03-21T14:05:01.291Z admin GET /api/rooms 304  - 11.020 ms
+2026-03-21T14:05:01.295Z admin GET /api/allocations 304  - 13.649 ms
+2026-03-21T14:05:01.296Z admin GET /api/fees 304  - 9.330 ms
+2026-03-21T14:05:01.300Z admin GET /api/members 304  - 21.732 ms
+2026-03-21T14:05:01.301Z admin GET /api/visitors 200 10769 - 16.197 ms
+2026-03-21T14:05:01.303Z admin GET /api/complaints 304  - 20.021 ms
+2026-03-21T14:05:01.314Z admin GET /api/maintenance 304  - 9.760 ms
+2026-03-21T14:05:01.314Z admin GET /api/fees/categories 304  - 6.947 ms
+2026-03-21T14:05:01.315Z admin GET /api/complaints/categories 304  - 9.310 ms
+2026-03-21T14:05:01.317Z admin GET /api/furniture 304  - 6.928 ms
+2026-03-21T14:05:01.318Z admin GET /api/scans 304  - 6.517 ms
+2026-03-21T14:05:01.319Z admin GET /api/stats 304  - 9.321 ms
+2026-03-21T14:05:01.322Z admin GET /api/hostels 304  - 2.023 ms
+2026-03-21T14:05:01.322Z admin GET /api/rooms/types 304  - 1.334 ms
+2026-03-21T14:05:01.774Z admin PATCH /api/visitors/26 200 21 - 3.354 ms
+2026-03-21T14:05:01.791Z admin GET /api/complaints 304  - 8.291 ms
+2026-03-21T14:05:01.793Z admin GET /api/visitors 200 10791 - 8.005 ms
+2026-03-21T14:05:01.794Z admin GET /api/fees 304  - 7.503 ms
+2026-03-21T14:05:01.797Z admin GET /api/members 304  - 19.275 ms
+2026-03-21T14:05:01.799Z admin GET /api/rooms 304  - 19.511 ms
+2026-03-21T14:05:01.803Z admin GET /api/allocations 304  - 21.119 ms
+2026-03-21T14:05:01.812Z admin GET /api/maintenance 304  - 8.581 ms
+2026-03-21T14:05:01.812Z admin GET /api/fees/categories 304  - 6.631 ms
+2026-03-21T14:05:01.813Z admin GET /api/complaints/categories 304  - 8.181 ms
+2026-03-21T14:05:01.814Z admin GET /api/stats 304  - 6.921 ms
+2026-03-21T14:05:01.816Z admin GET /api/furniture 304  - 6.446 ms
+2026-03-21T14:05:01.819Z admin GET /api/scans 304  - 8.105 ms
+2026-03-21T14:05:01.820Z admin GET /api/hostels 304  - 3.513 ms
+2026-03-21T14:05:01.820Z admin GET /api/rooms/types 304  - 2.646 ms
+2026-03-21T14:05:02.242Z admin PATCH /api/visitors/14 200 21 - 3.193 ms
+2026-03-21T14:05:02.255Z admin GET /api/complaints 304  - 6.609 ms
+2026-03-21T14:05:02.256Z admin GET /api/visitors 200 10813 - 5.641 ms
+2026-03-21T14:05:02.257Z admin GET /api/fees 304  - 4.763 ms
+2026-03-21T14:05:02.259Z admin GET /api/members 304  - 14.950 ms
+2026-03-21T14:05:02.260Z admin GET /api/rooms 304  - 14.840 ms
+2026-03-21T14:05:02.263Z admin GET /api/allocations 304  - 16.317 ms
+2026-03-21T14:05:02.271Z admin GET /api/maintenance 304  - 6.439 ms
+2026-03-21T14:05:02.271Z admin GET /api/complaints/categories 304  - 4.805 ms
+2026-03-21T14:05:02.271Z admin GET /api/fees/categories 304  - 4.376 ms
+2026-03-21T14:05:02.273Z admin GET /api/furniture 304  - 5.093 ms
+2026-03-21T14:05:02.274Z admin GET /api/scans 304  - 5.164 ms
+2026-03-21T14:05:02.275Z admin GET /api/stats 304  - 6.856 ms
+2026-03-21T14:05:02.277Z admin GET /api/hostels 304  - 1.767 ms
+2026-03-21T14:05:02.277Z admin GET /api/rooms/types 304  - 1.250 ms
+2026-03-21T14:05:02.655Z admin PATCH /api/visitors/37 200 21 - 2.638 ms
+2026-03-21T14:05:02.668Z admin GET /api/rooms 304  - 8.795 ms
+2026-03-21T14:05:02.670Z admin GET /api/allocations 304  - 9.788 ms
+2026-03-21T14:05:02.670Z admin GET /api/fees 304  - 6.060 ms
+2026-03-21T14:05:02.673Z admin GET /api/members 304  - 15.675 ms
+2026-03-21T14:05:02.674Z admin GET /api/visitors 200 10835 - 11.284 ms
+2026-03-21T14:05:02.676Z admin GET /api/complaints 304  - 14.338 ms
+2026-03-21T14:05:02.683Z admin GET /api/maintenance 304  - 5.960 ms
+2026-03-21T14:05:02.683Z admin GET /api/complaints/categories 304  - 5.020 ms
+2026-03-21T14:05:02.685Z admin GET /api/furniture 304  - 4.946 ms
+2026-03-21T14:05:02.686Z admin GET /api/scans 304  - 5.136 ms
+2026-03-21T14:05:02.686Z admin GET /api/fees/categories 304  - 7.580 ms
+2026-03-21T14:05:02.687Z admin GET /api/stats 304  - 7.675 ms
+2026-03-21T14:05:02.690Z admin GET /api/hostels 304  - 2.433 ms
+2026-03-21T14:05:02.691Z admin GET /api/rooms/types 304  - 2.183 ms
+2026-03-21T14:05:03.033Z admin PATCH /api/visitors/31 200 21 - 2.992 ms
+2026-03-21T14:05:03.045Z admin GET /api/complaints 304  - 5.178 ms
+2026-03-21T14:05:03.047Z admin GET /api/rooms 304  - 9.568 ms
+2026-03-21T14:05:03.047Z admin GET /api/fees 304  - 5.746 ms
+2026-03-21T14:05:03.050Z admin GET /api/members 304  - 14.228 ms
+2026-03-21T14:05:03.051Z admin GET /api/visitors 200 10857 - 10.188 ms
+2026-03-21T14:05:03.054Z admin GET /api/allocations 304  - 15.833 ms
+2026-03-21T14:05:03.062Z admin GET /api/complaints/categories 304  - 5.190 ms
+2026-03-21T14:05:03.063Z admin GET /api/maintenance 304  - 7.525 ms
+2026-03-21T14:05:03.063Z admin GET /api/fees/categories 304  - 4.881 ms
+2026-03-21T14:05:03.064Z admin GET /api/stats 304  - 4.292 ms
+2026-03-21T14:05:03.066Z admin GET /api/furniture 304  - 5.947 ms
+2026-03-21T14:05:03.069Z admin GET /api/scans 304  - 7.850 ms
+2026-03-21T14:05:03.069Z admin GET /api/hostels 304  - 3.105 ms
+2026-03-21T14:05:03.070Z admin GET /api/rooms/types 304  - 2.535 ms
+2026-03-21T14:05:03.306Z admin PATCH /api/visitors/32 200 21 - 2.975 ms
+2026-03-21T14:05:03.335Z admin GET /api/rooms 304  - 9.391 ms
+2026-03-21T14:05:03.336Z admin GET /api/visitors 200 10879 - 6.412 ms
+2026-03-21T14:05:03.337Z admin GET /api/fees 304  - 5.715 ms
+2026-03-21T14:05:03.339Z admin GET /api/members 304  - 15.065 ms
+2026-03-21T14:05:03.342Z admin GET /api/allocations 304  - 14.629 ms
+2026-03-21T14:05:03.344Z admin GET /api/complaints 304  - 14.969 ms
+2026-03-21T14:05:03.353Z admin GET /api/maintenance 304  - 7.494 ms
+2026-03-21T14:05:03.353Z admin GET /api/fees/categories 304  - 6.237 ms
+2026-03-21T14:05:03.357Z admin GET /api/furniture 304  - 7.598 ms
+2026-03-21T14:05:03.358Z admin GET /api/stats 304  - 9.259 ms
+2026-03-21T14:05:03.358Z admin GET /api/complaints/categories 304  - 12.170 ms
+2026-03-21T14:05:03.359Z admin GET /api/scans 304  - 8.949 ms
+2026-03-21T14:05:03.365Z admin GET /api/hostels 304  - 2.126 ms
+2026-03-21T14:05:03.366Z admin GET /api/rooms/types 304  - 1.918 ms
+2026-03-21T14:05:03.591Z admin PATCH /api/visitors/35 200 21 - 4.400 ms
+2026-03-21T14:05:03.603Z admin GET /api/members 304  - 9.942 ms
+2026-03-21T14:05:03.604Z admin GET /api/visitors 200 10901 - 5.949 ms
+2026-03-21T14:05:03.605Z admin GET /api/fees 304  - 5.721 ms
+2026-03-21T14:05:03.606Z admin GET /api/complaints 304  - 9.085 ms
+2026-03-21T14:05:03.608Z admin GET /api/rooms 304  - 12.933 ms
+2026-03-21T14:05:03.610Z admin GET /api/allocations 304  - 13.785 ms
+2026-03-21T14:05:03.616Z admin GET /api/maintenance 304  - 5.701 ms
+2026-03-21T14:05:03.616Z admin GET /api/fees/categories 304  - 4.177 ms
+2026-03-21T14:05:03.617Z admin GET /api/complaints/categories 304  - 5.851 ms
+2026-03-21T14:05:03.618Z admin GET /api/stats 304  - 4.514 ms
+2026-03-21T14:05:03.619Z admin GET /api/furniture 304  - 5.489 ms
+2026-03-21T14:05:03.622Z admin GET /api/scans 304  - 7.438 ms
+2026-03-21T14:05:03.623Z admin GET /api/hostels 304  - 3.454 ms
+2026-03-21T14:05:03.624Z admin GET /api/rooms/types 304  - 3.163 ms
+2026-03-21T14:05:03.839Z admin PATCH /api/visitors/34 200 21 - 3.377 ms
+2026-03-21T14:05:03.869Z admin GET /api/members 304  - 10.982 ms
+2026-03-21T14:05:03.870Z admin GET /api/visitors 200 10923 - 6.207 ms
+2026-03-21T14:05:03.871Z admin GET /api/fees 304  - 5.305 ms
+2026-03-21T14:05:03.872Z admin GET /api/complaints 304  - 9.688 ms
+2026-03-21T14:05:03.874Z admin GET /api/rooms 304  - 13.631 ms
+2026-03-21T14:05:03.876Z admin GET /api/allocations 304  - 14.791 ms
+2026-03-21T14:05:03.883Z admin GET /api/maintenance 304  - 6.205 ms
+2026-03-21T14:05:03.883Z admin GET /api/complaints/categories 304  - 5.275 ms
+2026-03-21T14:05:03.884Z admin GET /api/fees/categories 304  - 5.091 ms
+2026-03-21T14:05:03.886Z admin GET /api/furniture 304  - 5.622 ms
+2026-03-21T14:05:03.887Z admin GET /api/scans 304  - 5.705 ms
+2026-03-21T14:05:03.887Z admin GET /api/stats 304  - 7.431 ms
+2026-03-21T14:05:03.890Z admin GET /api/hostels 304  - 2.657 ms
+2026-03-21T14:05:03.891Z admin GET /api/rooms/types 304  - 1.609 ms
+2026-03-21T14:05:04.072Z admin PATCH /api/visitors/9 200 21 - 2.858 ms
+2026-03-21T14:05:04.103Z admin GET /api/complaints 304  - 6.633 ms
+2026-03-21T14:05:04.105Z admin GET /api/rooms 304  - 11.286 ms
+2026-03-21T14:05:04.106Z admin GET /api/fees 304  - 6.394 ms
+2026-03-21T14:05:04.108Z admin GET /api/members 304  - 15.900 ms
+2026-03-21T14:05:04.109Z admin GET /api/visitors 200 10945 - 11.262 ms
+2026-03-21T14:05:04.111Z admin GET /api/allocations 304  - 16.431 ms
+2026-03-21T14:05:04.118Z admin GET /api/maintenance 304  - 5.617 ms
+2026-03-21T14:05:04.118Z admin GET /api/complaints/categories 304  - 4.972 ms
+2026-03-21T14:05:04.120Z admin GET /api/furniture 304  - 4.943 ms
+2026-03-21T14:05:04.121Z admin GET /api/scans 304  - 5.005 ms
+2026-03-21T14:05:04.121Z admin GET /api/fees/categories 304  - 7.393 ms
+2026-03-21T14:05:04.122Z admin GET /api/stats 304  - 7.479 ms
+2026-03-21T14:05:04.125Z admin GET /api/hostels 304  - 2.478 ms
+2026-03-21T14:05:04.126Z admin GET /api/rooms/types 304  - 1.343 ms
+2026-03-21T14:05:04.322Z admin PATCH /api/visitors/28 200 21 - 3.099 ms
+2026-03-21T14:05:04.336Z admin GET /api/rooms 304  - 8.729 ms
+2026-03-21T14:05:04.337Z admin GET /api/visitors 200 10967 - 5.173 ms
+2026-03-21T14:05:04.337Z admin GET /api/fees 304  - 5.060 ms
+2026-03-21T14:05:04.340Z admin GET /api/members 304  - 14.827 ms
+2026-03-21T14:05:04.343Z admin GET /api/allocations 304  - 14.275 ms
+2026-03-21T14:05:04.344Z admin GET /api/complaints 304  - 14.182 ms
+2026-03-21T14:05:04.350Z admin GET /api/fees/categories 304  - 3.330 ms
+2026-03-21T14:05:04.350Z admin GET /api/stats 304  - 2.929 ms
+2026-03-21T14:05:04.351Z admin GET /api/complaints/categories 304  - 4.716 ms
+2026-03-21T14:05:04.351Z admin GET /api/maintenance 304  - 6.675 ms
+2026-03-21T14:05:04.353Z admin GET /api/furniture 304  - 5.323 ms
+2026-03-21T14:05:04.356Z admin GET /api/scans 304  - 7.692 ms
+2026-03-21T14:05:04.357Z admin GET /api/hostels 304  - 3.446 ms
+2026-03-21T14:05:04.358Z admin GET /api/rooms/types 304  - 3.296 ms
+2026-03-21T14:05:04.573Z admin PATCH /api/visitors/17 200 21 - 3.653 ms
+2026-03-21T14:05:04.603Z admin GET /api/members 304  - 11.457 ms
+2026-03-21T14:05:04.606Z admin GET /api/rooms 304  - 12.180 ms
+2026-03-21T14:05:04.606Z admin GET /api/fees 304  - 7.125 ms
+2026-03-21T14:05:04.607Z admin GET /api/complaints 304  - 11.508 ms
+2026-03-21T14:05:04.608Z admin GET /api/visitors 200 10989 - 10.931 ms
+2026-03-21T14:05:04.611Z admin GET /api/allocations 304  - 16.053 ms
+2026-03-21T14:05:04.617Z admin GET /api/maintenance 304  - 5.544 ms
+2026-03-21T14:05:04.617Z admin GET /api/complaints/categories 304  - 4.922 ms
+2026-03-21T14:05:04.618Z admin GET /api/fees/categories 304  - 4.621 ms
+2026-03-21T14:05:04.620Z admin GET /api/furniture 304  - 5.317 ms
+2026-03-21T14:05:04.621Z admin GET /api/scans 304  - 5.489 ms
+2026-03-21T14:05:04.621Z admin GET /api/stats 304  - 7.104 ms
+2026-03-21T14:05:04.624Z admin GET /api/hostels 304  - 2.589 ms
+2026-03-21T14:05:04.625Z admin GET /api/rooms/types 304  - 1.251 ms
+2026-03-21T14:05:04.824Z admin PATCH /api/visitors/24 200 21 - 3.717 ms
+2026-03-21T14:05:04.836Z admin GET /api/complaints 304  - 5.082 ms
+2026-03-21T14:05:04.837Z admin GET /api/visitors 200 11011 - 4.946 ms
+2026-03-21T14:05:04.838Z admin GET /api/fees 304  - 4.653 ms
+2026-03-21T14:05:04.840Z admin GET /api/members 304  - 14.119 ms
+2026-03-21T14:05:04.844Z admin GET /api/allocations 304  - 14.490 ms
+2026-03-21T14:05:04.846Z admin GET /api/rooms 304  - 17.786 ms
+2026-03-21T14:05:04.852Z admin GET /api/complaints/categories 304  - 4.357 ms
+2026-03-21T14:05:04.853Z admin GET /api/maintenance 304  - 6.578 ms
+2026-03-21T14:05:04.854Z admin GET /api/stats 304  - 4.687 ms
+2026-03-21T14:05:04.854Z admin GET /api/fees/categories 304  - 6.128 ms
+2026-03-21T14:05:04.857Z admin GET /api/furniture 304  - 7.278 ms
+2026-03-21T14:05:04.860Z admin GET /api/scans 304  - 9.805 ms
+2026-03-21T14:05:04.861Z admin GET /api/hostels 304  - 3.255 ms
+2026-03-21T14:05:04.862Z admin GET /api/rooms/types 304  - 2.552 ms
+2026-03-21T14:05:05.072Z admin PATCH /api/visitors/39 200 21 - 2.850 ms
+2026-03-21T14:05:05.104Z admin GET /api/members 304  - 12.003 ms
+2026-03-21T14:05:05.105Z admin GET /api/visitors 200 11033 - 7.401 ms
+2026-03-21T14:05:05.105Z admin GET /api/fees 304  - 6.523 ms
+2026-03-21T14:05:05.107Z admin GET /api/complaints 304  - 10.883 ms
+2026-03-21T14:05:05.108Z admin GET /api/rooms 304  - 14.941 ms
+2026-03-21T14:05:05.111Z admin GET /api/allocations 304  - 16.169 ms
+2026-03-21T14:05:05.117Z admin GET /api/maintenance 304  - 5.576 ms
+2026-03-21T14:05:05.118Z admin GET /api/complaints/categories 304  - 4.950 ms
+2026-03-21T14:05:05.119Z admin GET /api/fees/categories 304  - 5.347 ms
+2026-03-21T14:05:05.120Z admin GET /api/furniture 304  - 5.678 ms
+2026-03-21T14:05:05.121Z admin GET /api/scans 304  - 5.831 ms
+2026-03-21T14:05:05.122Z admin GET /api/stats 304  - 7.571 ms
+2026-03-21T14:05:05.125Z admin GET /api/hostels 304  - 2.385 ms
+2026-03-21T14:05:05.125Z admin GET /api/rooms/types 304  - 1.204 ms
+2026-03-21T14:05:05.306Z admin PATCH /api/visitors/30 200 21 - 3.173 ms
+2026-03-21T14:05:05.336Z admin GET /api/allocations 304  - 7.456 ms
+2026-03-21T14:05:05.337Z admin GET /api/visitors 200 11055 - 5.602 ms
+2026-03-21T14:05:05.338Z admin GET /api/fees 304  - 5.266 ms
+2026-03-21T14:05:05.339Z admin GET /api/complaints 304  - 9.056 ms
+2026-03-21T14:05:05.341Z admin GET /api/rooms 304  - 13.366 ms
+2026-03-21T14:05:05.343Z admin GET /api/members 304  - 17.603 ms
+2026-03-21T14:05:05.350Z admin GET /api/maintenance 304  - 5.274 ms
+2026-03-21T14:05:05.350Z admin GET /api/complaints/categories 304  - 4.694 ms
+2026-03-21T14:05:05.351Z admin GET /api/fees/categories 304  - 4.687 ms
+2026-03-21T14:05:05.352Z admin GET /api/furniture 304  - 5.304 ms
+2026-03-21T14:05:05.353Z admin GET /api/scans 304  - 5.495 ms
+2026-03-21T14:05:05.354Z admin GET /api/stats 304  - 6.941 ms
+2026-03-21T14:05:05.357Z admin GET /api/hostels 304  - 2.596 ms
+2026-03-21T14:05:05.357Z admin GET /api/rooms/types 304  - 2.063 ms
+2026-03-21T14:05:05.555Z admin PATCH /api/visitors/12 200 21 - 2.984 ms
+2026-03-21T14:05:05.570Z admin GET /api/members 304  - 10.869 ms
+2026-03-21T14:05:05.571Z admin GET /api/visitors 200 11077 - 5.619 ms
+2026-03-21T14:05:05.573Z admin GET /api/allocations 304  - 10.955 ms
+2026-03-21T14:05:05.574Z admin GET /api/complaints 304  - 10.624 ms
+2026-03-21T14:05:05.576Z admin GET /api/rooms 304  - 15.097 ms
+2026-03-21T14:05:05.576Z admin GET /api/fees 304  - 10.496 ms
+2026-03-21T14:05:05.583Z admin GET /api/maintenance 304  - 6.021 ms
+2026-03-21T14:05:05.583Z admin GET /api/complaints/categories 304  - 5.295 ms
+2026-03-21T14:05:05.584Z admin GET /api/fees/categories 304  - 4.916 ms
+2026-03-21T14:05:05.586Z admin GET /api/furniture 304  - 5.394 ms
+2026-03-21T14:05:05.586Z admin GET /api/stats 304  - 6.365 ms
+2026-03-21T14:05:05.587Z admin GET /api/scans 304  - 5.984 ms
+2026-03-21T14:05:05.591Z admin GET /api/hostels 304  - 3.235 ms
+2026-03-21T14:05:05.592Z admin GET /api/rooms/types 304  - 1.853 ms
+2026-03-21T14:05:05.805Z admin PATCH /api/visitors/4 200 21 - 3.105 ms
+2026-03-21T14:05:05.835Z admin GET /api/complaints 304  - 5.805 ms
+2026-03-21T14:05:05.836Z admin GET /api/visitors 200 11099 - 5.383 ms
+2026-03-21T14:05:05.837Z admin GET /api/fees 304  - 4.758 ms
+2026-03-21T14:05:05.839Z admin GET /api/members 304  - 14.019 ms
+2026-03-21T14:05:05.841Z admin GET /api/rooms 304  - 13.890 ms
+2026-03-21T14:05:05.843Z admin GET /api/allocations 304  - 14.957 ms
+2026-03-21T14:05:05.850Z admin GET /api/maintenance 304  - 5.523 ms
+2026-03-21T14:05:05.851Z admin GET /api/complaints/categories 304  - 4.821 ms
+2026-03-21T14:05:05.851Z admin GET /api/fees/categories 304  - 4.858 ms
+2026-03-21T14:05:05.853Z admin GET /api/furniture 304  - 5.295 ms
+2026-03-21T14:05:05.854Z admin GET /api/scans 304  - 5.477 ms
+2026-03-21T14:05:05.854Z admin GET /api/stats 304  - 7.023 ms
+2026-03-21T14:05:05.857Z admin GET /api/hostels 304  - 2.537 ms
+2026-03-21T14:05:05.858Z admin GET /api/rooms/types 304  - 1.297 ms
+2026-03-21T14:05:06.081Z admin PATCH /api/visitors/27 200 21 - 2.737 ms
+2026-03-21T14:05:06.094Z admin GET /api/allocations 304  - 7.720 ms
+2026-03-21T14:05:06.095Z admin GET /api/visitors 200 11121 - 6.150 ms
+2026-03-21T14:05:06.095Z admin GET /api/fees 304  - 5.485 ms
+2026-03-21T14:05:06.097Z admin GET /api/members 304  - 14.637 ms
+2026-03-21T14:05:06.099Z admin GET /api/rooms 304  - 14.394 ms
+2026-03-21T14:05:06.100Z admin GET /api/complaints 304  - 13.213 ms
+2026-03-21T14:05:06.107Z admin GET /api/maintenance 304  - 5.798 ms
+2026-03-21T14:05:06.107Z admin GET /api/fees/categories 304  - 4.237 ms
+2026-03-21T14:05:06.108Z admin GET /api/complaints/categories 304  - 6.148 ms
+2026-03-21T14:05:06.109Z admin GET /api/stats 304  - 4.602 ms
+2026-03-21T14:05:06.110Z admin GET /api/furniture 304  - 5.658 ms
+2026-03-21T14:05:06.113Z admin GET /api/scans 304  - 7.237 ms
+2026-03-21T14:05:06.114Z admin GET /api/rooms/types 304  - 1.481 ms
+2026-03-21T14:05:06.114Z admin GET /api/hostels 304  - 3.346 ms
+2026-03-21T14:05:06.305Z admin PATCH /api/visitors/7 200 21 - 2.737 ms
+2026-03-21T14:05:06.339Z admin GET /api/rooms 304  - 6.160 ms
+2026-03-21T14:05:06.340Z admin GET /api/visitors 200 11143 - 4.883 ms
+2026-03-21T14:05:06.341Z admin GET /api/fees 304  - 4.821 ms
+2026-03-21T14:05:06.343Z admin GET /api/allocations 304  - 9.180 ms
+2026-03-21T14:05:06.345Z admin GET /api/members 304  - 13.733 ms
+2026-03-21T14:05:06.347Z admin GET /api/complaints 304  - 12.514 ms
+2026-03-21T14:05:06.353Z admin GET /api/maintenance 304  - 5.507 ms
+2026-03-21T14:05:06.354Z admin GET /api/complaints/categories 304  - 4.986 ms
+2026-03-21T14:05:06.354Z admin GET /api/fees/categories 304  - 5.043 ms
+2026-03-21T14:05:06.357Z admin GET /api/furniture 304  - 5.916 ms
+2026-03-21T14:05:06.357Z admin GET /api/scans 304  - 6.089 ms
+2026-03-21T14:05:06.358Z admin GET /api/stats 304  - 8.079 ms
+2026-03-21T14:05:06.361Z admin GET /api/hostels 304  - 1.692 ms
+2026-03-21T14:05:06.361Z admin GET /api/rooms/types 304  - 1.437 ms
+2026-03-21T14:05:06.539Z admin PATCH /api/visitors/16 200 21 - 3.078 ms
+2026-03-21T14:05:06.571Z admin GET /api/allocations 304  - 9.531 ms
+2026-03-21T14:05:06.572Z admin GET /api/visitors 200 11165 - 7.290 ms
+2026-03-21T14:05:06.573Z admin GET /api/fees 304  - 6.238 ms
+2026-03-21T14:05:06.575Z admin GET /api/members 304  - 16.539 ms
+2026-03-21T14:05:06.577Z admin GET /api/rooms 304  - 16.648 ms
+2026-03-21T14:05:06.578Z admin GET /api/complaints 304  - 15.349 ms
+2026-03-21T14:05:06.584Z admin GET /api/maintenance 304  - 5.517 ms
+2026-03-21T14:05:06.585Z admin GET /api/fees/categories 304  - 4.026 ms
+2026-03-21T14:05:06.586Z admin GET /api/complaints/categories 304  - 5.614 ms
+2026-03-21T14:05:06.586Z admin GET /api/stats 304  - 4.614 ms
+2026-03-21T14:05:06.588Z admin GET /api/furniture 304  - 5.723 ms
+2026-03-21T14:05:06.592Z admin GET /api/scans 304  - 8.396 ms
+2026-03-21T14:05:06.592Z admin GET /api/hostels 304  - 3.754 ms
+2026-03-21T14:05:06.593Z admin GET /api/rooms/types 304  - 2.611 ms
+2026-03-21T14:05:06.774Z admin PATCH /api/visitors/23 200 21 - 4.695 ms
+2026-03-21T14:05:06.803Z admin GET /api/members 304  - 10.690 ms
+2026-03-21T14:05:06.803Z admin GET /api/visitors 200 11187 - 5.933 ms
+2026-03-21T14:05:06.804Z admin GET /api/fees 304  - 5.188 ms
+2026-03-21T14:05:06.805Z admin GET /api/complaints 304  - 9.236 ms
+2026-03-21T14:05:06.807Z admin GET /api/rooms 304  - 13.208 ms
+2026-03-21T14:05:06.809Z admin GET /api/allocations 304  - 14.286 ms
+2026-03-21T14:05:06.815Z admin GET /api/complaints/categories 304  - 4.009 ms
+2026-03-21T14:05:06.815Z admin GET /api/fees/categories 304  - 3.409 ms
+2026-03-21T14:05:06.816Z admin GET /api/maintenance 304  - 6.313 ms
+2026-03-21T14:05:06.817Z admin GET /api/stats 304  - 4.238 ms
+2026-03-21T14:05:06.819Z admin GET /api/furniture 304  - 5.477 ms
+2026-03-21T14:05:06.821Z admin GET /api/hostels 304  - 7.016 ms
+2026-03-21T14:05:06.822Z admin GET /api/rooms/types 304  - 2.644 ms
+2026-03-21T14:05:06.824Z admin GET /api/scans 304  - 3.750 ms
+2026-03-21T14:05:07.033Z admin PATCH /api/visitors/13 200 21 - 3.306 ms
+2026-03-21T14:05:07.046Z admin GET /api/complaints 304  - 6.465 ms
+2026-03-21T14:05:07.047Z admin GET /api/visitors 200 11209 - 5.746 ms
+2026-03-21T14:05:07.049Z admin GET /api/allocations 304  - 10.866 ms
+2026-03-21T14:05:07.051Z admin GET /api/members 304  - 16.008 ms
+2026-03-21T14:05:07.053Z admin GET /api/rooms 304  - 16.074 ms
+2026-03-21T14:05:07.053Z admin GET /api/fees 304  - 11.206 ms
+2026-03-21T14:05:07.060Z admin GET /api/maintenance 304  - 6.217 ms
+2026-03-21T14:05:07.061Z admin GET /api/complaints/categories 304  - 5.874 ms
+2026-03-21T14:05:07.062Z admin GET /api/fees/categories 304  - 4.829 ms
+2026-03-21T14:05:07.063Z admin GET /api/furniture 304  - 4.961 ms
+2026-03-21T14:05:07.064Z admin GET /api/scans 304  - 5.167 ms
+2026-03-21T14:05:07.065Z admin GET /api/stats 304  - 6.769 ms
+2026-03-21T14:05:07.067Z admin GET /api/hostels 304  - 1.910 ms
+2026-03-21T14:05:07.067Z admin GET /api/rooms/types 304  - 1.223 ms
+2026-03-21T14:05:07.256Z admin PATCH /api/visitors/22 200 21 - 3.043 ms
+2026-03-21T14:05:07.268Z admin GET /api/allocations 304  - 6.535 ms
+2026-03-21T14:05:07.269Z admin GET /api/visitors 200 11231 - 5.045 ms
+2026-03-21T14:05:07.270Z admin GET /api/fees 304  - 4.954 ms
+2026-03-21T14:05:07.272Z admin GET /api/members 304  - 13.293 ms
+2026-03-21T14:05:07.273Z admin GET /api/rooms 304  - 13.139 ms
+2026-03-21T14:05:07.275Z admin GET /api/complaints 304  - 11.658 ms
+2026-03-21T14:05:07.280Z admin GET /api/maintenance 304  - 5.020 ms
+2026-03-21T14:05:07.281Z admin GET /api/fees/categories 304  - 3.716 ms
+2026-03-21T14:05:07.281Z admin GET /api/complaints/categories 304  - 4.882 ms
+2026-03-21T14:05:07.282Z admin GET /api/stats 304  - 4.461 ms
+2026-03-21T14:05:07.286Z admin GET /api/furniture 304  - 7.433 ms
+2026-03-21T14:05:07.287Z admin GET /api/scans 304  - 8.016 ms
+2026-03-21T14:05:07.292Z admin GET /api/hostels 304  - 3.542 ms
+2026-03-21T14:05:07.292Z admin GET /api/rooms/types 304  - 2.767 ms
+2026-03-21T14:05:07.457Z admin PATCH /api/visitors/40 200 21 - 3.938 ms
+2026-03-21T14:05:07.469Z admin GET /api/allocations 304  - 6.165 ms
+2026-03-21T14:05:07.470Z admin GET /api/visitors 200 11253 - 5.466 ms
+2026-03-21T14:05:07.470Z admin GET /api/fees 304  - 5.360 ms
+2026-03-21T14:05:07.473Z admin GET /api/members 304  - 13.171 ms
+2026-03-21T14:05:07.474Z admin GET /api/rooms 304  - 12.937 ms
+2026-03-21T14:05:07.476Z admin GET /api/complaints 304  - 12.199 ms
+2026-03-21T14:05:07.482Z admin GET /api/maintenance 304  - 5.585 ms
+2026-03-21T14:05:07.482Z admin GET /api/fees/categories 304  - 4.341 ms
+2026-03-21T14:05:07.483Z admin GET /api/complaints/categories 304  - 5.907 ms
+2026-03-21T14:05:07.484Z admin GET /api/stats 304  - 4.634 ms
+2026-03-21T14:05:07.485Z admin GET /api/furniture 304  - 5.581 ms
+2026-03-21T14:05:07.488Z admin GET /api/scans 304  - 7.153 ms
+2026-03-21T14:05:07.489Z admin GET /api/hostels 304  - 3.469 ms
+2026-03-21T14:05:07.490Z admin GET /api/rooms/types 304  - 3.253 ms
+2026-03-21T14:05:07.689Z admin PATCH /api/visitors/1 200 21 - 3.176 ms
+2026-03-21T14:05:07.702Z admin GET /api/allocations 304  - 7.428 ms
+2026-03-21T14:05:07.703Z admin GET /api/visitors 200 11275 - 5.619 ms
+2026-03-21T14:05:07.704Z admin GET /api/fees 304  - 5.471 ms
+2026-03-21T14:05:07.706Z admin GET /api/members 304  - 14.269 ms
+2026-03-21T14:05:07.708Z admin GET /api/complaints 304  - 11.303 ms
+2026-03-21T14:05:07.709Z admin GET /api/rooms 304  - 15.522 ms
+2026-03-21T14:05:07.715Z admin GET /api/maintenance 304  - 5.261 ms
+2026-03-21T14:05:07.716Z admin GET /api/complaints/categories 304  - 4.587 ms
+2026-03-21T14:05:07.717Z admin GET /api/stats 304  - 3.805 ms
+2026-03-21T14:05:07.717Z admin GET /api/fees/categories 304  - 5.076 ms
+2026-03-21T14:05:07.719Z admin GET /api/furniture 304  - 5.403 ms
+2026-03-21T14:05:07.721Z admin GET /api/scans 304  - 7.096 ms
+2026-03-21T14:05:07.722Z admin GET /api/hostels 304  - 2.810 ms
+2026-03-21T14:05:07.723Z admin GET /api/rooms/types 304  - 2.724 ms
+2026-03-21T14:05:07.923Z admin PATCH /api/visitors/33 200 21 - 3.169 ms
+2026-03-21T14:05:07.935Z admin GET /api/rooms 304  - 7.860 ms
+2026-03-21T14:05:07.936Z admin GET /api/visitors 200 11297 - 5.750 ms
+2026-03-21T14:05:07.937Z admin GET /api/fees 304  - 5.590 ms
+2026-03-21T14:05:07.939Z admin GET /api/allocations 304  - 10.959 ms
+2026-03-21T14:05:07.941Z admin GET /api/members 304  - 16.335 ms
+2026-03-21T14:05:07.943Z admin GET /api/complaints 304  - 13.511 ms
+2026-03-21T14:05:07.949Z admin GET /api/maintenance 304  - 5.747 ms
+2026-03-21T14:05:07.950Z admin GET /api/complaints/categories 304  - 5.015 ms
+2026-03-21T14:05:07.951Z admin GET /api/fees/categories 304  - 5.054 ms
+2026-03-21T14:05:07.952Z admin GET /api/furniture 304  - 5.345 ms
+2026-03-21T14:05:07.953Z admin GET /api/scans 304  - 5.546 ms
+2026-03-21T14:05:07.954Z admin GET /api/stats 304  - 7.108 ms
+2026-03-21T14:05:07.957Z admin GET /api/hostels 304  - 2.681 ms
+2026-03-21T14:05:07.957Z admin GET /api/rooms/types 304  - 2.092 ms
+2026-03-21T14:05:08.139Z admin PATCH /api/visitors/8 200 21 - 3.491 ms
+2026-03-21T14:05:08.169Z admin GET /api/allocations 304  - 6.382 ms
+2026-03-21T14:05:08.170Z admin GET /api/visitors 200 11319 - 5.805 ms
+2026-03-21T14:05:08.171Z admin GET /api/fees 304  - 5.117 ms
+2026-03-21T14:05:08.172Z admin GET /api/rooms 304  - 12.343 ms
+2026-03-21T14:05:08.174Z admin GET /api/complaints 304  - 12.273 ms
+2026-03-21T14:05:08.176Z admin GET /api/members 304  - 17.631 ms
+2026-03-21T14:05:08.182Z admin GET /api/maintenance 304  - 5.531 ms
+2026-03-21T14:05:08.183Z admin GET /api/complaints/categories 304  - 5.071 ms
+2026-03-21T14:05:08.184Z admin GET /api/fees/categories 304  - 5.260 ms
+2026-03-21T14:05:08.186Z admin GET /api/furniture 304  - 5.731 ms
+2026-03-21T14:05:08.186Z admin GET /api/scans 304  - 5.878 ms
+2026-03-21T14:05:08.187Z admin GET /api/stats 304  - 7.836 ms
+2026-03-21T14:05:08.190Z admin GET /api/hostels 304  - 2.804 ms
+2026-03-21T14:05:08.191Z admin GET /api/rooms/types 304  - 1.919 ms
+2026-03-21T14:05:08.389Z admin PATCH /api/visitors/38 200 21 - 3.120 ms
+2026-03-21T14:05:08.403Z admin GET /api/complaints 304  - 6.108 ms
+2026-03-21T14:05:08.404Z admin GET /api/visitors 200 11341 - 6.105 ms
+2026-03-21T14:05:08.405Z admin GET /api/fees 304  - 5.667 ms
+2026-03-21T14:05:08.408Z admin GET /api/members 304  - 15.643 ms
+2026-03-21T14:05:08.409Z admin GET /api/rooms 304  - 15.627 ms
+2026-03-21T14:05:08.411Z admin GET /api/allocations 304  - 16.347 ms
+2026-03-21T14:05:08.417Z admin GET /api/maintenance 304  - 5.441 ms
+2026-03-21T14:05:08.418Z admin GET /api/complaints/categories 304  - 4.811 ms
+2026-03-21T14:05:08.418Z admin GET /api/fees/categories 304  - 4.708 ms
+2026-03-21T14:05:08.420Z admin GET /api/furniture 304  - 5.271 ms
+2026-03-21T14:05:08.421Z admin GET /api/scans 304  - 5.384 ms
+2026-03-21T14:05:08.421Z admin GET /api/stats 304  - 7.096 ms
+2026-03-21T14:05:08.425Z admin GET /api/hostels 304  - 2.452 ms
+2026-03-21T14:05:08.425Z admin GET /api/rooms/types 304  - 1.280 ms
+2026-03-21T14:05:08.607Z admin PATCH /api/visitors/36 200 21 - 3.057 ms
+2026-03-21T14:05:08.637Z admin GET /api/members 304  - 11.692 ms
+2026-03-21T14:05:08.638Z admin GET /api/visitors 200 11363 - 7.086 ms
+2026-03-21T14:05:08.639Z admin GET /api/fees 304  - 6.088 ms
+2026-03-21T14:05:08.640Z admin GET /api/complaints 304  - 10.707 ms
+2026-03-21T14:05:08.642Z admin GET /api/rooms 304  - 14.706 ms
+2026-03-21T14:05:08.644Z admin GET /api/allocations 304  - 15.830 ms
+2026-03-21T14:05:08.650Z admin GET /api/maintenance 304  - 5.039 ms
+2026-03-21T14:05:08.651Z admin GET /api/fees/categories 304  - 3.671 ms
+2026-03-21T14:05:08.652Z admin GET /api/complaints/categories 304  - 5.359 ms
+2026-03-21T14:05:08.652Z admin GET /api/stats 304  - 4.421 ms
+2026-03-21T14:05:08.654Z admin GET /api/furniture 304  - 5.439 ms
+2026-03-21T14:05:08.657Z admin GET /api/scans 304  - 7.774 ms
+2026-03-21T14:05:08.658Z admin GET /api/hostels 304  - 3.301 ms
+2026-03-21T14:05:08.658Z admin GET /api/rooms/types 304  - 3.023 ms
+2026-03-21T14:05:08.873Z admin PATCH /api/visitors/2 200 21 - 3.848 ms
+2026-03-21T14:05:08.885Z admin GET /api/members 304  - 9.852 ms
+2026-03-21T14:05:08.886Z admin GET /api/visitors 200 11385 - 5.794 ms
+2026-03-21T14:05:08.886Z admin GET /api/fees 304  - 5.381 ms
+2026-03-21T14:05:08.887Z admin GET /api/complaints 304  - 8.604 ms
+2026-03-21T14:05:08.889Z admin GET /api/rooms 304  - 12.794 ms
+2026-03-21T14:05:08.892Z admin GET /api/allocations 304  - 13.983 ms
+2026-03-21T14:05:08.898Z admin GET /api/maintenance 304  - 5.619 ms
+2026-03-21T14:05:08.898Z admin GET /api/fees/categories 304  - 4.175 ms
+2026-03-21T14:05:08.899Z admin GET /api/complaints/categories 304  - 5.897 ms
+2026-03-21T14:05:08.900Z admin GET /api/stats 304  - 4.599 ms
+2026-03-21T14:05:08.901Z admin GET /api/furniture 304  - 5.597 ms
+2026-03-21T14:05:08.904Z admin GET /api/scans 304  - 7.370 ms
+2026-03-21T14:05:08.905Z admin GET /api/hostels 304  - 2.603 ms
+2026-03-21T14:05:08.905Z admin GET /api/rooms/types 304  - 2.091 ms
+2026-03-21T14:05:09.056Z admin PATCH /api/visitors/10 200 21 - 3.250 ms
+2026-03-21T14:05:09.069Z admin GET /api/complaints 304  - 5.045 ms
+2026-03-21T14:05:09.070Z admin GET /api/visitors 200 11407 - 5.084 ms
+2026-03-21T14:05:09.072Z admin GET /api/allocations 304  - 9.989 ms
+2026-03-21T14:05:09.075Z admin GET /api/members 304  - 15.812 ms
+2026-03-21T14:05:09.076Z admin GET /api/rooms 304  - 15.414 ms
+2026-03-21T14:05:09.077Z admin GET /api/fees 304  - 10.974 ms
+2026-03-21T14:05:09.083Z admin GET /api/maintenance 304  - 5.606 ms
+2026-03-21T14:05:09.084Z admin GET /api/complaints/categories 304  - 4.942 ms
+2026-03-21T14:05:09.084Z admin GET /api/fees/categories 304  - 5.028 ms
+2026-03-21T14:05:09.086Z admin GET /api/furniture 304  - 5.437 ms
+2026-03-21T14:05:09.087Z admin GET /api/scans 304  - 5.488 ms
+2026-03-21T14:05:09.087Z admin GET /api/stats 304  - 7.302 ms
+2026-03-21T14:05:09.090Z admin GET /api/hostels 304  - 2.344 ms
+2026-03-21T14:05:09.091Z admin GET /api/rooms/types 304  - 1.360 ms
+2026-03-21T14:05:09.257Z admin PATCH /api/visitors/3 200 21 - 3.764 ms
+2026-03-21T14:05:09.269Z admin GET /api/members 304  - 9.865 ms
+2026-03-21T14:05:09.270Z admin GET /api/visitors 200 11429 - 5.260 ms
+2026-03-21T14:05:09.270Z admin GET /api/fees 304  - 5.263 ms
+2026-03-21T14:05:09.273Z admin GET /api/complaints 304  - 9.020 ms
+2026-03-21T14:05:09.275Z admin GET /api/rooms 304  - 13.977 ms
+2026-03-21T14:05:09.278Z admin GET /api/allocations 304  - 16.016 ms
+2026-03-21T14:05:09.285Z admin GET /api/maintenance 304  - 6.052 ms
+2026-03-21T14:05:09.285Z admin GET /api/complaints/categories 304  - 4.776 ms
+2026-03-21T14:05:09.287Z admin GET /api/fees/categories 304  - 4.303 ms
+2026-03-21T14:05:09.292Z admin GET /api/furniture 304  - 8.755 ms
+2026-03-21T14:05:09.293Z admin GET /api/stats 304  - 10.253 ms
+2026-03-21T14:05:09.296Z admin GET /api/scans 304  - 11.606 ms
+2026-03-21T14:05:09.297Z admin GET /api/hostels 304  - 2.795 ms
+2026-03-21T14:05:09.297Z admin GET /api/rooms/types 304  - 2.262 ms
+2026-03-21T14:05:09.473Z admin PATCH /api/visitors/20 200 21 - 3.522 ms
+2026-03-21T14:05:09.502Z admin GET /api/members 304  - 10.468 ms
+2026-03-21T14:05:09.503Z admin GET /api/visitors 200 11451 - 5.823 ms
+2026-03-21T14:05:09.504Z admin GET /api/fees 304  - 5.414 ms
+2026-03-21T14:05:09.505Z admin GET /api/complaints 304  - 9.093 ms
+2026-03-21T14:05:09.507Z admin GET /api/allocations 304  - 13.736 ms
+2026-03-21T14:05:09.508Z admin GET /api/rooms 304  - 13.832 ms
+2026-03-21T14:05:09.514Z admin GET /api/maintenance 304  - 5.076 ms
+2026-03-21T14:05:09.515Z admin GET /api/fees/categories 304  - 3.708 ms
+2026-03-21T14:05:09.515Z admin GET /api/complaints/categories 304  - 5.477 ms
+2026-03-21T14:05:09.516Z admin GET /api/stats 304  - 4.452 ms
+2026-03-21T14:05:09.517Z admin GET /api/furniture 304  - 5.478 ms
+2026-03-21T14:05:09.520Z admin GET /api/scans 304  - 7.227 ms
+2026-03-21T14:05:09.521Z admin GET /api/hostels 304  - 2.835 ms
+2026-03-21T14:05:09.521Z admin GET /api/rooms/types 304  - 2.285 ms
+2026-03-21T14:05:09.673Z admin PATCH /api/visitors/11 200 21 - 3.588 ms
+2026-03-21T14:05:09.704Z admin GET /api/members 304  - 11.937 ms
+2026-03-21T14:05:09.705Z admin GET /api/visitors 200 11473 - 7.429 ms
+2026-03-21T14:05:09.706Z admin GET /api/fees 304  - 6.393 ms
+2026-03-21T14:05:09.707Z admin GET /api/complaints 304  - 10.802 ms
+2026-03-21T14:05:09.708Z admin GET /api/rooms 304  - 14.794 ms
+2026-03-21T14:05:09.711Z admin GET /api/allocations 304  - 15.938 ms
+2026-03-21T14:05:09.717Z admin GET /api/fees/categories 304  - 3.284 ms
+2026-03-21T14:05:09.717Z admin GET /api/complaints/categories 304  - 4.232 ms
+2026-03-21T14:05:09.718Z admin GET /api/maintenance 304  - 6.689 ms
+2026-03-21T14:05:09.718Z admin GET /api/stats 304  - 4.486 ms
+2026-03-21T14:05:09.720Z admin GET /api/furniture 304  - 5.614 ms
+2026-03-21T14:05:09.723Z admin GET /api/scans 304  - 8.028 ms
+2026-03-21T14:05:09.724Z admin GET /api/hostels 304  - 3.470 ms
+2026-03-21T14:05:09.725Z admin GET /api/rooms/types 304  - 3.035 ms
+2026-03-21T14:05:09.872Z admin PATCH /api/visitors/25 200 21 - 3.034 ms
+2026-03-21T14:05:09.903Z admin GET /api/rooms 304  - 8.819 ms
+2026-03-21T14:05:09.904Z admin GET /api/visitors 200 11495 - 5.305 ms
+2026-03-21T14:05:09.904Z admin GET /api/fees 304  - 5.046 ms
+2026-03-21T14:05:09.906Z admin GET /api/complaints 304  - 8.864 ms
+2026-03-21T14:05:09.908Z admin GET /api/members 304  - 16.061 ms
+2026-03-21T14:05:09.911Z admin GET /api/allocations 304  - 15.466 ms
+2026-03-21T14:05:09.917Z admin GET /api/maintenance 304  - 5.286 ms
+2026-03-21T14:05:09.917Z admin GET /api/fees/categories 304  - 3.760 ms
+2026-03-21T14:05:09.918Z admin GET /api/complaints/categories 304  - 5.379 ms
+2026-03-21T14:05:09.918Z admin GET /api/stats 304  - 4.437 ms
+2026-03-21T14:05:09.920Z admin GET /api/furniture 304  - 5.546 ms
+2026-03-21T14:05:09.923Z admin GET /api/scans 304  - 7.761 ms
+2026-03-21T14:05:09.924Z admin GET /api/hostels 304  - 3.628 ms
+2026-03-21T14:05:09.925Z admin GET /api/rooms/types 304  - 3.235 ms
+2026-03-21T14:05:10.089Z admin PATCH /api/visitors/6 200 21 - 3.181 ms
+2026-03-21T14:05:10.103Z admin GET /api/members 304  - 10.224 ms
+2026-03-21T14:05:10.104Z admin GET /api/visitors 200 11517 - 5.667 ms
+2026-03-21T14:05:10.104Z admin GET /api/fees 304  - 5.291 ms
+2026-03-21T14:05:10.105Z admin GET /api/complaints 304  - 8.557 ms
+2026-03-21T14:05:10.107Z admin GET /api/rooms 304  - 12.934 ms
+2026-03-21T14:05:10.110Z admin GET /api/allocations 304  - 14.179 ms
+2026-03-21T14:05:10.117Z admin GET /api/maintenance 304  - 5.934 ms
+2026-03-21T14:05:10.117Z admin GET /api/fees/categories 304  - 4.409 ms
+2026-03-21T14:05:10.118Z admin GET /api/complaints/categories 304  - 5.881 ms
+2026-03-21T14:05:10.118Z admin GET /api/stats 304  - 4.676 ms
+2026-03-21T14:05:10.120Z admin GET /api/furniture 304  - 6.089 ms
+2026-03-21T14:05:10.124Z admin GET /api/scans 304  - 9.276 ms
+2026-03-21T14:05:10.125Z admin GET /api/hostels 304  - 3.529 ms
+2026-03-21T14:05:10.126Z admin GET /api/rooms/types 304  - 2.905 ms
+2026-03-21T14:05:10.306Z admin PATCH /api/visitors/15 200 21 - 3.031 ms
+2026-03-21T14:05:10.336Z admin GET /api/complaints 304  - 5.902 ms
+2026-03-21T14:05:10.336Z admin GET /api/visitors 200 11539 - 5.150 ms
+2026-03-21T14:05:10.337Z admin GET /api/fees 304  - 4.592 ms
+2026-03-21T14:05:10.339Z admin GET /api/members 304  - 14.405 ms
+2026-03-21T14:05:10.341Z admin GET /api/allocations 304  - 13.313 ms
+2026-03-21T14:05:10.343Z admin GET /api/rooms 304  - 16.196 ms
+2026-03-21T14:05:10.348Z admin GET /api/maintenance 304  - 4.839 ms
+2026-03-21T14:05:10.349Z admin GET /api/complaints/categories 304  - 4.774 ms
+2026-03-21T14:05:10.351Z admin GET /api/furniture 304  - 4.279 ms
+2026-03-21T14:05:10.351Z admin GET /api/scans 304  - 4.461 ms
+2026-03-21T14:05:10.352Z admin GET /api/fees/categories 304  - 6.785 ms
+2026-03-21T14:05:10.352Z admin GET /api/stats 304  - 6.447 ms
+2026-03-21T14:05:10.355Z admin GET /api/hostels 304  - 2.003 ms
+2026-03-21T14:05:10.355Z admin GET /api/rooms/types 304  - 1.496 ms
+2026-03-21T14:05:10.507Z admin PATCH /api/visitors/29 200 21 - 3.214 ms
+2026-03-21T14:05:10.536Z admin GET /api/complaints 304  - 6.333 ms
+2026-03-21T14:05:10.537Z admin GET /api/visitors 200 11561 - 5.712 ms
+2026-03-21T14:05:10.537Z admin GET /api/fees 304  - 4.748 ms
+2026-03-21T14:05:10.540Z admin GET /api/members 304  - 14.434 ms
+2026-03-21T14:05:10.541Z admin GET /api/rooms 304  - 14.139 ms
+2026-03-21T14:05:10.543Z admin GET /api/allocations 304  - 14.954 ms
+2026-03-21T14:05:10.549Z admin GET /api/maintenance 304  - 5.130 ms
+2026-03-21T14:05:10.550Z admin GET /api/fees/categories 304  - 3.945 ms
+2026-03-21T14:05:10.550Z admin GET /api/complaints/categories 304  - 5.499 ms
+2026-03-21T14:05:10.551Z admin GET /api/stats 304  - 4.410 ms
+2026-03-21T14:05:10.552Z admin GET /api/furniture 304  - 5.556 ms
+2026-03-21T14:05:10.556Z admin GET /api/scans 304  - 8.125 ms
+2026-03-21T14:05:10.557Z admin GET /api/hostels 304  - 3.662 ms
+2026-03-21T14:05:10.557Z admin GET /api/rooms/types 304  - 3.330 ms
+2026-03-21T14:07:02.937Z admin GET /api/rooms 200 35191 - 13.012 ms
+2026-03-21T14:07:02.943Z admin GET /api/members 304  - 45.788 ms
+2026-03-21T14:07:02.944Z admin GET /api/fees 304  - 17.470 ms
+2026-03-21T14:07:02.945Z admin GET /api/complaints 200 31822 - 21.129 ms
+2026-03-21T14:07:02.946Z admin GET /api/visitors 200 11561 - 21.190 ms
+2026-03-21T14:07:02.949Z admin GET /api/allocations 304  - 25.900 ms
+2026-03-21T14:07:02.957Z admin GET /api/maintenance 304  - 6.946 ms
+2026-03-21T14:07:02.957Z admin GET /api/fees/categories 304  - 5.179 ms
+2026-03-21T14:07:02.957Z admin GET /api/complaints/categories 304  - 6.461 ms
+2026-03-21T14:07:02.958Z admin GET /api/stats 200 215 - 4.373 ms
+2026-03-21T14:07:02.960Z admin GET /api/furniture 304  - 5.729 ms
+2026-03-21T14:07:02.964Z admin GET /api/scans 304  - 8.566 ms
+2026-03-21T14:07:02.965Z admin GET /api/rooms/types 304  - 3.436 ms
+2026-03-21T14:07:02.965Z admin GET /api/hostels 200 2829 - 2.807 ms
+2026-03-21T14:07:03.448Z admin GET /api/complaints 304  - 6.501 ms
+2026-03-21T14:07:03.448Z admin GET /api/visitors 304  - 5.951 ms
+2026-03-21T14:07:03.449Z admin GET /api/fees 304  - 4.923 ms
+2026-03-21T14:07:03.452Z admin GET /api/members 304  - 14.992 ms
+2026-03-21T14:07:03.453Z admin GET /api/rooms 304  - 14.691 ms
+2026-03-21T14:07:03.460Z admin GET /api/allocations 304  - 20.242 ms
+2026-03-21T14:07:03.475Z admin GET /api/maintenance 304  - 6.119 ms
+2026-03-21T14:07:03.475Z admin GET /api/complaints/categories 304  - 5.509 ms
+2026-03-21T14:07:03.477Z admin GET /api/furniture 304  - 5.250 ms
+2026-03-21T14:07:03.478Z admin GET /api/scans 304  - 5.147 ms
+2026-03-21T14:07:03.478Z admin GET /api/fees/categories 304  - 7.848 ms
+2026-03-21T14:07:03.479Z admin GET /api/stats 304  - 7.945 ms
+2026-03-21T14:07:03.481Z admin GET /api/hostels 304  - 2.088 ms
+2026-03-21T14:07:03.484Z admin GET /api/rooms/types 304  - 3.933 ms
+2026-03-21T14:07:04.003Z admin GET /api/members 304  - 13.120 ms
+2026-03-21T14:07:04.005Z admin GET /api/visitors 304  - 9.553 ms
+2026-03-21T14:07:04.006Z admin GET /api/fees 304  - 8.954 ms
+2026-03-21T14:07:04.008Z admin GET /api/allocations 304  - 14.881 ms
+2026-03-21T14:07:04.011Z admin GET /api/rooms 304  - 19.383 ms
+2026-03-21T14:07:04.014Z admin GET /api/complaints 304  - 18.720 ms
+2026-03-21T14:07:04.021Z admin GET /api/maintenance 304  - 6.874 ms
+2026-03-21T14:07:04.022Z admin GET /api/complaints/categories 304  - 6.388 ms
+2026-03-21T14:07:04.023Z admin GET /api/fees/categories 304  - 6.401 ms
+2026-03-21T14:07:04.025Z admin GET /api/furniture 304  - 6.981 ms
+2026-03-21T14:07:04.026Z admin GET /api/scans 304  - 7.086 ms
+2026-03-21T14:07:04.027Z admin GET /api/stats 304  - 9.709 ms
+2026-03-21T14:07:04.030Z admin GET /api/hostels 304  - 2.247 ms
+2026-03-21T14:07:04.030Z admin GET /api/rooms/types 304  - 1.645 ms
+2026-03-21T14:07:04.398Z admin GET /api/members 304  - 11.521 ms
+2026-03-21T14:07:04.398Z admin GET /api/visitors 304  - 6.526 ms
+2026-03-21T14:07:04.399Z admin GET /api/fees 304  - 5.433 ms
+2026-03-21T14:07:04.400Z admin GET /api/complaints 304  - 9.856 ms
+2026-03-21T14:07:04.402Z admin GET /api/allocations 304  - 13.394 ms
+2026-03-21T14:07:04.405Z admin GET /api/rooms 304  - 17.067 ms
+2026-03-21T14:07:04.413Z admin GET /api/maintenance 304  - 7.043 ms
+2026-03-21T14:07:04.413Z admin GET /api/fees/categories 304  - 5.812 ms
+2026-03-21T14:07:04.415Z admin GET /api/furniture 304  - 5.336 ms
+2026-03-21T14:07:04.416Z admin GET /api/scans 304  - 5.325 ms
+2026-03-21T14:07:04.416Z admin GET /api/complaints/categories 304  - 10.093 ms
+2026-03-21T14:07:04.417Z admin GET /api/stats 304  - 7.985 ms
+2026-03-21T14:07:04.419Z admin GET /api/hostels 304  - 1.679 ms
+2026-03-21T14:07:04.420Z admin GET /api/rooms/types 304  - 1.097 ms
+2026-03-21T14:07:04.632Z admin GET /api/allocations 304  - 8.944 ms
+2026-03-21T14:07:04.633Z admin GET /api/visitors 304  - 7.252 ms
+2026-03-21T14:07:04.634Z admin GET /api/fees 304  - 6.856 ms
+2026-03-21T14:07:04.637Z admin GET /api/members 304  - 17.181 ms
+2026-03-21T14:07:04.638Z admin GET /api/rooms 304  - 16.866 ms
+2026-03-21T14:07:04.640Z admin GET /api/complaints 304  - 15.745 ms
+2026-03-21T14:07:04.647Z admin GET /api/fees/categories 304  - 3.506 ms
+2026-03-21T14:07:04.647Z admin GET /api/complaints/categories 304  - 4.581 ms
+2026-03-21T14:07:04.648Z admin GET /api/maintenance 304  - 7.861 ms
+2026-03-21T14:07:04.649Z admin GET /api/stats 304  - 4.178 ms
+2026-03-21T14:07:04.651Z admin GET /api/furniture 304  - 5.756 ms
+2026-03-21T14:07:04.654Z admin GET /api/scans 304  - 7.510 ms
+2026-03-21T14:07:04.654Z admin GET /api/hostels 304  - 2.753 ms
+2026-03-21T14:07:04.655Z admin GET /api/rooms/types 304  - 2.023 ms
+2026-03-21T14:07:04.849Z admin GET /api/complaints 304  - 7.401 ms
+2026-03-21T14:07:04.850Z admin GET /api/visitors 304  - 6.923 ms
+2026-03-21T14:07:04.850Z admin GET /api/fees 304  - 5.679 ms
+2026-03-21T14:07:04.853Z admin GET /api/allocations 304  - 13.854 ms
+2026-03-21T14:07:04.855Z admin GET /api/rooms 304  - 17.234 ms
+2026-03-21T14:07:04.858Z admin GET /api/members 304  - 22.524 ms
+2026-03-21T14:07:04.866Z admin GET /api/complaints/categories 304  - 5.040 ms
+2026-03-21T14:07:04.867Z admin GET /api/maintenance 304  - 7.567 ms
+2026-03-21T14:07:04.867Z admin GET /api/fees/categories 304  - 5.216 ms
+2026-03-21T14:07:04.868Z admin GET /api/stats 304  - 5.047 ms
+2026-03-21T14:07:04.870Z admin GET /api/furniture 304  - 6.543 ms
+2026-03-21T14:07:04.873Z admin GET /api/scans 304  - 8.710 ms
+2026-03-21T14:07:04.874Z admin GET /api/hostels 304  - 3.142 ms
+2026-03-21T14:07:04.875Z admin GET /api/rooms/types 304  - 2.779 ms
+2026-03-21T14:07:05.031Z admin GET /api/complaints 304  - 7.301 ms
+2026-03-21T14:07:05.032Z admin GET /api/visitors 304  - 6.245 ms
+2026-03-21T14:07:05.033Z admin GET /api/fees 304  - 4.850 ms
+2026-03-21T14:07:05.035Z admin GET /api/members 304  - 16.303 ms
+2026-03-21T14:07:05.037Z admin GET /api/rooms 304  - 15.893 ms
+2026-03-21T14:07:05.039Z admin GET /api/allocations 304  - 16.330 ms
+2026-03-21T14:07:05.045Z admin GET /api/maintenance 304  - 5.729 ms
+2026-03-21T14:07:05.045Z admin GET /api/fees/categories 304  - 4.361 ms
+2026-03-21T14:07:05.046Z admin GET /api/complaints/categories 304  - 5.623 ms
+2026-03-21T14:07:05.046Z admin GET /api/stats 304  - 4.754 ms
+2026-03-21T14:07:05.048Z admin GET /api/furniture 304  - 5.645 ms
+2026-03-21T14:07:05.050Z admin GET /api/scans 304  - 6.689 ms
+2026-03-21T14:07:05.051Z admin GET /api/rooms/types 304  - 1.630 ms
+2026-03-21T14:07:05.051Z admin GET /api/hostels 304  - 2.926 ms
+2026-03-21T14:07:05.199Z admin GET /api/rooms 304  - 10.627 ms
+2026-03-21T14:07:05.200Z admin GET /api/visitors 304  - 6.781 ms
+2026-03-21T14:07:05.200Z admin GET /api/fees 304  - 5.298 ms
+2026-03-21T14:07:05.202Z admin GET /api/complaints 304  - 10.050 ms
+2026-03-21T14:07:05.204Z admin GET /api/allocations 304  - 13.984 ms
+2026-03-21T14:07:05.206Z admin GET /api/members 304  - 19.729 ms
+2026-03-21T14:07:05.213Z admin GET /api/maintenance 304  - 5.670 ms
+2026-03-21T14:07:05.213Z admin GET /api/fees/categories 304  - 4.218 ms
+2026-03-21T14:07:05.213Z admin GET /api/stats 304  - 3.638 ms
+2026-03-21T14:07:05.214Z admin GET /api/complaints/categories 304  - 5.972 ms
+2026-03-21T14:07:05.216Z admin GET /api/furniture 304  - 5.145 ms
+2026-03-21T14:07:05.218Z admin GET /api/scans 304  - 6.705 ms
+2026-03-21T14:07:05.219Z admin GET /api/hostels 304  - 2.649 ms
+2026-03-21T14:07:05.219Z admin GET /api/rooms/types 304  - 2.242 ms
+2026-03-21T14:07:05.368Z admin GET /api/members 304  - 13.978 ms
+2026-03-21T14:07:05.370Z admin GET /api/visitors 304  - 6.154 ms
+2026-03-21T14:07:05.370Z admin GET /api/fees 304  - 6.124 ms
+2026-03-21T14:07:05.373Z admin GET /api/allocations 304  - 12.500 ms
+2026-03-21T14:07:05.375Z admin GET /api/rooms 304  - 18.338 ms
+2026-03-21T14:07:05.376Z admin GET /api/complaints 304  - 13.845 ms
+2026-03-21T14:07:05.385Z admin GET /api/maintenance 304  - 7.872 ms
+2026-03-21T14:07:05.385Z admin GET /api/complaints/categories 304  - 7.643 ms
+2026-03-21T14:07:05.386Z admin GET /api/fees/categories 304  - 7.712 ms
+2026-03-21T14:07:05.387Z admin GET /api/stats 304  - 7.119 ms
+2026-03-21T14:07:05.390Z admin GET /api/furniture 304  - 8.445 ms
+2026-03-21T14:07:05.392Z admin GET /api/scans 304  - 9.307 ms
+2026-03-21T14:07:05.395Z admin GET /api/hostels 304  - 2.123 ms
+2026-03-21T14:07:05.395Z admin GET /api/rooms/types 304  - 1.348 ms
+2026-03-21T14:07:05.535Z admin GET /api/rooms 304  - 11.944 ms
+2026-03-21T14:07:05.536Z admin GET /api/visitors 304  - 5.500 ms
+2026-03-21T14:07:05.537Z admin GET /api/fees 304  - 4.955 ms
+2026-03-21T14:07:05.540Z admin GET /api/members 304  - 18.922 ms
+2026-03-21T14:07:05.543Z admin GET /api/allocations 304  - 17.811 ms
+2026-03-21T14:07:05.545Z admin GET /api/complaints 304  - 16.821 ms
+2026-03-21T14:07:05.551Z admin GET /api/maintenance 304  - 5.363 ms
+2026-03-21T14:07:05.552Z admin GET /api/complaints/categories 304  - 4.805 ms
+2026-03-21T14:07:05.552Z admin GET /api/fees/categories 304  - 4.953 ms
+2026-03-21T14:07:05.554Z admin GET /api/furniture 304  - 5.361 ms
+2026-03-21T14:07:05.556Z admin GET /api/scans 304  - 5.811 ms
+2026-03-21T14:07:05.557Z admin GET /api/stats 304  - 8.696 ms
+2026-03-21T14:07:05.560Z admin GET /api/hostels 304  - 2.165 ms
+2026-03-21T14:07:05.560Z admin GET /api/rooms/types 304  - 1.425 ms
+2026-03-21T14:07:05.717Z admin GET /api/members 304  - 11.871 ms
+2026-03-21T14:07:05.718Z admin GET /api/visitors 304  - 5.991 ms
+2026-03-21T14:07:05.718Z admin GET /api/fees 304  - 4.931 ms
+2026-03-21T14:07:05.719Z admin GET /api/complaints 304  - 8.936 ms
+2026-03-21T14:07:05.720Z admin GET /api/rooms 304  - 13.670 ms
+2026-03-21T14:07:05.723Z admin GET /api/allocations 304  - 14.022 ms
+2026-03-21T14:07:05.730Z admin GET /api/maintenance 304  - 5.932 ms
+2026-03-21T14:07:05.731Z admin GET /api/complaints/categories 304  - 5.129 ms
+2026-03-21T14:07:05.731Z admin GET /api/fees/categories 304  - 4.958 ms
+2026-03-21T14:07:05.733Z admin GET /api/furniture 304  - 5.641 ms
+2026-03-21T14:07:05.734Z admin GET /api/scans 304  - 5.703 ms
+2026-03-21T14:07:05.734Z admin GET /api/stats 304  - 7.551 ms
+2026-03-21T14:07:05.737Z admin GET /api/hostels 304  - 1.707 ms
+2026-03-21T14:07:05.737Z admin GET /api/rooms/types 304  - 1.304 ms
+2026-03-21T14:07:05.881Z admin GET /api/rooms 304  - 9.128 ms
+2026-03-21T14:07:05.881Z admin GET /api/visitors 304  - 5.637 ms
+2026-03-21T14:07:05.882Z admin GET /api/fees 304  - 4.508 ms
+2026-03-21T14:07:05.884Z admin GET /api/members 304  - 13.938 ms
+2026-03-21T14:07:05.886Z admin GET /api/allocations 304  - 12.610 ms
+2026-03-21T14:07:05.887Z admin GET /api/complaints 304  - 12.519 ms
+2026-03-21T14:07:05.894Z admin GET /api/maintenance 304  - 7.036 ms
+2026-03-21T14:07:05.895Z admin GET /api/fees/categories 304  - 5.350 ms
+2026-03-21T14:07:05.895Z admin GET /api/stats 304  - 3.873 ms
+2026-03-21T14:07:05.896Z admin GET /api/complaints/categories 304  - 7.427 ms
+2026-03-21T14:07:05.897Z admin GET /api/furniture 304  - 5.429 ms
+2026-03-21T14:07:05.900Z admin GET /api/scans 304  - 7.508 ms
+2026-03-21T14:07:05.901Z admin GET /api/hostels 304  - 2.548 ms
+2026-03-21T14:07:05.901Z admin GET /api/rooms/types 304  - 2.272 ms
+2026-03-21T14:07:06.048Z admin GET /api/rooms 304  - 10.340 ms
+2026-03-21T14:07:06.049Z admin GET /api/visitors 304  - 6.464 ms
+2026-03-21T14:07:06.049Z admin GET /api/fees 304  - 4.782 ms
+2026-03-21T14:07:06.050Z admin GET /api/complaints 304  - 9.733 ms
+2026-03-21T14:07:06.052Z admin GET /api/allocations 304  - 13.161 ms
+2026-03-21T14:07:06.055Z admin GET /api/members 304  - 18.841 ms
+2026-03-21T14:07:06.061Z admin GET /api/fees/categories 304  - 3.551 ms
+2026-03-21T14:07:06.062Z admin GET /api/complaints/categories 304  - 5.330 ms
+2026-03-21T14:07:06.063Z admin GET /api/maintenance 304  - 7.659 ms
+2026-03-21T14:07:06.063Z admin GET /api/stats 304  - 5.209 ms
+2026-03-21T14:07:06.065Z admin GET /api/furniture 304  - 6.354 ms
+2026-03-21T14:07:06.068Z admin GET /api/scans 304  - 8.155 ms
+2026-03-21T14:07:06.069Z admin GET /api/hostels 304  - 2.878 ms
+2026-03-21T14:07:06.069Z admin GET /api/rooms/types 304  - 2.661 ms
+2026-03-21T14:07:06.215Z admin GET /api/members 304  - 11.716 ms
+2026-03-21T14:07:06.216Z admin GET /api/visitors 304  - 6.253 ms
+2026-03-21T14:07:06.216Z admin GET /api/fees 304  - 5.269 ms
+2026-03-21T14:07:06.218Z admin GET /api/complaints 304  - 9.514 ms
+2026-03-21T14:07:06.219Z admin GET /api/rooms 304  - 13.753 ms
+2026-03-21T14:07:06.221Z admin GET /api/allocations 304  - 14.466 ms
+2026-03-21T14:07:06.229Z admin GET /api/maintenance 304  - 7.085 ms
+2026-03-21T14:07:06.230Z admin GET /api/complaints/categories 304  - 6.727 ms
+2026-03-21T14:07:06.230Z admin GET /api/fees/categories 304  - 6.573 ms
+2026-03-21T14:07:06.230Z admin GET /api/stats 304  - 6.264 ms
+2026-03-21T14:07:06.232Z admin GET /api/furniture 304  - 6.243 ms
+2026-03-21T14:07:06.235Z admin GET /api/scans 304  - 7.248 ms
+2026-03-21T14:07:06.235Z admin GET /api/hostels 304  - 2.608 ms
+2026-03-21T14:07:06.236Z admin GET /api/rooms/types 304  - 2.157 ms
+2026-03-21T14:07:06.381Z admin GET /api/allocations 304  - 7.988 ms
+2026-03-21T14:07:06.382Z admin GET /api/visitors 304  - 6.208 ms
+2026-03-21T14:07:06.382Z admin GET /api/fees 304  - 5.026 ms
+2026-03-21T14:07:06.384Z admin GET /api/members 304  - 14.830 ms
+2026-03-21T14:07:06.386Z admin GET /api/rooms 304  - 14.406 ms
+2026-03-21T14:07:06.387Z admin GET /api/complaints 304  - 12.998 ms
+2026-03-21T14:07:06.394Z admin GET /api/maintenance 304  - 6.669 ms
+2026-03-21T14:07:06.395Z admin GET /api/fees/categories 304  - 5.393 ms
+2026-03-21T14:07:06.396Z admin GET /api/complaints/categories 304  - 6.761 ms
+2026-03-21T14:07:06.396Z admin GET /api/stats 304  - 5.927 ms
+2026-03-21T14:07:06.398Z admin GET /api/furniture 304  - 6.800 ms
+2026-03-21T14:07:06.400Z admin GET /api/scans 304  - 7.663 ms
+2026-03-21T14:07:06.401Z admin GET /api/hostels 304  - 2.585 ms
+2026-03-21T14:07:06.401Z admin GET /api/rooms/types 304  - 1.987 ms
+2026-03-21T14:07:06.549Z admin GET /api/members 304  - 12.231 ms
+2026-03-21T14:07:06.550Z admin GET /api/visitors 304  - 6.166 ms
+2026-03-21T14:07:06.551Z admin GET /api/fees 304  - 5.658 ms
+2026-03-21T14:07:06.552Z admin GET /api/complaints 304  - 9.546 ms
+2026-03-21T14:07:06.553Z admin GET /api/rooms 304  - 14.775 ms
+2026-03-21T14:07:06.556Z admin GET /api/allocations 304  - 15.169 ms
+2026-03-21T14:07:06.564Z admin GET /api/maintenance 304  - 7.515 ms
+2026-03-21T14:07:06.564Z admin GET /api/complaints/categories 304  - 6.584 ms
+2026-03-21T14:07:06.565Z admin GET /api/fees/categories 304  - 5.286 ms
+2026-03-21T14:07:06.566Z admin GET /api/furniture 304  - 5.233 ms
+2026-03-21T14:07:06.567Z admin GET /api/scans 304  - 5.341 ms
+2026-03-21T14:07:06.568Z admin GET /api/stats 304  - 7.133 ms
+2026-03-21T14:07:06.570Z admin GET /api/hostels 304  - 1.634 ms
+2026-03-21T14:07:06.570Z admin GET /api/rooms/types 304  - 1.178 ms
+2026-03-21T14:07:06.704Z admin GET /api/complaints 304  - 9.194 ms
+2026-03-21T14:07:06.705Z admin GET /api/visitors 304  - 6.345 ms
+2026-03-21T14:07:06.706Z admin GET /api/fees 304  - 5.368 ms
+2026-03-21T14:07:06.709Z admin GET /api/members 304  - 20.317 ms
+2026-03-21T14:07:06.711Z admin GET /api/rooms 304  - 20.009 ms
+2026-03-21T14:07:06.714Z admin GET /api/allocations 304  - 21.213 ms
+2026-03-21T14:07:06.727Z admin GET /api/maintenance 304  - 9.430 ms
+2026-03-21T14:07:06.730Z admin GET /api/furniture 304  - 7.056 ms
+2026-03-21T14:07:06.732Z admin GET /api/scans 304  - 7.162 ms
+2026-03-21T14:07:06.732Z admin GET /api/fees/categories 304  - 11.607 ms
+2026-03-21T14:07:06.733Z admin GET /api/complaints/categories 304  - 13.696 ms
+2026-03-21T14:07:06.733Z admin GET /api/stats 304  - 11.450 ms
+2026-03-21T14:07:06.740Z admin GET /api/hostels 304  - 2.141 ms
+2026-03-21T14:07:06.741Z admin GET /api/rooms/types 304  - 1.616 ms
+2026-03-21T14:07:06.899Z admin GET /api/members 304  - 13.172 ms
+2026-03-21T14:07:06.901Z admin GET /api/rooms 304  - 12.960 ms
+2026-03-21T14:07:06.901Z admin GET /api/fees 304  - 5.867 ms
+2026-03-21T14:07:06.903Z admin GET /api/complaints 304  - 10.939 ms
+2026-03-21T14:07:06.903Z admin GET /api/visitors 304  - 9.370 ms
+2026-03-21T14:07:06.905Z admin GET /api/allocations 304  - 15.544 ms
+2026-03-21T14:07:06.911Z admin GET /api/maintenance 304  - 5.021 ms
+2026-03-21T14:07:06.911Z admin GET /api/fees/categories 304  - 3.596 ms
+2026-03-21T14:07:06.912Z admin GET /api/complaints/categories 304  - 4.879 ms
+2026-03-21T14:07:06.912Z admin GET /api/stats 304  - 4.235 ms
+2026-03-21T14:07:06.914Z admin GET /api/furniture 304  - 5.310 ms
+2026-03-21T14:07:06.916Z admin GET /api/scans 304  - 6.928 ms
+2026-03-21T14:07:06.917Z admin GET /api/hostels 304  - 2.609 ms
+2026-03-21T14:07:06.917Z admin GET /api/rooms/types 304  - 2.087 ms
+2026-03-21T14:07:07.199Z admin GET /api/members 304  - 12.511 ms
+2026-03-21T14:07:07.200Z admin GET /api/visitors 304  - 6.921 ms
+2026-03-21T14:07:07.200Z admin GET /api/fees 304  - 5.447 ms
+2026-03-21T14:07:07.202Z admin GET /api/complaints 304  - 10.446 ms
+2026-03-21T14:07:07.203Z admin GET /api/rooms 304  - 15.086 ms
+2026-03-21T14:07:07.207Z admin GET /api/allocations 304  - 16.843 ms
+2026-03-21T14:07:07.213Z admin GET /api/maintenance 304  - 5.577 ms
+2026-03-21T14:07:07.214Z admin GET /api/fees/categories 304  - 4.404 ms
+2026-03-21T14:07:07.214Z admin GET /api/stats 304  - 4.043 ms
+2026-03-21T14:07:07.215Z admin GET /api/complaints/categories 304  - 6.038 ms
+2026-03-21T14:07:07.217Z admin GET /api/furniture 304  - 5.903 ms
+2026-03-21T14:07:07.219Z admin GET /api/scans 304  - 7.632 ms
+2026-03-21T14:07:07.220Z admin GET /api/hostels 304  - 2.588 ms
+2026-03-21T14:07:07.220Z admin GET /api/rooms/types 304  - 2.174 ms
+2026-03-21T14:07:07.366Z admin GET /api/complaints 304  - 7.465 ms
+2026-03-21T14:07:07.367Z admin GET /api/visitors 304  - 6.961 ms
+2026-03-21T14:07:07.368Z admin GET /api/fees 304  - 5.780 ms
+2026-03-21T14:07:07.371Z admin GET /api/members 304  - 17.860 ms
+2026-03-21T14:07:07.373Z admin GET /api/rooms 304  - 17.749 ms
+2026-03-21T14:07:07.377Z admin GET /api/allocations 304  - 19.836 ms
+2026-03-21T14:07:07.383Z admin GET /api/maintenance 304  - 5.159 ms
+2026-03-21T14:07:07.384Z admin GET /api/fees/categories 304  - 3.767 ms
+2026-03-21T14:07:07.384Z admin GET /api/stats 304  - 3.767 ms
+2026-03-21T14:07:07.385Z admin GET /api/complaints/categories 304  - 5.838 ms
+2026-03-21T14:07:07.386Z admin GET /api/furniture 304  - 5.290 ms
+2026-03-21T14:07:07.389Z admin GET /api/scans 304  - 6.992 ms
+2026-03-21T14:07:07.390Z admin GET /api/hostels 304  - 3.100 ms
+2026-03-21T14:07:07.390Z admin GET /api/rooms/types 304  - 2.625 ms
+2026-03-21T14:07:07.551Z admin GET /api/members 304  - 11.958 ms
+2026-03-21T14:07:07.552Z admin GET /api/visitors 304  - 6.640 ms
+2026-03-21T14:07:07.552Z admin GET /api/fees 304  - 5.656 ms
+2026-03-21T14:07:07.553Z admin GET /api/complaints 304  - 9.682 ms
+2026-03-21T14:07:07.555Z admin GET /api/rooms 304  - 14.128 ms
+2026-03-21T14:07:07.557Z admin GET /api/allocations 304  - 14.989 ms
+2026-03-21T14:07:07.566Z admin GET /api/complaints/categories 304  - 7.016 ms
+2026-03-21T14:07:07.566Z admin GET /api/fees/categories 304  - 4.860 ms
+2026-03-21T14:07:07.567Z admin GET /api/stats 304  - 3.988 ms
+2026-03-21T14:07:07.568Z admin GET /api/maintenance 304  - 10.049 ms
+2026-03-21T14:07:07.569Z admin GET /api/furniture 304  - 5.633 ms
+2026-03-21T14:07:07.572Z admin GET /api/scans 304  - 7.543 ms
+2026-03-21T14:07:07.573Z admin GET /api/hostels 304  - 2.980 ms
+2026-03-21T14:07:07.574Z admin GET /api/rooms/types 304  - 2.568 ms
+2026-03-21T14:07:38.282Z admin GET /api/members 304  - 12.724 ms
+2026-03-21T14:07:38.283Z admin GET /api/visitors 304  - 8.517 ms
+2026-03-21T14:07:38.284Z admin GET /api/fees 304  - 8.235 ms
+2026-03-21T14:07:38.285Z admin GET /api/complaints 304  - 11.586 ms
+2026-03-21T14:07:38.287Z admin GET /api/rooms 304  - 14.778 ms
+2026-03-21T14:07:38.290Z admin GET /api/allocations 304  - 16.572 ms
+2026-03-21T14:07:38.301Z admin GET /api/maintenance 304  - 5.871 ms
+2026-03-21T14:07:38.301Z admin GET /api/complaints/categories 304  - 5.196 ms
+2026-03-21T14:07:38.304Z admin GET /api/furniture 304  - 5.855 ms
+2026-03-21T14:07:38.305Z admin GET /api/hostels 304  - 5.466 ms
+2026-03-21T14:07:38.305Z admin GET /api/stats 304  - 7.552 ms
+2026-03-21T14:07:38.306Z admin GET /api/fees/categories 304  - 8.636 ms
+2026-03-21T14:07:38.309Z admin GET /api/scans 304  - 2.815 ms
+2026-03-21T14:07:38.310Z admin GET /api/rooms/types 304  - 1.730 ms
+2026-03-21T14:07:38.412Z admin GET /api/members 304  - 7.752 ms
+2026-03-21T14:07:38.413Z admin GET /api/visitors 304  - 6.274 ms
+2026-03-21T14:07:38.413Z admin GET /api/fees 304  - 5.410 ms
+2026-03-21T14:07:38.415Z admin GET /api/rooms 304  - 12.755 ms
+2026-03-21T14:07:38.417Z admin GET /api/allocations 304  - 12.569 ms
+2026-03-21T14:07:38.419Z admin GET /api/complaints 304  - 13.484 ms
+2026-03-21T14:07:38.426Z admin GET /api/complaints/categories 304  - 5.827 ms
+2026-03-21T14:07:38.427Z admin GET /api/fees/categories 304  - 5.166 ms
+2026-03-21T14:07:38.428Z admin GET /api/maintenance 304  - 7.937 ms
+2026-03-21T14:07:38.428Z admin GET /api/stats 304  - 4.454 ms
+2026-03-21T14:07:38.431Z admin GET /api/furniture 304  - 6.348 ms
+2026-03-21T14:07:38.433Z admin GET /api/scans 304  - 7.912 ms
+2026-03-21T14:07:38.434Z admin GET /api/hostels 304  - 2.723 ms
+2026-03-21T14:07:38.434Z admin GET /api/rooms/types 304  - 2.142 ms
+2026-03-21T14:07:38.715Z admin GET /api/members 304  - 12.264 ms
+2026-03-21T14:07:38.716Z admin GET /api/visitors 304  - 6.697 ms
+2026-03-21T14:07:38.717Z admin GET /api/fees 304  - 5.557 ms
+2026-03-21T14:07:38.719Z admin GET /api/complaints 304  - 10.116 ms
+2026-03-21T14:07:38.720Z admin GET /api/rooms 304  - 15.054 ms
+2026-03-21T14:07:38.723Z admin GET /api/allocations 304  - 16.452 ms
+2026-03-21T14:07:38.729Z admin GET /api/fees/categories 304  - 3.164 ms
+2026-03-21T14:07:38.731Z admin GET /api/maintenance 304  - 6.280 ms
+2026-03-21T14:07:38.731Z admin GET /api/complaints/categories 304  - 5.606 ms
+2026-03-21T14:07:38.732Z admin GET /api/stats 304  - 4.918 ms
+2026-03-21T14:07:38.733Z admin GET /api/furniture 304  - 5.901 ms
+2026-03-21T14:07:38.736Z admin GET /api/scans 304  - 7.616 ms
+2026-03-21T14:07:38.736Z admin GET /api/rooms/types 304  - 1.690 ms
+2026-03-21T14:07:38.737Z admin GET /api/hostels 304  - 3.157 ms
+2026-03-21T14:07:38.882Z admin GET /api/members 304  - 13.223 ms
+2026-03-21T14:07:38.883Z admin GET /api/visitors 304  - 7.147 ms
+2026-03-21T14:07:38.883Z admin GET /api/fees 304  - 5.897 ms
+2026-03-21T14:07:38.885Z admin GET /api/complaints 304  - 11.004 ms
+2026-03-21T14:07:38.886Z admin GET /api/rooms 304  - 16.203 ms
+2026-03-21T14:07:38.890Z admin GET /api/allocations 304  - 18.459 ms
+2026-03-21T14:07:38.896Z admin GET /api/maintenance 304  - 5.077 ms
+2026-03-21T14:07:38.896Z admin GET /api/fees/categories 304  - 3.449 ms
+2026-03-21T14:07:38.897Z admin GET /api/complaints/categories 304  - 5.555 ms
+2026-03-21T14:07:38.898Z admin GET /api/stats 304  - 4.441 ms
+2026-03-21T14:07:38.899Z admin GET /api/furniture 304  - 5.567 ms
+2026-03-21T14:07:38.902Z admin GET /api/scans 304  - 7.338 ms
+2026-03-21T14:07:38.903Z admin GET /api/hostels 304  - 2.691 ms
+2026-03-21T14:07:38.903Z admin GET /api/rooms/types 304  - 2.196 ms
+2026-03-21T14:07:39.019Z admin GET /api/members 304  - 16.193 ms
+2026-03-21T14:07:39.019Z admin GET /api/visitors 304  - 6.629 ms
+2026-03-21T14:07:39.020Z admin GET /api/fees 304  - 5.197 ms
+2026-03-21T14:07:39.022Z admin GET /api/complaints 304  - 10.378 ms
+2026-03-21T14:07:39.025Z admin GET /api/allocations 304  - 14.568 ms
+2026-03-21T14:07:39.026Z admin GET /api/rooms 304  - 17.986 ms
+2026-03-21T14:07:39.033Z admin GET /api/maintenance 304  - 5.433 ms
+2026-03-21T14:07:39.033Z admin GET /api/complaints/categories 304  - 4.805 ms
+2026-03-21T14:07:39.033Z admin GET /api/fees/categories 304  - 4.302 ms
+2026-03-21T14:07:39.035Z admin GET /api/furniture 304  - 5.194 ms
+2026-03-21T14:07:39.036Z admin GET /api/scans 304  - 5.273 ms
+2026-03-21T14:07:39.037Z admin GET /api/stats 304  - 6.916 ms
+2026-03-21T14:07:39.039Z admin GET /api/hostels 304  - 1.930 ms
+2026-03-21T14:07:39.040Z admin GET /api/rooms/types 304  - 1.682 ms
+2026-03-21T14:07:39.201Z admin GET /api/complaints 304  - 9.055 ms
+2026-03-21T14:07:39.203Z admin GET /api/visitors 304  - 8.541 ms
+2026-03-21T14:07:39.206Z admin GET /api/fees 304  - 7.458 ms
+2026-03-21T14:07:39.213Z admin GET /api/allocations 304  - 22.990 ms
+2026-03-21T14:07:39.216Z admin GET /api/rooms 304  - 27.149 ms
+2026-03-21T14:07:39.222Z admin GET /api/members 304  - 35.360 ms
+2026-03-21T14:07:39.229Z admin GET /api/complaints/categories 304  - 4.794 ms
+2026-03-21T14:07:39.229Z admin GET /api/fees/categories 304  - 4.627 ms
+2026-03-21T14:07:39.230Z admin GET /api/maintenance 304  - 7.222 ms
+2026-03-21T14:07:39.231Z admin GET /api/stats 304  - 5.394 ms
+2026-03-21T14:07:39.232Z admin GET /api/furniture 304  - 6.403 ms
+2026-03-21T14:07:39.235Z admin GET /api/scans 304  - 7.540 ms
+2026-03-21T14:07:39.236Z admin GET /api/hostels 304  - 2.565 ms
+2026-03-21T14:07:39.236Z admin GET /api/rooms/types 304  - 2.177 ms
+2026-03-21T14:07:39.327Z admin GET /api/rooms 304  - 6.648 ms
+2026-03-21T14:07:39.328Z admin GET /api/visitors 304  - 5.073 ms
+2026-03-21T14:07:39.329Z admin GET /api/fees 304  - 4.645 ms
+2026-03-21T14:07:39.330Z admin GET /api/complaints 304  - 7.517 ms
+2026-03-21T14:07:39.333Z admin GET /api/members 304  - 13.492 ms
+2026-03-21T14:07:39.335Z admin GET /api/allocations 304  - 14.102 ms
+2026-03-21T14:07:39.344Z admin GET /api/maintenance 304  - 7.707 ms
+2026-03-21T14:07:39.344Z admin GET /api/fees/categories 304  - 6.425 ms
+2026-03-21T14:07:39.345Z admin GET /api/complaints/categories 304  - 8.022 ms
+2026-03-21T14:07:39.346Z admin GET /api/stats 304  - 6.643 ms
+2026-03-21T14:07:39.348Z admin GET /api/furniture 304  - 6.531 ms
+2026-03-21T14:07:39.350Z admin GET /api/scans 304  - 8.066 ms
+2026-03-21T14:07:39.351Z admin GET /api/hostels 304  - 2.953 ms
+2026-03-21T14:07:39.352Z admin GET /api/rooms/types 304  - 2.417 ms
+2026-03-21T14:07:39.494Z admin GET /api/allocations 304  - 5.958 ms
+2026-03-21T14:07:39.494Z admin GET /api/visitors 304  - 5.264 ms
+2026-03-21T14:07:39.495Z admin GET /api/fees 304  - 4.881 ms
+2026-03-21T14:07:39.496Z admin GET /api/complaints 304  - 8.070 ms
+2026-03-21T14:07:39.498Z admin GET /api/rooms 304  - 10.984 ms
+2026-03-21T14:07:39.500Z admin GET /api/members 304  - 14.461 ms
+2026-03-21T14:07:39.508Z admin GET /api/maintenance 304  - 6.961 ms
+2026-03-21T14:07:39.510Z admin GET /api/furniture 304  - 6.158 ms
+2026-03-21T14:07:39.511Z admin GET /api/complaints/categories 304  - 8.918 ms
+2026-03-21T14:07:39.511Z admin GET /api/fees/categories 304  - 8.663 ms
+2026-03-21T14:07:39.512Z admin GET /api/stats 304  - 8.697 ms
+2026-03-21T14:07:39.514Z admin GET /api/scans 304  - 8.624 ms
+2026-03-21T14:07:39.515Z admin GET /api/hostels 304  - 2.686 ms
+2026-03-21T14:07:39.516Z admin GET /api/rooms/types 304  - 2.293 ms
+2026-03-21T14:07:39.664Z admin GET /api/rooms 304  - 9.822 ms
+2026-03-21T14:07:39.664Z admin GET /api/visitors 304  - 6.107 ms
+2026-03-21T14:07:39.665Z admin GET /api/fees 304  - 5.002 ms
+2026-03-21T14:07:39.667Z admin GET /api/members 304  - 15.040 ms
+2026-03-21T14:07:39.670Z admin GET /api/allocations 304  - 14.205 ms
+2026-03-21T14:07:39.672Z admin GET /api/complaints 304  - 14.943 ms
+2026-03-21T14:07:39.679Z admin GET /api/maintenance 304  - 6.019 ms
+2026-03-21T14:07:39.680Z admin GET /api/complaints/categories 304  - 5.224 ms
+2026-03-21T14:07:39.682Z admin GET /api/furniture 304  - 5.140 ms
+2026-03-21T14:07:39.683Z admin GET /api/scans 304  - 5.274 ms
+2026-03-21T14:07:39.683Z admin GET /api/fees/categories 304  - 7.556 ms
+2026-03-21T14:07:39.684Z admin GET /api/stats 304  - 7.544 ms
+2026-03-21T14:07:39.686Z admin GET /api/hostels 304  - 1.702 ms
+2026-03-21T14:07:39.686Z admin GET /api/rooms/types 304  - 1.149 ms
+2026-03-21T14:07:39.833Z admin GET /api/rooms 304  - 10.172 ms
+2026-03-21T14:07:39.834Z admin GET /api/visitors 304  - 6.210 ms
+2026-03-21T14:07:39.834Z admin GET /api/fees 304  - 5.009 ms
+2026-03-21T14:07:39.837Z admin GET /api/members 304  - 15.407 ms
+2026-03-21T14:07:39.839Z admin GET /api/allocations 304  - 14.587 ms
+2026-03-21T14:07:39.841Z admin GET /api/complaints 304  - 14.892 ms
+2026-03-21T14:07:39.848Z admin GET /api/maintenance 304  - 5.741 ms
+2026-03-21T14:07:39.848Z admin GET /api/fees/categories 304  - 4.212 ms
+2026-03-21T14:07:39.849Z admin GET /api/complaints/categories 304  - 5.427 ms
+2026-03-21T14:07:39.851Z admin GET /api/furniture 304  - 5.543 ms
+2026-03-21T14:07:39.852Z admin GET /api/scans 304  - 5.685 ms
+2026-03-21T14:07:39.852Z admin GET /api/stats 304  - 7.539 ms
+2026-03-21T14:07:39.855Z admin GET /api/hostels 304  - 1.885 ms
+2026-03-21T14:07:39.855Z admin GET /api/rooms/types 304  - 1.231 ms
+2026-03-21T14:07:39.963Z admin GET /api/complaints 304  - 6.571 ms
+2026-03-21T14:07:39.964Z admin GET /api/visitors 304  - 5.984 ms
+2026-03-21T14:07:39.964Z admin GET /api/fees 304  - 4.959 ms
+2026-03-21T14:07:39.967Z admin GET /api/members 304  - 14.527 ms
+2026-03-21T14:07:39.968Z admin GET /api/rooms 304  - 14.325 ms
+2026-03-21T14:07:39.970Z admin GET /api/allocations 304  - 15.241 ms
+2026-03-21T14:07:39.978Z admin GET /api/complaints/categories 304  - 5.926 ms
+2026-03-21T14:07:39.979Z admin GET /api/maintenance 304  - 8.012 ms
+2026-03-21T14:07:39.980Z admin GET /api/fees/categories 304  - 5.196 ms
+2026-03-21T14:07:39.980Z admin GET /api/stats 304  - 4.837 ms
+2026-03-21T14:07:39.982Z admin GET /api/furniture 304  - 5.718 ms
+2026-03-21T14:07:39.984Z admin GET /api/scans 304  - 7.396 ms
+2026-03-21T14:07:39.985Z admin GET /api/hostels 304  - 3.061 ms
+2026-03-21T14:07:39.986Z admin GET /api/rooms/types 304  - 2.679 ms
+2026-03-21T14:07:40.114Z admin GET /api/rooms 304  - 10.153 ms
+2026-03-21T14:07:40.117Z admin GET /api/members 304  - 14.210 ms
+2026-03-21T14:07:40.117Z admin GET /api/fees 304  - 5.670 ms
+2026-03-21T14:07:40.118Z admin GET /api/complaints 304  - 10.869 ms
+2026-03-21T14:07:40.119Z admin GET /api/visitors 304  - 9.523 ms
+2026-03-21T14:07:40.123Z admin GET /api/allocations 304  - 16.503 ms
+2026-03-21T14:07:40.129Z admin GET /api/maintenance 304  - 5.326 ms
+2026-03-21T14:07:40.130Z admin GET /api/complaints/categories 304  - 5.162 ms
+2026-03-21T14:07:40.131Z admin GET /api/furniture 304  - 4.767 ms
+2026-03-21T14:07:40.132Z admin GET /api/scans 304  - 4.698 ms
+2026-03-21T14:07:40.132Z admin GET /api/fees/categories 304  - 6.791 ms
+2026-03-21T14:07:40.132Z admin GET /api/stats 304  - 6.281 ms
+2026-03-21T14:07:40.135Z admin GET /api/hostels 304  - 2.602 ms
+2026-03-21T14:07:40.135Z admin GET /api/rooms/types 304  - 1.335 ms
+2026-03-21T14:07:40.281Z admin GET /api/allocations 304  - 8.391 ms
+2026-03-21T14:07:40.282Z admin GET /api/visitors 304  - 5.393 ms
+2026-03-21T14:07:40.283Z admin GET /api/fees 304  - 5.080 ms
+2026-03-21T14:07:40.285Z admin GET /api/members 304  - 15.785 ms
+2026-03-21T14:07:40.286Z admin GET /api/rooms 304  - 15.391 ms
+2026-03-21T14:07:40.287Z admin GET /api/complaints 304  - 12.276 ms
+2026-03-21T14:07:40.293Z admin GET /api/maintenance 304  - 5.398 ms
+2026-03-21T14:07:40.294Z admin GET /api/complaints/categories 304  - 4.743 ms
+2026-03-21T14:07:40.294Z admin GET /api/fees/categories 304  - 4.474 ms
+2026-03-21T14:07:40.296Z admin GET /api/furniture 304  - 5.020 ms
+2026-03-21T14:07:40.296Z admin GET /api/scans 304  - 4.949 ms
+2026-03-21T14:07:40.297Z admin GET /api/stats 304  - 6.546 ms
+2026-03-21T14:07:40.299Z admin GET /api/hostels 304  - 1.846 ms
+2026-03-21T14:07:40.300Z admin GET /api/rooms/types 304  - 1.389 ms
+2026-03-21T14:07:40.431Z admin GET /api/complaints 304  - 6.808 ms
+2026-03-21T14:07:40.432Z admin GET /api/visitors 304  - 6.746 ms
+2026-03-21T14:07:40.432Z admin GET /api/fees 304  - 5.610 ms
+2026-03-21T14:07:40.434Z admin GET /api/rooms 304  - 14.571 ms
+2026-03-21T14:07:40.436Z admin GET /api/members 304  - 14.979 ms
+2026-03-21T14:07:40.440Z admin GET /api/allocations 304  - 16.741 ms
+2026-03-21T14:07:40.445Z admin GET /api/fees/categories 304  - 2.963 ms
+2026-03-21T14:07:40.447Z admin GET /api/complaints/categories 304  - 5.241 ms
+2026-03-21T14:07:40.447Z admin GET /api/maintenance 304  - 6.930 ms
+2026-03-21T14:07:40.449Z admin GET /api/furniture 304  - 5.617 ms
+2026-03-21T14:07:40.450Z admin GET /api/scans 304  - 5.719 ms
+2026-03-21T14:07:40.450Z admin GET /api/stats 304  - 7.477 ms
+2026-03-21T14:07:40.453Z admin GET /api/hostels 304  - 1.721 ms
+2026-03-21T14:07:40.453Z admin GET /api/rooms/types 304  - 1.183 ms

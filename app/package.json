@@ -1,0 +1,51 @@
+{
+  "name": "react-example",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch-path=./server.js --watch-path=./src/routes --watch-path=./src/db --watch-path=./src/middleware server.js",
+    "start": "node server.js",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist",
+    "lint": "echo \"Linting skipped\""
+  },
+  "dependencies": {
+    "@google/genai": "^1.29.0",
+    "@tailwindcss/oxide-darwin-arm64": "^4.2.2",
+    "@tailwindcss/vite": "^4.1.14",
+    "@vitejs/plugin-react": "^5.0.4",
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "html5-qrcode": "^2.3.8",
+    "jsonwebtoken": "^9.0.3",
+    "lucide-react": "^0.546.0",
+    "morgan": "^1.10.1",
+    "motion": "^12.23.24",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-qr-code": "^2.0.18",
+    "react-router-dom": "^7.13.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^6.0.1",
+    "vite": "^6.2.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^22.14.0",
+    "@types/sqlite3": "^3.1.11",
+    "autoprefixer": "^10.4.21",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
