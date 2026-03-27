@@ -57,8 +57,9 @@ Verifies that the system correctly rolls back transactions if an error occurs mi
 node scripts/failure-simulation.cjs
 ```
 
-#### 2. Concurrency & Race Condition Test
-Simulates multiple users attempting to book the last available spot in a single-capacity room at the exact same microsecond.
+#### 2. Concurrency Race Test
+Validates that only one successful allocation is made for a single spot in a room, even with simultaneous requests. 
+Supports **Auto-Mode**: automatically discovers unallocated members and available rooms.
 ```bash
 node scripts/race-test.cjs
 ```
@@ -79,6 +80,7 @@ node scripts/unified-stress-test.cjs
 All test parameters (URLs, user accounts, concurrency levels, etc.) are managed in `scripts/constants.cjs`. You can modify this file to:
 - Add more `TEST_USERS` or `MEMBER_IDS`.
 - Adjust `STRESS_CONFIG` for higher volumes.
+- Change `RACE_TEST` to toggle `AUTO_MODE` and set `TARGET_CAPACITY`.
 - Change `COMPLAINT_CONFIG` categories and rooms.
 
 ### Execution Logs

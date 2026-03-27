@@ -18,21 +18,28 @@ router.get('/', authenticateToken, requireAdmin, async (req, res) => {
 });
 
 router.post('/gate', authenticateToken, requireAdmin, async (req, res) => {
+  let db;
   try {
     const { qrCode } = req.body;
-    const db = getDB();
+    db = await createConnection();
+    await db.run('BEGIN IMMEDIATE TRANSACTION');
     
     // Find member by their unique ID or QR string
     const member = await db.get('SELECT * FROM Member WHERE QRCode = ? OR IdentificationNumber = ?', [qrCode, qrCode]);
     if (!member) {
+      await db.run('ROLLBACK');
+      await db.close();
       return res.status(404).json({ error: 'Invalid QR Code. Member not found.' });
     }
     
     // Find active room info to return
     const alloc = await db.get('SELECT r.RoomNumber, h.Name FROM Allocation a JOIN Room r ON a.RoomNumber = r.RoomNumber JOIN Hostel h ON r.ShortCode = h.ShortCode WHERE a.IdentificationNumber = ? AND a.AllocationStatus="Active"', [member.IdentificationNumber]);
 
-    // Log the scan (Atomic by itself in SQLite)
+    // Log the scan (Atomic by itself in SQLite, but wrapped for total script-wide consistency)
     await db.run('INSERT INTO QRScanLog (ScanType, QRCode, ScannedBy, Location, IdentificationNumber) VALUES (?, ?, ?, ?, ?)', ['Member', qrCode, req.user.username, 'Main Gate', member.IdentificationNumber]);
+
+    await db.run('COMMIT');
+    await db.close();
 
     res.json({
       valid: true,
@@ -44,6 +51,10 @@ router.post('/gate', authenticateToken, requireAdmin, async (req, res) => {
       }
     });
   } catch (e) { 
+    if (db) {
+      await db.run('ROLLBACK').catch(() => {});
+      await db.close().catch(() => {});
+    }
     res.status(500).json({ error: e.message }); 
   }
 });
