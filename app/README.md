@@ -76,6 +76,31 @@ Comprehensive load testing for critical system endpoints (Member Polling, Scans,
 node scripts/unified-stress-test.cjs
 ```
 
+#### 5. Concurrent Usage Simulation 🆕
+Simulates multiple users (admin sessions) performing gate scans at the exact same time to ensure no interference or data corruption occurs.
+```bash
+node scripts/concurrent-usage.cjs
+```
+
+---
+
+## 🛡️ System Constraints
+
+The system enforces several layers of constraints to ensure data integrity and security under high load.
+
+### Database Constraints (SQLite)
+- **Room Occupancy**: `CurrentOccupancy` is strictly checked against `MaxCapacity` via `chk_room_occupancy_valid` constraint.
+- **Unique Identifiers**: `IdentificationNumber`, `Email`, and `QRCode` are unique across the `Member` table.
+- **Relational Integrity**: `FOREIGN KEY` constraints (with `ON DELETE RESTRICT`) prevent deletion of members with active room allocations.
+- **Age Validation**: `Member` age must be positive; `YearOfStudy` is constrained between 1 and 10.
+
+### Application Logic Constraints
+- **Role-Based Access**: Critical operations (Scans, Allocations, Maintenance) require an active **Admin** session (`requireAdmin` middleware).
+- **Atomic Gate Rush**: High-load scans are handled via Write-Ahead Logging (WAL) to prevent "Database Locked" errors during concurrent reads/writes.
+- **Maintenance Lock**: Maintenance closure via QR scan is permitted only if the resident's personal QR is scanned (for occupied rooms) or the Room QR (for vacant rooms).
+
+---
+
 ### Centralized Configuration
 All test parameters (URLs, user accounts, concurrency levels, etc.) are managed in `scripts/constants.cjs`. You can modify this file to:
 - Add more `TEST_USERS` or `MEMBER_IDS`.

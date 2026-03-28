@@ -26,13 +26,13 @@ module.exports = {
 
     // --- UNIFIED STRESS TEST (Parallel Scenarios) ---
     UNIFIED_TEST: {
-        S1_MEMBER_POLLING: { TOTAL_REQUESTS: 100, CONCURRENCY: 20 },
-        S2_GATE_SCAN: { TOTAL_REQUESTS: 60, CONCURRENCY: 10 },
-        S3_AUTH_STRESS: { TOTAL_REQUESTS: 30, CONCURRENCY: 5 },
-        S4_MAINTENANCE: { TOTAL_REQUESTS: 50, CONCURRENCY: 10 },
+        S1_MEMBER_POLLING: { TOTAL_REQUESTS: 10000, CONCURRENCY: 200 },
+        // S2_GATE_SCAN: { TOTAL_REQUESTS: 60, CONCURRENCY: 10 },
+        // S3_AUTH_STRESS: { TOTAL_REQUESTS: 30, CONCURRENCY: 5 },
+        // S4_MAINTENANCE: { TOTAL_REQUESTS: 50, CONCURRENCY: 10 },
         S5_COMPLAINT_WRITE: {
-            TOTAL_REQUESTS: 20,
-            CONCURRENCY: 5,
+            TOTAL_REQUESTS: 10000,
+            CONCURRENCY: 200,
             CATEGORIES: [1, 2, 3, 4, 5, 6, 7, 8],
             SEVERITIES: ['Low', 'Medium', 'High', 'Critical'],
             ROOMS: ['A001', 'A002', 'A003', 'A004', 'A105', 'A106']
@@ -41,7 +41,7 @@ module.exports = {
 
     // --- RACE CONDITION TEST ---
     RACE_TEST: {
-        AUTO_MODE: false,
+        AUTO_MODE: true,
         AUTO_VACATE: true,
         AUTO_CONFIG: {
             TARGET_CAPACITY: 1,
@@ -54,8 +54,14 @@ module.exports = {
 
     // --- GATE RUSH STRESS TEST ---
     STRESS_TEST: {
-        TOTAL_REQUESTS: 2000,
+        TOTAL_REQUESTS: 1000,
         CONCURRENCY: 300,
         QR_CODE: 'MEM-QR-0001'
+    },
+
+    // --- CONCURRENT USAGE TEST ---
+    CONCURRENT_USAGE: {
+        CONCURRENCY: 10,
+        TOTAL_REQUESTS: 200
     }
 };

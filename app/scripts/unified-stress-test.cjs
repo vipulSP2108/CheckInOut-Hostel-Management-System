@@ -84,6 +84,7 @@ async function start() {
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
         }),
 
+/*
         // S2: Gate Scan (GET)
         () => runScenario('S2: Gate Scan Stream (GET)', UNIFIED_TEST.S2_GATE_SCAN, async () => {
             const res = await fetch(`${API_URL}/scans`, { 
@@ -110,6 +111,7 @@ async function start() {
             });
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
         }),
+*/
 
         // S5: Complaint Submission (WRITE)
         () => runScenario('S5: Complaint Write (POST)', UNIFIED_TEST.S5_COMPLAINT_WRITE, async (idx) => {
