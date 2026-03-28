@@ -1,0 +1,1000 @@
+{"timestamp":1774707193460,"latency":70,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193462,"latency":72,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193462,"latency":72,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193463,"latency":73,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193468,"latency":78,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193469,"latency":79,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193469,"latency":79,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193470,"latency":79,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193471,"latency":80,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193471,"latency":80,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193472,"latency":81,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193472,"latency":81,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193472,"latency":81,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193473,"latency":82,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193473,"latency":82,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193474,"latency":82,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193474,"latency":82,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193474,"latency":82,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193475,"latency":83,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193475,"latency":83,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193475,"latency":83,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193476,"latency":84,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193476,"latency":84,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193476,"latency":84,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193477,"latency":85,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193477,"latency":84,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193478,"latency":85,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193478,"latency":85,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193479,"latency":86,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193479,"latency":86,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193479,"latency":86,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193480,"latency":87,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193480,"latency":87,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193481,"latency":88,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193481,"latency":88,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193481,"latency":88,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193482,"latency":88,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193482,"latency":88,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193482,"latency":88,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193483,"latency":89,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193483,"latency":89,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193483,"latency":89,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193483,"latency":89,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193484,"latency":90,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193484,"latency":90,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193485,"latency":91,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193485,"latency":90,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193485,"latency":90,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193486,"latency":91,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193486,"latency":91,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193487,"latency":92,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193487,"latency":91,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193488,"latency":92,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193488,"latency":92,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193488,"latency":92,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193489,"latency":93,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193489,"latency":93,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193489,"latency":92,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193490,"latency":93,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193490,"latency":93,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193491,"latency":94,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193491,"latency":94,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193491,"latency":94,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193492,"latency":94,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193492,"latency":94,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193493,"latency":95,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193494,"latency":96,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193495,"latency":97,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193495,"latency":96,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193496,"latency":97,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193496,"latency":97,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193497,"latency":98,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193497,"latency":97,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193498,"latency":98,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193498,"latency":98,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193498,"latency":98,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193499,"latency":99,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193499,"latency":98,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193499,"latency":97,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193500,"latency":98,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193500,"latency":98,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193501,"latency":99,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193501,"latency":98,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193502,"latency":99,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193502,"latency":99,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193503,"latency":100,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193503,"latency":100,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193504,"latency":101,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193504,"latency":101,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193505,"latency":101,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193505,"latency":101,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193506,"latency":102,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193506,"latency":102,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193507,"latency":103,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193507,"latency":103,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193507,"latency":103,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193508,"latency":103,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193509,"latency":104,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193509,"latency":104,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193509,"latency":104,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193510,"latency":105,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193510,"latency":105,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193511,"latency":105,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193511,"latency":105,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193512,"latency":106,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193513,"latency":107,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193513,"latency":106,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193514,"latency":107,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193514,"latency":107,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193515,"latency":108,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193515,"latency":108,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193515,"latency":108,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193516,"latency":109,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193516,"latency":109,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193516,"latency":108,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193517,"latency":108,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193517,"latency":108,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193518,"latency":109,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193518,"latency":109,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193519,"latency":110,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193520,"latency":111,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193520,"latency":111,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193521,"latency":111,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193521,"latency":111,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193522,"latency":112,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193522,"latency":112,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193523,"latency":113,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193523,"latency":113,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193523,"latency":113,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193524,"latency":114,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193524,"latency":114,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193525,"latency":114,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193526,"latency":115,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193526,"latency":115,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193527,"latency":116,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193527,"latency":116,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193528,"latency":116,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193529,"latency":117,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193530,"latency":117,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193531,"latency":118,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193532,"latency":117,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193533,"latency":118,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193534,"latency":117,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193540,"latency":150,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193540,"latency":151,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193541,"latency":152,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193541,"latency":152,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193542,"latency":153,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193542,"latency":153,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193543,"latency":154,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193544,"latency":156,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193544,"latency":156,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193545,"latency":158,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193545,"latency":158,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193545,"latency":158,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193546,"latency":159,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193546,"latency":159,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193546,"latency":159,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193547,"latency":160,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193547,"latency":161,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193547,"latency":161,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193547,"latency":161,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193548,"latency":162,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193548,"latency":162,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193548,"latency":162,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193548,"latency":163,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193549,"latency":164,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193549,"latency":164,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193549,"latency":164,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193549,"latency":164,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193549,"latency":164,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193550,"latency":165,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193550,"latency":165,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193551,"latency":167,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193551,"latency":167,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193552,"latency":168,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193552,"latency":168,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193552,"latency":168,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193553,"latency":169,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193553,"latency":169,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193553,"latency":169,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193554,"latency":170,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193554,"latency":171,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193554,"latency":171,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193554,"latency":171,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193555,"latency":172,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193555,"latency":172,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193555,"latency":172,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193555,"latency":172,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193556,"latency":173,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193556,"latency":173,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193557,"latency":175,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193557,"latency":175,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193557,"latency":175,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193557,"latency":175,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193558,"latency":176,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193558,"latency":176,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193558,"latency":176,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193559,"latency":178,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193559,"latency":178,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193559,"latency":178,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193560,"latency":179,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193560,"latency":179,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193560,"latency":179,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193560,"latency":179,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193561,"latency":180,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193561,"latency":181,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193561,"latency":181,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193561,"latency":181,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193562,"latency":182,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193562,"latency":182,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193562,"latency":182,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193563,"latency":183,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193563,"latency":183,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193563,"latency":183,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193563,"latency":183,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193564,"latency":185,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193564,"latency":185,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193564,"latency":185,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193565,"latency":186,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193565,"latency":186,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193565,"latency":186,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193565,"latency":186,"status":500,"error":"fetch failed","type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193884,"latency":518,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193886,"latency":516,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193888,"latency":519,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193890,"latency":522,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193892,"latency":523,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193893,"latency":524,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193894,"latency":527,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193895,"latency":523,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193897,"latency":532,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193898,"latency":527,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193899,"latency":526,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193901,"latency":529,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193901,"latency":531,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193903,"latency":530,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193904,"latency":531,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193905,"latency":532,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193905,"latency":531,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193906,"latency":533,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193907,"latency":533,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193908,"latency":534,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193908,"latency":534,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193909,"latency":534,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193910,"latency":540,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193910,"latency":536,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193911,"latency":536,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193912,"latency":537,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193912,"latency":541,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193913,"latency":537,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193914,"latency":538,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193914,"latency":539,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193915,"latency":538,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193916,"latency":538,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193916,"latency":538,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193917,"latency":541,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193917,"latency":541,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193918,"latency":540,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193919,"latency":543,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193919,"latency":541,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193920,"latency":544,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193921,"latency":543,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193922,"latency":544,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193922,"latency":544,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193923,"latency":545,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193924,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193924,"latency":545,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193925,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193926,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193926,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193928,"latency":533,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193928,"latency":467,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193929,"latency":533,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193929,"latency":533,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193930,"latency":535,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193931,"latency":534,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193931,"latency":536,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193932,"latency":537,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193932,"latency":537,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193932,"latency":535,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193933,"latency":536,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193933,"latency":536,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193934,"latency":538,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193934,"latency":536,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193935,"latency":537,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193935,"latency":537,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193936,"latency":537,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193937,"latency":539,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193937,"latency":538,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193938,"latency":537,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193938,"latency":539,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193939,"latency":542,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193940,"latency":541,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193940,"latency":538,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193940,"latency":539,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193941,"latency":539,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193941,"latency":542,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193942,"latency":540,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193942,"latency":540,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193943,"latency":541,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193943,"latency":540,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193943,"latency":540,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193944,"latency":541,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193944,"latency":541,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193945,"latency":543,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193945,"latency":543,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193946,"latency":542,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193946,"latency":542,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193947,"latency":541,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193947,"latency":543,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193948,"latency":543,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193948,"latency":543,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193948,"latency":542,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193949,"latency":543,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193949,"latency":544,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193952,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193952,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193953,"latency":549,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193953,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193954,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193955,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193955,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193956,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193956,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193957,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193957,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193958,"latency":549,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193959,"latency":549,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193959,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193960,"latency":549,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193960,"latency":554,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193961,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193961,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193962,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193962,"latency":553,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193963,"latency":552,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193963,"latency":553,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193963,"latency":551,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193964,"latency":554,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193964,"latency":552,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193965,"latency":554,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193965,"latency":553,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193965,"latency":553,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193966,"latency":554,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193967,"latency":555,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193967,"latency":556,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193968,"latency":555,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193968,"latency":556,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193972,"latency":560,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193972,"latency":560,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193973,"latency":560,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193973,"latency":561,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193974,"latency":561,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193974,"latency":562,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193974,"latency":561,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193975,"latency":563,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193975,"latency":564,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193976,"latency":563,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193976,"latency":563,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193976,"latency":563,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193977,"latency":563,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193977,"latency":564,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193977,"latency":564,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193978,"latency":564,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193978,"latency":565,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193979,"latency":566,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193979,"latency":566,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193979,"latency":565,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193980,"latency":566,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193980,"latency":566,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193981,"latency":567,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193982,"latency":568,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193982,"latency":568,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193983,"latency":569,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193983,"latency":569,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193983,"latency":569,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193984,"latency":570,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193984,"latency":570,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193985,"latency":570,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193986,"latency":572,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193987,"latency":572,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193987,"latency":572,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193988,"latency":573,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193988,"latency":574,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193990,"latency":575,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193993,"latency":578,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193993,"latency":578,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193994,"latency":579,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193994,"latency":579,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193995,"latency":580,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193995,"latency":580,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193996,"latency":581,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193996,"latency":579,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193997,"latency":580,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193997,"latency":580,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193998,"latency":581,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193998,"latency":581,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193999,"latency":633,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707193999,"latency":598,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194000,"latency":602,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194034,"latency":545,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194035,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194035,"latency":544,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194036,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194037,"latency":545,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194037,"latency":545,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194038,"latency":544,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194039,"latency":549,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194039,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194040,"latency":545,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194041,"latency":545,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194041,"latency":543,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194042,"latency":545,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194043,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194044,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194044,"latency":553,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194045,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194045,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194046,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194046,"latency":555,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194046,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194047,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194047,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194048,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194048,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194049,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194049,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194050,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194050,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194051,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194051,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194052,"latency":554,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194052,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194053,"latency":544,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194054,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194054,"latency":564,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194055,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194055,"latency":549,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194055,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194056,"latency":549,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194056,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194057,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194057,"latency":549,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194057,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194058,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194058,"latency":543,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194059,"latency":551,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194059,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194059,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194060,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194060,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194061,"latency":545,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194061,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194061,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194062,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194062,"latency":545,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194063,"latency":554,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194063,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194063,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194064,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194064,"latency":543,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194065,"latency":544,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194065,"latency":544,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194065,"latency":542,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194066,"latency":544,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194066,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194067,"latency":545,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194067,"latency":543,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194068,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194068,"latency":544,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194068,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194069,"latency":543,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194070,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194075,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194075,"latency":549,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194076,"latency":553,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194076,"latency":549,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194077,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194078,"latency":551,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194079,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194080,"latency":567,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194080,"latency":549,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194081,"latency":551,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194082,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194082,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194083,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194084,"latency":596,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194084,"latency":585,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194085,"latency":570,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194087,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194087,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194088,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194088,"latency":544,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194089,"latency":544,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194089,"latency":543,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194090,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194090,"latency":544,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194091,"latency":551,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194091,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194091,"latency":544,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194092,"latency":545,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194092,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194092,"latency":544,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194093,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194093,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194093,"latency":545,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194094,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194094,"latency":545,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194094,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194095,"latency":545,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194095,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194095,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194096,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194096,"latency":545,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194097,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194097,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194097,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194098,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194098,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194099,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194099,"latency":545,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194100,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194100,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194100,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194101,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194101,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194101,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194102,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194102,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194102,"latency":546,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194103,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194104,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194104,"latency":549,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194105,"latency":547,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194105,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194106,"latency":549,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194106,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194107,"latency":549,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194107,"latency":548,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194108,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194108,"latency":549,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194109,"latency":549,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194109,"latency":549,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194109,"latency":552,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194110,"latency":553,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194110,"latency":550,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194111,"latency":552,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194111,"latency":549,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194112,"latency":551,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194112,"latency":551,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194113,"latency":552,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194113,"latency":651,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194113,"latency":553,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194114,"latency":552,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194114,"latency":651,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194115,"latency":553,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194115,"latency":653,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194116,"latency":553,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194116,"latency":554,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194117,"latency":554,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194117,"latency":553,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194117,"latency":553,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194118,"latency":553,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194118,"latency":555,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194119,"latency":555,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194119,"latency":554,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194120,"latency":557,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194120,"latency":555,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194132,"latency":660,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194133,"latency":567,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194133,"latency":662,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194134,"latency":664,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194134,"latency":661,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194135,"latency":667,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194135,"latency":663,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194136,"latency":663,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194137,"latency":662,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194137,"latency":668,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194139,"latency":665,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194140,"latency":669,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194140,"latency":667,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194140,"latency":666,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194141,"latency":671,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194141,"latency":666,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194141,"latency":666,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194142,"latency":666,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194142,"latency":665,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194143,"latency":669,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194143,"latency":665,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194144,"latency":664,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194144,"latency":668,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194144,"latency":667,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194145,"latency":663,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194146,"latency":666,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194146,"latency":667,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194146,"latency":668,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194147,"latency":671,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194147,"latency":668,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194147,"latency":666,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194148,"latency":666,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194148,"latency":666,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194148,"latency":665,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194149,"latency":666,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194149,"latency":668,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194149,"latency":669,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194149,"latency":666,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194149,"latency":668,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194182,"latency":638,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194183,"latency":699,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194183,"latency":699,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194183,"latency":697,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194184,"latency":699,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194184,"latency":699,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194184,"latency":698,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194184,"latency":697,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194184,"latency":696,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194184,"latency":696,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194185,"latency":698,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194185,"latency":701,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194185,"latency":698,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194185,"latency":645,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194185,"latency":643,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194385,"latency":498,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194392,"latency":508,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194393,"latency":487,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194393,"latency":487,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194394,"latency":487,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194395,"latency":492,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194398,"latency":494,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194399,"latency":490,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194399,"latency":489,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194399,"latency":488,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194400,"latency":489,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194401,"latency":509,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194401,"latency":510,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194401,"latency":508,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194401,"latency":505,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194402,"latency":514,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194402,"latency":505,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194402,"latency":508,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194403,"latency":502,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194403,"latency":503,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194403,"latency":475,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194403,"latency":474,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194404,"latency":472,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194404,"latency":475,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194404,"latency":475,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194405,"latency":507,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194405,"latency":503,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194405,"latency":473,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194405,"latency":475,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194405,"latency":473,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194406,"latency":473,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194406,"latency":475,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194406,"latency":473,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194406,"latency":472,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194406,"latency":475,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194406,"latency":470,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194407,"latency":473,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194407,"latency":470,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194407,"latency":471,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194407,"latency":469,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194408,"latency":471,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194408,"latency":469,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194408,"latency":468,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194408,"latency":468,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194409,"latency":468,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194409,"latency":470,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194409,"latency":474,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194409,"latency":466,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194409,"latency":466,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194410,"latency":470,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194410,"latency":466,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194410,"latency":468,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194410,"latency":465,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194411,"latency":467,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194411,"latency":470,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194411,"latency":498,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194412,"latency":500,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194412,"latency":470,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194412,"latency":469,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194413,"latency":500,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194413,"latency":498,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194413,"latency":496,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194414,"latency":498,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194414,"latency":499,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194414,"latency":496,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194415,"latency":495,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194415,"latency":497,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194415,"latency":501,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194416,"latency":500,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194416,"latency":497,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194418,"latency":497,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194418,"latency":498,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194419,"latency":497,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194420,"latency":515,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194422,"latency":513,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194422,"latency":498,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194423,"latency":515,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194423,"latency":499,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194423,"latency":497,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194423,"latency":500,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194424,"latency":498,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194424,"latency":499,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194425,"latency":473,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194425,"latency":503,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194425,"latency":471,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194426,"latency":469,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194426,"latency":467,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194426,"latency":470,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194427,"latency":472,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194427,"latency":469,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194428,"latency":474,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194428,"latency":468,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194428,"latency":468,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194429,"latency":476,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194430,"latency":470,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194430,"latency":474,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194430,"latency":467,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194431,"latency":468,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194432,"latency":475,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194433,"latency":470,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194433,"latency":469,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194434,"latency":469,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194435,"latency":471,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194435,"latency":470,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194436,"latency":469,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194436,"latency":474,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194436,"latency":469,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194436,"latency":475,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194437,"latency":465,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194437,"latency":476,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194438,"latency":464,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194438,"latency":465,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194438,"latency":470,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194438,"latency":466,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194439,"latency":472,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194439,"latency":471,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194439,"latency":465,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194440,"latency":464,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194441,"latency":476,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194444,"latency":468,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194444,"latency":466,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194445,"latency":470,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194445,"latency":469,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194445,"latency":470,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194445,"latency":468,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194446,"latency":469,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194446,"latency":500,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194447,"latency":469,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194447,"latency":501,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194447,"latency":502,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194447,"latency":472,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194448,"latency":471,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194448,"latency":500,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194448,"latency":501,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194449,"latency":502,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194449,"latency":501,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194449,"latency":476,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194449,"latency":501,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194451,"latency":489,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194456,"latency":507,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194459,"latency":510,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194462,"latency":507,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194462,"latency":510,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194463,"latency":483,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194463,"latency":482,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194464,"latency":482,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194464,"latency":482,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194464,"latency":481,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194464,"latency":481,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194465,"latency":481,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194465,"latency":482,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194465,"latency":480,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194465,"latency":477,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194466,"latency":487,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194466,"latency":481,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194466,"latency":478,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194466,"latency":477,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194467,"latency":480,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194467,"latency":481,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194467,"latency":474,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194467,"latency":475,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194467,"latency":473,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194468,"latency":473,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194468,"latency":471,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194468,"latency":473,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194469,"latency":475,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194469,"latency":473,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194469,"latency":471,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194470,"latency":473,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194470,"latency":477,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194471,"latency":475,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194471,"latency":473,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194471,"latency":472,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194471,"latency":472,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194472,"latency":472,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194472,"latency":437,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194473,"latency":439,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194473,"latency":438,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194473,"latency":436,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194477,"latency":441,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194477,"latency":437,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194477,"latency":437,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194478,"latency":434,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194478,"latency":439,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194478,"latency":440,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194478,"latency":437,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194479,"latency":442,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194479,"latency":438,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194479,"latency":434,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194479,"latency":435,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194480,"latency":435,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194480,"latency":438,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194480,"latency":433,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194480,"latency":432,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194480,"latency":433,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194480,"latency":434,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194481,"latency":434,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194481,"latency":432,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194481,"latency":435,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194481,"latency":438,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194482,"latency":433,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194482,"latency":431,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194482,"latency":432,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194482,"latency":432,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194483,"latency":431,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194483,"latency":429,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194483,"latency":430,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194483,"latency":432,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194484,"latency":428,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194484,"latency":429,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194484,"latency":431,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194484,"latency":427,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194485,"latency":437,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194485,"latency":431,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194486,"latency":430,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194486,"latency":429,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194486,"latency":431,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194487,"latency":428,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194487,"latency":429,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194488,"latency":432,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194488,"latency":428,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194488,"latency":428,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194488,"latency":430,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194489,"latency":430,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194489,"latency":431,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194489,"latency":426,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194490,"latency":429,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194490,"latency":429,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194491,"latency":431,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194491,"latency":430,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194491,"latency":426,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194491,"latency":429,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194492,"latency":428,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194492,"latency":430,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194492,"latency":428,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194493,"latency":427,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194493,"latency":428,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194493,"latency":427,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194494,"latency":431,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194494,"latency":429,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194494,"latency":430,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194495,"latency":427,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194495,"latency":428,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194495,"latency":426,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194496,"latency":429,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194496,"latency":428,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194496,"latency":421,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194497,"latency":427,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194498,"latency":429,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194498,"latency":421,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194498,"latency":422,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194498,"latency":423,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194498,"latency":422,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194499,"latency":420,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194500,"latency":419,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194500,"latency":420,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194500,"latency":418,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194501,"latency":420,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194501,"latency":417,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194501,"latency":418,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194501,"latency":417,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194502,"latency":417,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194502,"latency":420,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194502,"latency":415,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194503,"latency":415,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194504,"latency":417,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194504,"latency":415,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194504,"latency":414,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194504,"latency":415,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194505,"latency":414,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194505,"latency":413,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194505,"latency":414,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194505,"latency":415,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194506,"latency":413,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194506,"latency":414,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194506,"latency":414,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194506,"latency":415,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194507,"latency":419,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194507,"latency":414,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194508,"latency":415,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194508,"latency":414,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194508,"latency":414,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194509,"latency":413,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194509,"latency":431,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194510,"latency":415,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194510,"latency":414,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194511,"latency":414,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194511,"latency":415,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194511,"latency":414,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194512,"latency":413,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194512,"latency":417,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194512,"latency":418,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194512,"latency":414,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194513,"latency":415,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194513,"latency":414,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194514,"latency":417,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194514,"latency":414,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194514,"latency":413,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194514,"latency":413,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194515,"latency":414,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194515,"latency":415,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194515,"latency":412,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194515,"latency":415,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194515,"latency":413,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194516,"latency":413,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194519,"latency":417,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194520,"latency":416,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194520,"latency":541,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194521,"latency":542,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194521,"latency":540,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194521,"latency":417,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194521,"latency":416,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194522,"latency":388,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194522,"latency":389,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194523,"latency":387,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194523,"latency":388,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194523,"latency":386,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194523,"latency":384,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194524,"latency":390,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194524,"latency":384,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194524,"latency":386,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194524,"latency":383,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194525,"latency":385,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194525,"latency":384,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194525,"latency":385,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194525,"latency":383,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194525,"latency":383,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194526,"latency":383,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194526,"latency":382,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194526,"latency":381,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194526,"latency":384,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194526,"latency":382,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194527,"latency":382,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194527,"latency":381,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194527,"latency":381,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194527,"latency":381,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194528,"latency":380,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194528,"latency":381,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194528,"latency":423,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194528,"latency":385,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194529,"latency":382,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194529,"latency":422,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194530,"latency":422,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194530,"latency":424,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194530,"latency":424,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194530,"latency":421,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194531,"latency":421,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194531,"latency":424,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194531,"latency":422,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194532,"latency":421,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194532,"latency":422,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194532,"latency":422,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194533,"latency":425,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194533,"latency":422,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194534,"latency":422,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194534,"latency":422,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194534,"latency":421,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194535,"latency":421,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194535,"latency":421,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194535,"latency":422,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194536,"latency":421,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194536,"latency":423,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194537,"latency":420,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194537,"latency":421,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194537,"latency":420,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194538,"latency":421,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194538,"latency":422,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194538,"latency":423,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194540,"latency":421,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194540,"latency":422,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194540,"latency":422,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194541,"latency":421,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194541,"latency":422,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194542,"latency":422,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194542,"latency":409,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194542,"latency":410,"status":200,"type":"write","endpoint":"/scans/gate"}
+{"timestamp":1774707194543,"latency":408,"status":200,"type":"write","endpoint":"/scans/gate"}

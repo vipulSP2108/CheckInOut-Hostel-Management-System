@@ -4,12 +4,20 @@ const sqlite3 = require('sqlite3');
 const { open } = require('sqlite');
 
 const LOG_FILE = path.join(__dirname, 'logs', 'failure-simulation.log');
+const METRICS_FILE = process.env.METRICS_FILE || null;
+
 fs.mkdirSync(path.join(__dirname, 'logs'), { recursive: true });
 
 function log(message) {
     const entry = `[${new Date().toISOString()}] ${message}`;
     console.log(entry);
     fs.appendFileSync(LOG_FILE, entry + '\n');
+}
+
+function logMetric(metric) {
+    if (METRICS_FILE) {
+        fs.appendFileSync(METRICS_FILE, JSON.stringify(metric) + '\n');
+    }
 }
 
 async function runTest() {
@@ -53,8 +61,10 @@ async function runTest() {
 
     if (finalRoom.CurrentOccupancy === initialRoom.CurrentOccupancy && !finalMember) {
         log('VERIFICATION: SUCCESS - Database is clean. No partial data stored.');
+        logMetric({ timestamp: Date.now(), success: true, type: 'failure-sim' });
     } else {
         log('VERIFICATION: FAILURE - Partial data detected! Check consistency.');
+        logMetric({ timestamp: Date.now(), success: false, type: 'failure-sim' });
     }
 
     await db.close();

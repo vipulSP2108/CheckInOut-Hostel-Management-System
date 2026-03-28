@@ -4,12 +4,20 @@ const path = require('path');
 const { API_URL, TEST_USERS, MEMBER_IDS, UNIFIED_TEST } = require('./constants.cjs');
 
 const LOG_FILE = path.join(__dirname, 'logs', 'unified-stress.log');
+const METRICS_FILE = process.env.METRICS_FILE || null;
+
 fs.mkdirSync(path.join(__dirname, 'logs'), { recursive: true });
 
 function log(message) {
     const entry = `[${new Date().toISOString()}] ${message}`;
     console.log(entry);
     fs.appendFileSync(LOG_FILE, entry + '\n');
+}
+
+function logMetric(metric) {
+    if (METRICS_FILE) {
+        fs.appendFileSync(METRICS_FILE, JSON.stringify(metric) + '\n');
+    }
 }
 
 async function runScenario(name, config, fn) {
@@ -25,14 +33,26 @@ async function runScenario(name, config, fn) {
 
     async function wrapper(index) {
         const reqStart = Date.now();
+        let status = 200;
+        let errMsg = null;
         try {
             await fn(index);
             latencies.push(Date.now() - reqStart);
         } catch (e) {
+            status = parseInt(e.message.split(' ')[1]) || 500;
+            errMsg = e.message;
             errors++;
             if (errors === 1) log(` [FIRST ERR] in ${name}: ${e.message}`);
         } finally {
             completed++;
+            logMetric({
+                timestamp: Date.now(),
+                latency: Date.now() - reqStart,
+                status: status,
+                error: errMsg,
+                type: config.TYPE || 'unknown',
+                endpoint: name
+            });
         }
     }
 
@@ -76,13 +96,19 @@ async function start() {
 
     const scenarios = [
         // S1: Member Polling (DIVERSE IDS)
-        () => runScenario('S1: Member Polling (GET)', UNIFIED_TEST.S1_MEMBER_POLLING, async (idx) => {
-            const memberId = MEMBER_IDS[idx % MEMBER_IDS.length];
-            const res = await fetch(`${API_URL}/members/${memberId}`, { 
-                headers: { 'Cookie': adminCookie } 
+        () => {
+            const cfg = { ...UNIFIED_TEST.S1_MEMBER_POLLING, TYPE: 'read' };
+            if (process.env.CONCURRENCY) cfg.CONCURRENCY = parseInt(process.env.CONCURRENCY);
+            if (process.env.TOTAL_REQUESTS) cfg.TOTAL_REQUESTS = parseInt(process.env.TOTAL_REQUESTS);
+            
+            return runScenario('S1: Member Polling (GET)', cfg, async (idx) => {
+                const memberId = MEMBER_IDS[idx % MEMBER_IDS.length];
+                const res = await fetch(`${API_URL}/members/${memberId}`, { 
+                    headers: { 'Cookie': adminCookie } 
+                });
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
             });
-            if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        }),
+        },
 
 /*
         // S2: Gate Scan (GET)
@@ -114,29 +140,34 @@ async function start() {
 */
 
         // S5: Complaint Submission (WRITE)
-        () => runScenario('S5: Complaint Write (POST)', UNIFIED_TEST.S5_COMPLAINT_WRITE, async (idx) => {
-            const userId = TEST_USERS[(idx % (TEST_USERS.length - 1)) + 1].username;
-            const userCookie = cookies[(idx % (cookies.length -1)) + 1];
-            
-            const cfg = UNIFIED_TEST.S5_COMPLAINT_WRITE;
-            const payload = {
-                IdentificationNumber: userId,
-                CategoryID: cfg.CATEGORIES[idx % cfg.CATEGORIES.length],
-                RoomNumber: cfg.ROOMS[idx % cfg.ROOMS.length],
-                Severity: cfg.SEVERITIES[idx % cfg.SEVERITIES.length],
-                Description: `Parallel stress test complaint #${idx} targeting ${cfg.ROOMS[idx % cfg.ROOMS.length]}`
-            };
+        () => {
+            const cfg = { ...UNIFIED_TEST.S5_COMPLAINT_WRITE, TYPE: 'write' };
+            if (process.env.CONCURRENCY) cfg.CONCURRENCY = parseInt(process.env.CONCURRENCY);
+            if (process.env.TOTAL_REQUESTS) cfg.TOTAL_REQUESTS = parseInt(process.env.TOTAL_REQUESTS);
 
-            const res = await fetch(`${API_URL}/complaints`, {
-                method: 'POST',
-                headers: { 
-                    'Content-Type': 'application/json',
-                    'Cookie': userCookie
-                },
-                body: JSON.stringify(payload)
+            return runScenario('S5: Complaint Write (POST)', cfg, async (idx) => {
+                const userId = TEST_USERS[(idx % (TEST_USERS.length - 1)) + 1].username;
+                const userCookie = cookies[(idx % (cookies.length -1)) + 1];
+                
+                const payload = {
+                    IdentificationNumber: userId,
+                    CategoryID: cfg.CATEGORIES[idx % cfg.CATEGORIES.length],
+                    RoomNumber: cfg.ROOMS[idx % cfg.ROOMS.length],
+                    Severity: cfg.SEVERITIES[idx % cfg.SEVERITIES.length],
+                    Description: `Parallel stress test complaint #${idx} targeting ${cfg.ROOMS[idx % cfg.ROOMS.length]}`
+                };
+
+                const res = await fetch(`${API_URL}/complaints`, {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Cookie': userCookie
+                    },
+                    body: JSON.stringify(payload)
+                });
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
             });
-            if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        })
+        }
     ];
 
     log('Launching all scenarios in parallel for maximum system stress...');

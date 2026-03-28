@@ -6,12 +6,20 @@ const { open } = require('sqlite');
 const { API_URL, TEST_USERS, RACE_TEST, DB_PATH } = require('./constants.cjs');
 
 const LOG_FILE = path.join(__dirname, 'logs', 'race-test.log');
+const METRICS_FILE = process.env.METRICS_FILE || null;
+
 fs.mkdirSync(path.join(__dirname, 'logs'), { recursive: true });
 
 function log(message) {
     const entry = `[${new Date().toISOString()}] ${message}`;
     console.log(entry);
     fs.appendFileSync(LOG_FILE, entry + '\n');
+}
+
+function logMetric(metric) {
+    if (METRICS_FILE) {
+        fs.appendFileSync(METRICS_FILE, JSON.stringify(metric) + '\n');
+    }
 }
 
 async function runTest() {
@@ -24,21 +32,23 @@ async function runTest() {
     
     // --- AUTO MODE DISCOVERY ---
     if (RACE_TEST.AUTO_MODE) {
-        log(`[AUTO-MODE] Discovering room with capacity ${RACE_TEST.AUTO_CONFIG.TARGET_CAPACITY} and ${RACE_TEST.AUTO_CONFIG.NUM_STUDENTS} unallocated members...`);
+        const targetCapacity = parseInt(process.env.TARGET_CAPACITY) || RACE_TEST.AUTO_CONFIG.TARGET_CAPACITY;
+        const numStudents = parseInt(process.env.NUM_STUDENTS) || RACE_TEST.AUTO_CONFIG.NUM_STUDENTS;
+        log(`[AUTO-MODE] Discovering room with capacity ${targetCapacity} and ${numStudents} unallocated members...`);
         
         const room = await db.get(
             "SELECT RoomNumber FROM Room WHERE MaxCapacity = ? LIMIT 1",
-            [RACE_TEST.AUTO_CONFIG.TARGET_CAPACITY]
+            [targetCapacity]
         );
         
         const members = await db.all(
             `SELECT IdentificationNumber FROM Member 
              WHERE IdentificationNumber NOT IN (SELECT IdentificationNumber FROM Allocation WHERE AllocationStatus = 'Active') 
              LIMIT ?`,
-            [RACE_TEST.AUTO_CONFIG.NUM_STUDENTS]
+            [numStudents]
         );
         
-        if (room && members.length === RACE_TEST.AUTO_CONFIG.NUM_STUDENTS) {
+        if (room && members.length === numStudents) {
             targetRoom = room.RoomNumber;
             targetMembers = members.map(m => m.IdentificationNumber);
             log(`[AUTO-MODE] Managed to find Room: ${targetRoom} | Members: ${targetMembers.join(', ')}`);
@@ -125,6 +135,8 @@ async function runTest() {
     } else {
         log(`VERIFICATION: FAILURE - OVER-ALLOCATION DETECTED! Allowed ${successes} into a ${maxCapacity} capacity room.`);
     }
+    
+    logMetric({ timestamp: Date.now(), requested: targetMembers.length, successful: successes, blocked: failures, capacity: maxCapacity, type: 'race-test' });
 }
 
 runTest().catch(e => log(`FATAL ERROR: ${e.message}`));

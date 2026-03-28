@@ -6,6 +6,8 @@ const { open } = require('sqlite');
 const { API_URL, TEST_USERS, CONCURRENT_USAGE, DB_PATH } = require('./constants.cjs');
 
 const LOG_FILE = path.join(__dirname, 'logs', 'concurrent-usage.log');
+const METRICS_FILE = process.env.METRICS_FILE || null;
+
 fs.mkdirSync(path.join(__dirname, 'logs'), { recursive: true });
 
 function log(message) {
@@ -14,12 +16,20 @@ function log(message) {
     fs.appendFileSync(LOG_FILE, entry + '\n');
 }
 
+function logMetric(metric) {
+    if (METRICS_FILE) {
+        fs.appendFileSync(METRICS_FILE, JSON.stringify(metric) + '\n');
+    }
+}
+
 /**
  * REFACTORED CONCURRENT USAGE TEST
  * Simulates multiple concurrent requests picking random QR codes from the database.
  */
 async function runTest() {
-    const { CONCURRENCY, TOTAL_REQUESTS } = CONCURRENT_USAGE;
+    const CONCURRENCY = parseInt(process.env.CONCURRENCY) || CONCURRENT_USAGE.CONCURRENCY;
+    const TOTAL_REQUESTS = parseInt(process.env.TOTAL_REQUESTS) || CONCURRENT_USAGE.TOTAL_REQUESTS;
+    
     log('--- STARTING REFACTORED CONCURRENT USAGE TEST ---');
     log(`[PARAM] Concurrency: ${CONCURRENCY} | Total Requests: ${TOTAL_REQUESTS}`);
 
@@ -36,11 +46,9 @@ async function runTest() {
     log(`[INFO] Loaded ${qrPool.length} QR codes from database.`);
 
     // 2. Setup admin sessions (using admin credentials from constants)
-    // We'll use a pool of admin cookies to simulate multiple concurrent admin devices
     const adminCookies = [];
     const numAdmins = Math.min(CONCURRENCY, TEST_USERS.filter(u => u.username === 'admin').length || 1);
     
-    // For simplicity, we can just use multiple sessions for the same admin or different admins if available
     for (let i = 0; i < Math.min(CONCURRENCY, 5); i++) {
         const adminUser = TEST_USERS[0]; // Usually 'admin'
         const loginRes = await fetch(`${API_URL}/auth/login`, {
@@ -78,15 +86,23 @@ async function runTest() {
                 body: JSON.stringify({ qrCode })
             });
 
-            if (!res.ok) {
+            const latency = Date.now() - reqStart;
+            const ok = res.ok;
+            
+            if (!ok) {
                 const errBody = await res.json().catch(() => ({}));
-                throw new Error(`HTTP ${res.status}: ${errBody.error || 'Unknown error'}`);
+                logMetric({ timestamp: Date.now(), latency, status: res.status, error: errBody.error, type: 'write', endpoint: '/scans/gate' });
+                throw new Error(`HTTP ${res.status}`);
             }
 
-            latencies.push(Date.now() - reqStart);
+            latencies.push(latency);
+            logMetric({ timestamp: Date.now(), latency, status: res.status, type: 'write', endpoint: '/scans/gate' });
         } catch (e) {
             if (errors === 0) log(`\n[FIRST ERROR]: ${e.message}`);
             errors++;
+            if (!e.message.includes('HTTP')) {
+               logMetric({ timestamp: Date.now(), latency: Date.now() - reqStart, status: 500, error: e.message, type: 'write', endpoint: '/scans/gate' });
+            }
         } finally {
             completed++;
         }
