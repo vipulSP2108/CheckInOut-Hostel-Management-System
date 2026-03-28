@@ -4,12 +4,12 @@ const path = require('path');
 const { API_URL, TEST_USERS, STRESS_TEST } = require('./constants.cjs');
 
 const LOG_FILE = path.join(__dirname, 'logs', 'stress-test.log');
+fs.mkdirSync(path.join(__dirname, 'logs'), { recursive: true });
 
 function log(message) {
-    const time = new Date().toISOString();
-    const entry = `[${time}] ${message}\n`;
-    fs.appendFileSync(LOG_FILE, entry);
-    console.log(message);
+    const entry = `[${new Date().toISOString()}] ${message}`;
+    console.log(entry);
+    fs.appendFileSync(LOG_FILE, entry + '\n');
 }
 
 async function runTest() {
@@ -57,15 +57,22 @@ async function runTest() {
         }
     }
 
-    // Run in batches
-    for (let i = 0; i < TOTAL_REQUESTS; i += CONCURRENCY) {
-        const batch = [];
-        for (let j = 0; j < CONCURRENCY && (i + j) < TOTAL_REQUESTS; j++) {
-            batch.push(sendRequest());
+    // Run with sliding window (Worker Pool)
+    let started = 0;
+    async function runWorker() {
+        while (started < TOTAL_REQUESTS) {
+            const myIndex = started++;
+            if (myIndex >= TOTAL_REQUESTS) break;
+            await sendRequest();
+            process.stdout.write(`\rProgress: ${completed}/${TOTAL_REQUESTS}...`);
         }
-        await Promise.all(batch);
-        process.stdout.write(`\rProgress: ${completed}/${TOTAL_REQUESTS}...`);
     }
+
+    const pool = [];
+    for (let i = 0; i < CONCURRENCY; i++) {
+        pool.push(runWorker());
+    }
+    await Promise.all(pool);
     
     const totalTime = (Date.now() - startTime) / 1000;
     const avgLatency = latencies.reduce((a, b) => a + b, 0) / (latencies.length || 1);

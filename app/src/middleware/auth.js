@@ -17,10 +17,18 @@ export function authenticateToken(req, res, next) {
 }
 
 export function requireAdmin(req, res, next) {
-  if (req.user && req.user.role === 'Admin') {
+  if (req.user && (req.user.role === 'Admin' || req.user.role === 'Tester')) {
     next();
   } else {
     res.status(403).json({ error: 'Admin access required' });
+  }
+}
+
+export function requireTester(req, res, next) {
+  if (req.user && req.user.role === 'Tester') {
+    next();
+  } else {
+    res.status(403).json({ error: 'Tester access required' });
   }
 }
 

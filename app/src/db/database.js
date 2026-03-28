@@ -90,6 +90,13 @@ export async function initDB() {
     await db.run('INSERT INTO Users (Username, PasswordHash, Role) VALUES (?, ?, ?)', ['admin', hash, 'Admin']);
   }
 
+  // Seed Tester (Stress Test Administrator)
+  const testerExists = await db.get('SELECT * FROM Users WHERE Username = ?', ['tester']);
+  if (!testerExists) {
+    const hash = await bcrypt.hash('stress2026', 10);
+    await db.run('INSERT INTO Users (Username, PasswordHash, Role) VALUES (?, ?, ?)', ['tester', hash, 'Tester']);
+  }
+
   // Provision login accounts for ALL members seeded from hostel.sql
   const members = await db.all('SELECT * FROM Member');
   for (const member of members) {

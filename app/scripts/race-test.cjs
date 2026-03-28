@@ -6,12 +6,12 @@ const { open } = require('sqlite');
 const { API_URL, TEST_USERS, RACE_TEST, DB_PATH } = require('./constants.cjs');
 
 const LOG_FILE = path.join(__dirname, 'logs', 'race-test.log');
+fs.mkdirSync(path.join(__dirname, 'logs'), { recursive: true });
 
 function log(message) {
-    const time = new Date().toISOString();
-    const entry = `[${time}] ${message}\n`;
-    fs.appendFileSync(LOG_FILE, entry);
-    console.log(message);
+    const entry = `[${new Date().toISOString()}] ${message}`;
+    console.log(entry);
+    fs.appendFileSync(LOG_FILE, entry + '\n');
 }
 
 async function runTest() {

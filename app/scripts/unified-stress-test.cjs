@@ -4,19 +4,20 @@ const path = require('path');
 const { API_URL, TEST_USERS, MEMBER_IDS, UNIFIED_TEST } = require('./constants.cjs');
 
 const LOG_FILE = path.join(__dirname, 'logs', 'unified-stress.log');
+fs.mkdirSync(path.join(__dirname, 'logs'), { recursive: true });
 
 function log(message) {
-    const time = new Date().toISOString();
-    const entry = `[${time}] ${message}\n`;
-    fs.appendFileSync(LOG_FILE, entry);
-    console.log(message);
+    const entry = `[${new Date().toISOString()}] ${message}`;
+    console.log(entry);
+    fs.appendFileSync(LOG_FILE, entry + '\n');
 }
 
 async function runScenario(name, config, fn) {
-    const { TOTAL, CONCURRENCY } = config;
+    const total = config.TOTAL_REQUESTS || config.TOTAL || 10;
+    const concurrency = config.CONCURRENCY || 5;
     log(`\n--- SCENARIO: ${name} ---`);
-    log(`[PARAM] Total Requests: ${TOTAL} | Concurrency: ${CONCURRENCY}`);
-    
+    log(`[PARAM] Total Requests: ${total} | Concurrency: ${concurrency}`);
+
     const startTime = Date.now();
     let completed = 0;
     let errors = 0;
@@ -35,15 +36,15 @@ async function runScenario(name, config, fn) {
         }
     }
 
-    for (let i = 0; i < TOTAL; i += CONCURRENCY) {
+    for (let i = 0; i < total; i += concurrency) {
         const batch = [];
-        for (let j = 0; j < CONCURRENCY && (i + j) < TOTAL; j++) {
+        for (let j = 0; j < concurrency && (i + j) < total; j++) {
             batch.push(wrapper(i + j));
         }
         await Promise.all(batch);
-        process.stdout.write(`\r Progress (${name}): ${completed}/${TOTAL}...`);
+        process.stdout.write(`\r Progress (${name}): ${completed}/${total}...`);
     }
-    
+
     const totalTime = (Date.now() - startTime) / 1000;
     const avgLatency = latencies.reduce((a, b) => a + b, 0) / (latencies.length || 1);
     const throughput = completed / totalTime;
@@ -83,8 +84,8 @@ async function start() {
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
         }),
 
-        // S2: Scan History History (GET)
-        () => runScenario('S2: Scan Movement (GET)', UNIFIED_TEST.S2_SCAN_MOVEMENT, async () => {
+        // S2: Gate Scan (GET)
+        () => runScenario('S2: Gate Scan Stream (GET)', UNIFIED_TEST.S2_GATE_SCAN, async () => {
             const res = await fetch(`${API_URL}/scans`, { 
                 headers: { 'Cookie': adminCookie } 
             });
@@ -103,7 +104,7 @@ async function start() {
         }),
 
         // S4: Maintenance Polling (GET)
-        () => runScenario('S4: Maintenance Polling (GET)', UNIFIED_TEST.S4_MAINTENANCE_POLLING, async () => {
+        () => runScenario('S4: Maintenance Ops (GET)', UNIFIED_TEST.S4_MAINTENANCE, async () => {
             const res = await fetch(`${API_URL}/maintenance`, { 
                 headers: { 'Cookie': adminCookie } 
             });

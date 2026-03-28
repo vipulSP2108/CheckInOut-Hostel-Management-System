@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Login from './components/Login.jsx';
 import AdminDashboard from './components/AdminDashboard.jsx';
 import MemberDashboard from './components/MemberDashboard.jsx';
+import StressDashboard from './components/StressDashboard.jsx';
 import { ThemeProvider } from './ThemeContext.jsx';
 
 export default function App() {
@@ -36,13 +37,16 @@ export default function App() {
         <Routes>
           <Route path="/login" element={
             !loggedIn ? <Login onLogin={handleLogin} /> :
-            <Navigate to={role === 'Admin' ? '/admin' : `/member/${identificationNumber}`} />
+            <Navigate to={role === 'Tester' ? '/stress-dashboard' : (role === 'Admin' ? '/admin' : `/member/${identificationNumber}`)} />
           } />
           <Route path="/admin" element={
             loggedIn && role === 'Admin' ? <AdminDashboard onLogout={handleLogout} /> : <Navigate to="/login" />
           } />
           <Route path="/member/:id" element={
             loggedIn && role === 'Regular' ? <MemberDashboard storedIdentificationNumber={identificationNumber} onLogout={handleLogout} /> : <Navigate to="/login" />
+          } />
+          <Route path="/stress-dashboard" element={
+            loggedIn && role === 'Tester' ? <StressDashboard onLogout={handleLogout} /> : <Navigate to="/login" />
           } />
           <Route path="*" element={<Navigate to="/login" />} />
         </Routes>

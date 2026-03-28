@@ -22,6 +22,7 @@ import feeRoutes from './src/routes/fees.js';
 import furnitureRoutes from './src/routes/furniture.js';
 import scanRoutes from './src/routes/scans.js';
 import hostelRoutes from './src/routes/hostels.js';
+import testRoutes from './src/routes/tests.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -82,6 +83,7 @@ async function startServer() {
   app.use('/api/furniture', furnitureRoutes);
   app.use('/api/scans', scanRoutes);
   app.use('/api/hostels', hostelRoutes);
+  app.use('/api/tests', testRoutes);
 
   app.get('/api/health', (req, res) => {
     res.json({ status: 'ok' });
