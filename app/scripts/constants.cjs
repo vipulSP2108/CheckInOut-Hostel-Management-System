@@ -54,8 +54,8 @@ module.exports = {
 
     // --- GATE RUSH STRESS TEST ---
     STRESS_TEST: {
-        TOTAL_REQUESTS: 1000,
-        CONCURRENCY: 300,
+        TOTAL_REQUESTS: 5000,
+        CONCURRENCY: 150,
         QR_CODE: 'MEM-QR-0001'
     },
 
