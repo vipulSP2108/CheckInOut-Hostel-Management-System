@@ -17,7 +17,7 @@ export default defineConfig(({mode}) => {
       // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
       hmr: process.env.DISABLE_HMR !== 'true',
       watch: {
-        ignored: ['**/hostel.db', '**/hostel.db-wal', '**/hostel.db-shm', '**/logs/**', '**/scripts/**'],
+        ignored: ['**/hostel.db', '**/hostel.db-wal', '**/hostel.db-shm', '**/logs/**', '**/scripts/**', '**/sharding/**'],
       },
     },
   };

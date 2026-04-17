@@ -7,7 +7,8 @@ import path from 'path';
 let db;
 
 export async function initDB() {
-  db = await open({ filename: './hostel.db', driver: sqlite3.Database });
+  // Now using global_hostel.db for reference data
+  db = await open({ filename: './global_hostel.db', driver: sqlite3.Database });
   await db.exec('PRAGMA foreign_keys = ON');
   await db.exec('PRAGMA journal_mode = WAL');
   await db.exec('PRAGMA busy_timeout = 5000');
@@ -133,9 +134,12 @@ export function getDB() {
 }
 
 export async function createConnection() {
-  const connection = await open({ filename: './hostel.db', driver: sqlite3.Database });
+  const connection = await open({ filename: './global_hostel.db', driver: sqlite3.Database });
   await connection.exec('PRAGMA foreign_keys = ON');
   await connection.exec('PRAGMA journal_mode = WAL');
   await connection.exec('PRAGMA busy_timeout = 5000');
   return connection;
 }
+
+// Export executeQuery from the router for use in routes
+export { executeQuery } from '../../sharding/router.js';

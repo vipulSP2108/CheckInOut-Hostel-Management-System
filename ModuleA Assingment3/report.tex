@@ -1,0 +1,853 @@
+\documentclass[sigconf]{acmart}
+% ----------------------------------------------------
+% ACM Configuration (For Course Submission)
+% ----------------------------------------------------
+\settopmatter{printacmref=false}
+\setcopyright{none}
+\pagestyle{plain}
+\acmConference{}{}{}
+\acmISBN{}
+\acmDOI{}
+
+% ----------------------------------------------------
+% Packages
+% ----------------------------------------------------
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{titlesec}
+
+% Customize subsubsection style
+\titleformat{\subsubsection}[runin]
+{\normalfont\normalsize\bfseries}
+{\thesubsubsection}
+{1em}
+{}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue
+}
+
+% ----------------------------------------------------
+% Custom Colours
+% ----------------------------------------------------
+\definecolor{codegreen}{rgb}{0.0,0.5,0.0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codeblue}{rgb}{0.0,0.2,0.7}
+\definecolor{codered}{rgb}{0.6,0.1,0.1}
+\definecolor{codebg}{rgb}{0.97,0.97,0.97}
+\definecolor{rowgreen}{HTML}{DCFCE7}
+\definecolor{rowyellow}{HTML}{FEF9C3}
+\definecolor{rowred}{HTML}{FEE2E2}
+\definecolor{headernavy}{HTML}{1B2A4A}
+\definecolor{headerteal}{HTML}{0E7490}
+
+% ----------------------------------------------------
+% Listing Styles
+% ----------------------------------------------------
+\lstdefinestyle{jsstyle}{
+  language=C, % Avoid undefined definitions
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\bfseries\color{codeblue},
+  commentstyle=\itshape\color{codegray},
+  stringstyle=\color{codered},
+  backgroundcolor=\color{codebg},
+  frame=single,
+  rulecolor=\color{codegray!50},
+  breaklines=true,
+  showstringspaces=false,
+  tabsize=2,
+  captionpos=b,
+  numbers=left,
+  numberstyle=\tiny\color{codegray},
+  xleftmargin=1.8em,
+  framexleftmargin=1.8em,
+}
+
+\lstdefinestyle{logstyle}{
+  basicstyle=\ttfamily\footnotesize,
+  backgroundcolor=\color{codebg},
+  frame=single,
+  rulecolor=\color{codegray!50},
+  breaklines=true,
+  showstringspaces=false,
+  captionpos=b,
+  numbers=left,
+  numberstyle=\tiny\color{codegray},
+  xleftmargin=1.8em,
+  framexleftmargin=1.8em,
+}
+
+% ----------------------------------------------------
+% Table helpers
+% ----------------------------------------------------
+\newcommand{\theadbf}[1]{\textbf{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\title{CheckInOut: Multi-User Behaviour and Stress Testing Report}
+\author{Assignment 3 Team: ACID Alliance}
+\affiliation{%
+  \institution{Indian Institute of Technology Gandhinagar}
+  \city{Gandhinagar}
+  \country{India}
+}
+% \email{hostel.admin@iitgn.ac.in}
+\date{March 2026}
+
+\begin{document}
+
+% ===================== TITLE PAGE =====================
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    {\Huge\bfseries CheckInOut -- Hostel Management System\par}
+    \vspace{1cm}
+    {\Large CS 432 -- Databases (Course Project -- Assignment 3 Module B)\par}
+    \vspace{0.5cm}
+    {\large Module B: Multi-User Behaviour and Stress Testing Report\par}
+    \vspace{1.5cm}
+    {\large Semester II (2025--2026)\par}
+    \vspace{0.5cm}
+    {\large Date: 28 March 2026\par}
+    \vfill
+    {\large Instructor: Dr. Yogesh K. Meena\par}
+    \vspace{1cm}
+    {\large Team Members \& Contributions\par}
+    \vspace{0.5cm}
+    Vipul Sunil Patil -- Race condition mitigation \& dashboard logic\\
+    Sai -- Backend transaction handling \& WAL optimization\\
+    Daksh Jain -- Stress testing suite \& data collection\\
+    Daksh Dave -- Failure simulation \& report writing\\
+    Harshit -- Verification tooling \& documentation\\
+    \vspace{1cm}
+    {\large GitHub Repository:\par}
+    \vspace{0.1cm}
+    {\small \url{https://github.com/vipulSP2108/CheckInOut-Hostel-Management-System}} \\
+    \vspace{0.3cm}
+    {\large Video Demonstration:\par}
+    \vspace{0.1cm}
+    {\small \url{https://youtu.be/NUBw8dWgoMI}}
+    \vfill
+    {\small \copyright\ Indian Institute of Technology Gandhinagar}
+\end{titlepage}
+
+\setcounter{page}{1}
+
+% ===================== ABSTRACT =====================
+\begin{abstract}
+This report documents the architectural improvements for the CheckInOut Hostel Management System, focusing on four pillars: (1) \textbf{Concurrency Control} via SQLite WAL; (2) \textbf{Race Condition Mitigation} through \texttt{BEGIN IMMEDIATE} transactions; (3) \textbf{Stress Testing (write and read)} under high-velocity parallel loads (same time 200+ req); and (4) \textbf{Failure Simulation} for ACID verification. Experimental results confirm zero data corruption and 100\% transaction integrity under extreme load.
+\end{abstract}
+
+\keywords{Concurrency Control, Race Conditions, SQLite WAL, ACID Compliance, Stress Testing, Atomic Transactions, Hostel Management}
+
+\maketitle
+
+% ===================== INTRODUCTION =====================
+\section{Introduction \& Operating Principles}
+
+
+In this Assignment, we transitioned CheckInOut from a prototype to a robust concurrent platform. Our implementation was guided by the \textbf{ACID} principles:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Atomicity}: Operations (e.g., room allocation) must fully complete or fully roll back across tables.
+    \item \textbf{Consistency}: Constraints (e.g., \texttt{Occupancy} $\leq$ \texttt{Capacity}) must be preserved despite parallel load.
+    \item \textbf{Isolation}: Parallel scans or dashboard reads must not interfere with each other.
+    \item \textbf{Durability}: Committed data must persist through system failures or crashes.
+\end{itemize}
+
+To ensure our analysis is both robust and realistic, we have adopted/assumed \textbf{IIT Gandhinagar (IITGN)} (approx.\ 2,500 students) as our primary deployment model. This institutional context allows us to analyze the system against deterministic "rush periods" (e.g., academic transitions and morning dashboard surges), justifying our implementations, atomic transactions, and a multi-channel stress testing suite.
+
+% ===================== SYSTEM ANALYSIS =====================
+\section{System Analysis \& Design Assumptions}
+
+Effective stress testing must be grounded in real-world usage patterns. We analyze the hostel domain using \textbf{IIT Gandhinagar (IITGN)} (approximately 2,500 students) as our deployment model to identify critical bottleneck points.
+
+\subsection{Deployment Model: The IITGN Context}
+A campus of this scale experiences deterministic "Rush Periods":
+
+\begin{itemize}[leftmargin=*]
+     \item \textbf{User Login \& Dashboard Fetch}: Every time a student opens the app, the first request triggered is to fetch their profile.
+    \item \textbf{Admission Rush}: Simultaneous room allocations and profiles for 1,000+ new students.
+    \item \textbf{Resumed Semester Gate Rush}: Massive spikes (1,000 students+) during academic transitions.
+    \item \textbf{Write (Complaint/allocations) Spikes}: At the start of each semester, there is a massive concurrent allocations (room booking) and complaints (initial maintenance reporting).
+
+\end{itemize}
+These real-world scenarios assumptions at IIT Gandhinagar formed the foundation for our architectural choices (WAL/Immediate)
+
+\subsection{Endpoint Priority \& Rationale}
+System operations are prioritized based on their impact on student life and database integrity.
+
+\begin{table}[H]
+\centering
+\caption{Comprehensive Endpoint Priority Matrix}
+\label{tab:priority}
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|L{1.3cm}|L{2.8cm}|L{3.5cm}|}
+\hline
+\rowcolor{headernavy}\color{white}\theadbf{Priority} & \color{white}\theadbf{Type + Endpoint} & \color{white}\theadbf{Rationale} \\
+\hline
+\rowcolor{gray!10}\textbf{CRITICAL} & \textbf{Read} -- \texttt{GET /api/members/:id} & \textbf{User Experience}: First hit immediately after login; critical for app responsiveness. \\
+\hline
+\rowcolor{gray!10}\textbf{CRITICAL} & \textbf{Write} -- \texttt{POST /api/allocations} & \textbf{High-Stakes Integrity}: Must prevent double-room assignment during admission. \\
+\hline
+\rowcolor{gray!10}\textbf{HIGHEST} & \textbf{Write} -- \texttt{POST /api/scans/gate} & \textbf{Throughput}: High-frequency I/O foundation for all security tracking. \\
+\hline
+\rowcolor{gray!10}\textbf{HIGH} & \textbf{Write} -- \texttt{POST /api/complaints} & \textbf{Write Foundation}: action triggered by thousands during semester start. \\
+\hline
+\rowcolor{gray!10}\textbf{HIGH} & \textbf{Write} -- \texttt{POST /api/auth/login} & \textbf{CPU-Intensive}: Session start; must interleave with gate writes without blocking. \\
+\hline
+\textbf{MEDIUM} & \textbf{Read} -- \texttt{GET /api/maintenance} & \textbf{Admin Dashboard}: Real-time triage for hostel wardens. \\
+\hline
+\textbf{MEDIUM} & \textbf{Write} -- \texttt{POST /api/visitors} & \textbf{Security Logging}: Low frequency tracking of guest entry/exit. \\
+\hline
+\textbf{MEDIUM} & \textbf{Read} -- \texttt{GET /api/furniture} & \textbf{Inventory Audit}: Occasional checks of dormitory assets. \\
+\hline
+\textbf{MEDIUM} & \textbf{Read} -- \texttt{GET /api/fees/member/:id} & \textbf{Financial Inquiry}: High volume during fee deadlines. \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Scaling Math: Write Time vs. Capacity}
+Modeling an extreme "Rush" (e.g., during a semester start):
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Theoretical Capacity}: Each QR scan write takes $\sim$1ms. of \textbf{100 scans/sec} consume only 100ms of database time per 1,000ms.
+    \item \textbf{Write Interleaving}: Even if \textbf{50 concurrent students} submit complaints (WRITE) during this rush (taking 2ms each), the total DB time is $100 + (50 \times 2) = 200\text{ms}$.
+\end{itemize}
+
+\textbf{Result:} Even under extreme "Admission Rush" load, the database is \textbf{80\% idle}. Our chosen foundations allow for this massive headroom, ensuring zero blocking.
+% ====================================================
+\section{Architectural Foundation \& Tooling}
+
+Optimizing a high-concurrency system requires decoupling configuration, logic, and testing.
+
+% \subsection{Core Components \& Logging}
+\subsection{Core Components}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{server.js / database.js}: Initializes Express and the \texttt{sqlite3} connection with \textbf{WAL mode} and \textbf{busy\_timeout = 5000}.
+    \item \textbf{src/routes/allocations.js}: Houses the most critical business logic, using \texttt{BEGIN IMMEDIATE} for atomic room booking.
+    % \item \textbf{Logging Layer}:
+    %     \begin{itemize}
+    %         \item \texttt{audit.log}: Records all state-modifying actions ( POST / PATCH / DELETE) per user.
+    %         \item \texttt{access.log}: Logs every HTTP request including response time.
+    %         \item \texttt{scripts/logs/}: Scenario-specific traces for verification.
+    %     \end{itemize}
+\end{itemize}
+
+\subsection{Logging}
+\begin{itemize}[leftmargin=*]
+    \item \texttt{audit.log}: Records all state-modifying actions ( POST / PATCH / DELETE) per user.
+    \item \texttt{access.log}: Logs every HTTP request including response time.
+    \item \texttt{scripts/logs/}: Scenario-specific traces for verification
+\end{itemize}
+
+\subsection{Test Setup (\texttt{scripts/name-test.cjs})}
+The core of our verification strategy is a decoupled Node.js testing framework. This allows researchers and admins to execute heavy loads without being tethered to a UI.
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Decoupled Execution}: Tests are triggered via CLI, making them suitable. The \textbf{Worker Pool Runner} implements a sliding-window worker pool, ensuring that exactly $N$ requests remain in-flight.
+    \item \textbf{Centralized Invariants}: To ensure reproducibility across testing phases, all operational parameters and data pools are centralized within \texttt{scripts/constants.cjs}. This design enables flexible scenario configuration—for instance, simulating a "Gate Rush" workload—by simply modifying invariants without requiring changes to the core testing logic.
+\end{itemize}
+
+
+\subsubsection{Manual Execution \& CLI Workflow}
+To ensure the system works independently, we provided a standardized CLI workflow:
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Scenario Configuration}: Update \texttt{scripts/constants.cjs} to define the desired \texttt{CONCURRENCY} (e.g., 300) and \texttt{TOTAL\_REQUESTS} (e.g., 2000).
+    \item \textbf{Individual Stress}: Execute \texttt{node scripts/stress-test.cjs} to saturate a specific endpoint (e.g., \texttt{POST /api/scans/gate} with 200 workers).
+    \item \textbf{Race Condition}: Execute \texttt{node scripts/race-test.cjs} To simulate concurrent requests (e.g., 5 members) targeting the same resource (e.g., a single room).
+    \item \textbf{Write—Heavy Stress (Complaints)}: To simulate high-volume maintenance reporting (e.g., 50 parallel writes) execute \texttt{node scripts/stress\_test.cjs}.
+    \item \textbf{Atomicity Verification}: To evaluate system recovery under forced termination (e.g., crashing a student during a \texttt{COMMIT}) execute \texttt{node scripts/failure-simulation.cjs}.
+    \item \textbf{Full System Saturation}: to simulate all five institutional scenarios concurrently (e.g., Gate Rush, Member Polling, and Complaint Surges) to evaluate global resource saturation execute \texttt{node scripts/unified-stress-test.cjs}.
+\end{enumerate}
+
+
+% \subsubsection{Manual Execution \& CLI Workflow}
+% To ensure the system works independently, we provided a standardized CLI workflow:
+% \begin{enumerate}[leftmargin=*]
+%     \item \textbf{Scenario Configuration}: Update \texttt{scripts/constants.cjs} to define the desired \texttt{CONCURRENCY} (e.g., 300) and \texttt{TOTAL\_REQUESTS} (e.g., 2000).
+    
+%     \item \textbf{Individual Stress}: Execute \texttt{node scripts/stress-test.cjs} to saturate a specific endpoint.
+%     \item \textbf{Full System}: Execute \texttt{node scripts/unified-stress-test.cjs} to simulate all five institutional scenarios concurrently.
+%     \item \textbf{ACID Verification}: Execute \texttt{node scripts/failure-simulation.cjs} to evaluate system recovery under forced termination.
+% \end{enumerate}
+
+\subsection{Extended: Reliable Dashboard}
+As an \textbf{additional feature} to enhance the developer experience, we implemented a React-based System Tester Dashboard. While the CLI test suite is the functional core, the dashboard provides a high-level visualization layer:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Event-Driven Streaming}: we used \texttt{child\_process.spawn} in Node.js (backend) to execute tests. Standard output is captured and pushed through an Express route as an \texttt{EventStream}.
+    \item \textbf{Real-Time Monitoring}: The dashboard consumes this stream using the \texttt{ReadableStream} API, providing sub-second visual updates without manual log tailing.
+\end{itemize}
+
+% ====================================================
+\section{Conflict Handling (Concurrent Writing)}
+
+\subsection{The Challenge: SQLite Default Locking}
+
+SQLite's default \texttt{DELETE} journal mode uses exclusive file-level locking. When any process writes to the database, the entire file is locked -- all other readers and writers are blocked until the write completes. In our hostel scenario, a single gate scan inserting a log entry would block every user from viewing their dashboard, producing widespread \texttt{SQLITE\_BUSY} errors at any meaningful concurrency level. 
+% Table~\ref{tab:wal-comparison} summarizes the behavioral difference.
+
+% \begin{table}[H]
+% \centering
+% \caption{Default Journal Mode vs. WAL Mode}
+% \label{tab:wal-comparison}
+% \small
+% \renewcommand{\arraystretch}{1.3}
+% \begin{tabular}{|L{3.5cm}|L{3.5cm}|}
+% \hline
+% \rowcolor{headernavy}\color{white}\theadbf{Default (DELETE Journal)} & \color{white}\theadbf{WAL Mode} \\
+% \hline
+% Writer locks entire DB file & Writer appends to separate \texttt{-wal} file \\
+% \hline
+% \rowcolor{rowred}All readers blocked during writes & Readers access main DB simultaneously \\
+% \hline
+% \rowcolor{rowgreen}-- & Zero \texttt{SQLITE\_BUSY} errors in gate rush test \\
+% \hline
+% \rowcolor{rowred}200ms+ dashboard latency under write load & 16ms avg dashboard latency under write load \\
+% \hline
+% \end{tabular}
+% \end{table}
+
+\subsection{Solution: Write-Ahead Logging (WAL)}
+
+We implemented \textbf{WAL mode} in the database initialization to fully decouple reading and writing operations. Readers read from the main database file while writers append changes to a separate \texttt{hostel-wal} file. The WAL is merged back into the main database file during a checkpoint operation.
+
+\begin{lstlisting}[style=jsstyle, caption={WAL Mode and busy timeout configuration (db/database.js)}]
+// db/database.js
+const db = await open({
+  filename: 'hostel.db',
+  driver: sqlite3.Database
+});
+
+// Readers and writers no longer block each other
+await db.exec('PRAGMA journal_mode = WAL;');
+
+// Retry for up to 5 seconds on lock contention
+// instead of failing immediately with SQLITE\_BUSY
+await db.exec('PRAGMA busy_timeout = 5000;');
+\end{lstlisting}
+
+
+% ====================================================
+\section{Race Condition Mitigation}
+
+\subsection{The Critical Challenge: Room Allocation}
+
+Room allocation is the highest-risk operation in the system for race conditions. It spans three sequential steps across two tables:
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Read}: Check \texttt{Room.CurrentOccupancy} vs.\ \texttt{Room.MaxCapacity}
+    \item \textbf{Insert}: Add a new record to the \texttt{Allocation} table
+    \item \textbf{Update}: Increment \texttt{Room.CurrentOccupancy} in the \texttt{Room} table
+\end{enumerate}
+
+\begin{lstlisting}[style=logstyle, caption={Race timeline (without BEGIN IMMEDIATE)}]
+T:0ms Admin A reads:CurrentOccupancy=3, MaxCapacity=4
+T:1ms Admin B reads:CurrentOccupancy=3, MaxCapacity=4    ==== (both see 1 spot remaining) ====
+         
+T:2ms Admin A: INSERT INTO Allocation ... (succeeds)
+T:3ms Admin B: INSERT INTO Allocation ... (also succeeds)
+T:4ms Admin A: UPDATE Room SET CurrentOccupancy=4
+T:5ms Admin B: UPDATE Room SET CurrentOccupancy=5            ==== CORRUPT ====
+
+RESULT: Room has 5 occupants, MaxCapacity=4.            
+\end{lstlisting}
+
+Locking only the \texttt{Allocation} table does not prevent Admin B from reading \texttt{CurrentOccupancy = 3} at T=1ms. Their check is based on stale data regardless of any table-level lock acquired later.
+
+\subsection{Solution: \texttt{BEGIN IMMEDIATE}}
+
+Standard \texttt{BEGIN} transactions acquire a shared lock only when they first attempt a write -- which is too late. We implemented \textbf{\texttt{BEGIN IMMEDIATE TRANSACTION}}, which acquires a \textit{reserved lock} at the very start, before any reads occur. This means the capacity check and the allocation write are part of a single atomic, isolated unit. No other transaction can read or write to this room's occupancy data until the current transaction commits or rolls back.
+
+% \subsection{Technical Connections \& Reserved Locking}
+
+To achieve true isolation for sensitive Room Allocation, we implemented a \textbf{"Shuttle Connection" Pattern}. Instead of using the long-lived, shared database handle used for standard UI reads, the allocation route initiates a dedicated, temporary connection to the SQLite engine.
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{The SQLite Lock Cycle}: Unlike a standard \texttt{BEGIN} (which only acquires a SHARED lock), \texttt{BEGIN IMMEDIATE} transitions the database connection directly into a \textbf{RESERVED} state.
+    % \item \textbf{Exclusion Zone}: While in the RESERVED state, other connections can still perform reads (WAL), but any other attempt to start a write transaction is blocked at the entry point.
+    % \item \textbf{Atomic Triage}: This pattern ensures that by the time our script reads \texttt{Room.Occupancy}, it is guaranteed that no other concurrent process is in the middle of a "Check-then-Act" cycle.
+    \item \textbf{Exclusion Zone}: While in the RESERVED state, other connections can still perform simple reads (due to WAL), but any other attempt to start a write transaction (\texttt{BEGIN IMMEDIATE}) is blocked at the entry point.
+    \item \textbf{Atomic Triage}: Since the allocation logic acquires this lock \textit{before} the occupancy check, any subsequent connection (e.g., Connection B) is blocked at the \texttt{BEGIN IMMEDIATE} line. It does not execute immediately but waits (sleeps) until Connection A completes its operation with a \texttt{COMMIT}. Once Connection A finishes, Connection B reads \texttt{Occupancy = 4} and correctly identifies the room as full.
+\end{enumerate}
+
+\begin{lstlisting}[style=jsstyle, caption={Shuttle connection and Reserved locking pattern}]
+// src/routes/allocations.js
+// 1. Create isolated connection
+const db = await createConnection(); 
+try {
+  // 2. Transition straight to RESERVED lock
+  await db.run('BEGIN IMMEDIATE TRANSACTION');
+  // ... check, insert, update ...
+  await db.run('COMMIT');
+} finally {
+  // 3. Close shuttle connection immediately
+  await db.close(); 
+}
+\end{lstlisting}
+
+% \textbf{Result}: In all Booking War simulations, with 50 concurrent attempts for 1 remaining bed, exactly \textbf{1 succeeded and 49 were blocked}. Zero over-allocations were recorded.
+
+% ====================================================
+
+% ====================================================
+\section{Failure Handling \& Verification}
+
+We developed \texttt{failure-simulation.cjs}, a dedicated test script designed to prove \textbf{Atomicity and Consistency}. The script ensures that even if a process terminates in the middle of a complex multi-step transaction (like Room Allocation), no partial data is committed to the database and remains consistent.
+
+\subsection{Mechanism of Verification}
+We follows a rigorous five-stage "Snapshot and Verify" cycle:
+
+\begin{lstlisting}[style=logstyle, caption={Snapshot and Verify Cycle (Failure Simulation)}]
+T:0ms  Snapshot:
+       Records Room.Occupancy and existing allocations
+
+T:1ms  Transaction Start:
+       BEGIN TRANSACTION opened.
+
+T:2ms  Partial Write:
+       --- Write Started
+       INSERT INTO Allocation ... (succeeds)
+    
+       Injected Failure (2.1 ms):
+       SYSTEM CRASH simulated
+       
+       UPDATE ROOM ... (intentionally skipped)
+       --- Write Ended
+
+T:3ms  ROLLBACK triggered (by the catch block)
+
+T:4ms  Post-Recovery Audit:
+       Re-read Room.Occupancy and allocations
+
+RESULT:
+Final State == Initial Snapshot
+(No partial INSERT persists)
+\end{lstlisting}
+
+\begin{table}[H]
+\centering
+\caption{Failure Simulation Outcomes (10 Unit Trials)}
+\label{tab:failure-log}
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{|L{0.9cm}|L{3.1cm}|L{1.5cm}|L{1.2cm}|}
+\hline
+\rowcolor{headerteal}\color{white}\theadbf{Trial} & \color{white}\theadbf{Injected Failure Point} & \color{white}\theadbf{Result} & \color{white}\theadbf{Verified} \\
+\hline
+T1 & Post-INSERT, Pre-UPDATE & Rolled Back & \textbf{YES} \\
+\hline
+T2 & MID-INSERT (Conflict) & Rolled Back & \textbf{YES} \\
+\hline
+T3--T10 & Randomized Crash Timing & Rolled Back & \textbf{YES} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{lstlisting}[style=jsstyle, caption={Atomicity verification logic (failure-simulation.cjs)}]
+try {
+  await db.run('BEGIN TRANSACTION');
+  // Snapshot T0: Check CurrentOccupancy
+  const initial = await db.get('SELECT CurrentOccupancy FROM Room...');
+  
+  // Partial Write T2: Insert allocation without Updating Room
+  await db.run('INSERT INTO Allocation (MemberID, RoomNum) ...');
+  
+  // Injected Failure T3
+  throw new Error('SYSTEM CRASH SIMULATION');
+  
+  await db.run('UPDATE Room SET CurrentOccupancy = ...');
+  await db.run('COMMIT');
+} catch (err) {
+  // Post-Recovery Audit T4
+  await db.run('ROLLBACK');
+}
+\end{lstlisting}
+
+\textbf{Verification Analysis}: In all trials, the database successfully reverted to its pre-transaction state. This proves that our "Shuttle Connection" and transaction wrapping effectively mitigate the risk of "ghost occupants" or "lost records" during system instability..
+
+% ====================================================
+
+\section{Stress Testing and Performance Analysis}
+
+The system's limits were tested using a decoupled Node.js framework designed for extreme concurrency. Our focus was on validating the database's performance under both individual endpoint saturation and complex multi-scenario coordination.
+
+\subsection{Core Implementation: Scenario-Based Stress}
+The primary objective was to validate the atomic operations and I/O capacity of the system under "rush" conditions.
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Write—Heavy Stress (Complaints)}: To simulate high-volume maintenance reporting (e.g., 50 parallel writes), we execute \texttt{node scripts/stress\_test.cjs}. This scenario mimics the "Admission or Start-of-Sem" spike where new residents flag furniture issues simultaneously, testing the \texttt{POST /api/complaints} endpoint's ability to interleave writes in WAL mode.
+    \item \textbf{Individual Stress (Saturability)}: Simulate high-volume traffic on critical paths, such as the \texttt{POST /api/scans/gate} endpoint with 200 concurrent workers. This ensures the gate detection mechanism remains responsive even if 100\% of the student population passes through portals within a 5-minute window. Execute the test using \texttt{node scripts/stress-test.cjs}.
+\end{itemize}
+
+% \begin{lstlisting}[style=jsstyle, caption={Worker Pool and Throughput logic (stress-test.cjs)}]
+% // Sliding Window Worker Pool
+% async function runWorker() {
+%   while (started < TOTAL_REQUESTS) {
+%     const myIndex = started++;
+%     if (myIndex >= TOTAL_REQUESTS) break;
+%     await sendRequest(); // fetch() and latency tracking
+%   }
+% }
+
+% // Keeping N requests in-flight at all times
+% const pool = Array.from({length: CONCURRENCY}, runWorker);
+% await Promise.all(pool);
+
+% const throughput = completed / ((Date.now() - startTime) / 1000);
+% \end{lstlisting}
+
+\subsection{Gate Scan Throughput Optimization}
+
+\subsubsection{Challenge: Over-Locking on Scans} Early testing of 20 parallel workers and 1,000 requests revealed following severe throughput limitations.
+
+Initially, each gate scan was wrapped in \texttt{BEGIN IMMEDIATE}, which serialized all writes and turned this high-frequency I/O endpoint into a bottleneck. When multiple workers attempted concurrent requests, only one could execute at a time while others were blocked (sleeping) at the transaction entry. This caused a cascading delay and \texttt{SQLITE\_BUSY} and timeout errors.
+
+\begin{lstlisting}[style=logstyle, caption={Race timeline with BEGIN IMMEDIATE on scans}]
+T:0ms WorkerA starts: sendRequest()--> BEGIN IMMEDIATE
+T:1ms WorkerB starts: sendRequest()--> BLOCKED at BEGIN IMMEDIATE (sleeping)
+... other workers also blocked/sleep
+
+T:2ms Worker A inserts audit log ... COMMIT
+T:3ms Worker B proceeds: sendRequest()--> BEGIN IMMEDIATE
+... remaining workers still blocked, causing timeouts and resulting in 3xx server errors
+
+RESULT: Only 1 request executes at a time; throughput severely limited.
+\end{lstlisting}
+
+\subsubsection{Solution: WAL Concurrency}
+
+Audit logging is a "fire-and-forget" insert and does not require isolation. By removing the transaction lock in \texttt{scans.js} we unlocked true parallel I/O. 
+
+The optimized test executed 300 parallel workers issuing 2,000 requests, with all requests completing successfully 
+and zero \texttt{SQLITE\_BUSY} or timeout errors.
+
+
+% \textbf{Key Insight}: Removing unnecessary locks and using a sliding window execution model allowed throughput to scale smoothly from 20 to 300 concurrent workers, handling peak "Gate Rush" scenarios without stalls.
+
+% \subsection{Key Technical Optimizations (Deep Dives)}
+
+% \subsubsection{Challenge: Over-Locking on Scans}
+% Initially, gate scans were wrapped in \texttt{BEGIN IMMEDIATE}, converting a parallel write endpoint into a serial bottleneck. Removing this lock from \texttt{scans.js} (which lacks a check-then-act pattern) unlocked true I/O capacity.
+
+% \subsubsection{Challenge: Batch-Sequential Stuttering}
+% The initial test model fired requests in synchronized batches, where one slow outlier blocked entire groups. We refactored to a \textbf{Sliding Window (Worker Pool)} model, keeping $N$ requests in-flight at all times for sustained pressure.
+
+% \begin{lstlisting}[style=jsstyle, caption={Sliding window worker pool logic (stress-test.cjs)}]
+% async function runWorker() {
+%   while (completed < TOTAL_REQUESTS) {
+%     const start = Date.now();
+%     try { await sendRequest(); } catch (err) {}
+%     completed++;
+%   }
+% }
+% const workers = Array.from({length: CONCURRENCY}, runWorker);
+% await Promise.all(workers);
+% \end{lstlisting}
+
+% \subsubsection{Evolution of "Gate Rush" Throughput}
+% The transition from a baseline of 20 concurrent workers to a production-grade 300 was achieved through three surgical optimizations.
+% \begin{itemize}[leftmargin=*]
+%     \item \textbf{Initial Approach (20 Parallel / 1,000 Req)}: During early testing, the gate scan endpoint erroneously utilized \texttt{BEGIN IMMEDIATE} transactions. This serialized all audit logs, causing high wait times even under minimal load.
+%     \item \textbf{Optimized Approach (300 Parallel / 2,000 Req)}: We identified that audit logging (scanning) is a "fire-and-forget" insert that does not require "check-then-act" isolation. By removing the transaction lock from \texttt{scans.js} and relying on SQLite's native WAL-mode concurrency, we unlocked true parallel I/O. Combined with the worker pool runner (detailed below), throughput scaled from baseline to full saturation with zero \texttt{SQLITE\_BUSY} errors.
+% \end{itemize}
+
+\begin{lstlisting}[style=jsstyle, caption={Optimized scans.js (removed BEGIN IMMEDIATE bottleneck)}]
+// src/routes/scans.js
+// 1. Dedicated shuttle connection
+const db = await createConnection();
+try {  
+  // 2. Removed BEGIN IMMEDIATE 
+  // to allow concurrent audit logs
+  // await db.run('BEGIN IMMEDIATE TRANSACTION'); 
+  // ... Perform Actions (like get member) ...
+  // 4. Log the scan (SQLite is Atomic by itself)
+  await db.run('INSERT INTO QRScanLog ...', [qrCode, req.user.username]);
+  // 5. Commit not required for single atomic insert
+  // await db.run('COMMIT');
+} finally {
+  // 6. Close the dedicated connection
+  await db.close();
+}
+\end{lstlisting}
+
+\begin{lstlisting}[style=logstyle, caption={Race timeline without BEGIN IMMEDIATE on scans}]
+T:0ms WorkerA: sendRequest()--> INSERT audit log (succeeds)
+T:1ms WorkerB: sendRequest()--> INSERT audit log (concurrent, succeeds)
+T:2ms WorkerC: sendRequest()--> INSERT audit log (concurrent, succeeds)
+... other workers continue in parallel ...
+
+RESULT: All requests execute concurrently; full throughput achieved, zero SQLITE_BUSY errors.
+\end{lstlisting}
+
+
+\subsubsection{Challenge: Batch Stuttering}
+The initial test model executed requests in synchronized batches. Each batch waited for all requests to complete before triggering. This created a bottleneck where a single slow request delayed the entire batch, leading to uneven load distribution and underutilization of concurrency.
+
+\begin{lstlisting}[style=logstyle, caption={Batch execution causing stuttering}]
+Batch 1: Worker A --> completes
+         Worker B --> slow (delays entire batch)
+
+==== Next batch cannot start until all finish ====
+Batch 2: Worker C --> waiting for batch completion
+         hence, Starts late due to this delay
+
+RESULT: Irregular throughput, idle time between batches.
+\end{lstlisting}
+
+\subsubsection{Solution: Sliding Window (Worker Pool)}
+
+To eliminate batch-level blocking, we adopted a \textbf{Sliding Window (Worker Pool)} model. Instead of waiting for batches to complete, the system maintains a constant number ($N$) of in-flight requests. As soon as one request finishes, a new one is immediately issued, ensuring continuous pressure and optimal resource utilization.
+
+\begin{lstlisting}[style=jsstyle, caption={Sliding window worker pool logic (stress-test.cjs)}]
+async function runWorker() {
+  while (completed < TOTAL_REQUESTS) {
+    try { await sendRequest(); } catch (err) {}
+    completed++;
+  }
+}
+const workers = Array.from({length: CONCURRENCY}, runWorker);
+await Promise.all(workers);
+\end{lstlisting}
+
+\begin{lstlisting}[style=logstyle, caption={Sliding window execution (continuous flow)}]
+T:0ms Worker A --> sendRequest()
+T:1ms Worker B --> sendRequest()
+T:2ms Worker C --> sendRequest()
+
+T:50ms Worker A completes --> immediately picks next request
+T:51ms Worker D continues without waiting
+...
+RESULT: Constant concurrency maintained; smooth, sustained throughput.
+\end{lstlisting}
+
+% \textbf{Key Insight}: Replacing batch execution with a sliding window model eliminates idle gaps and prevents slow outliers from stalling progress, resulting in stable and maximized throughput under load.
+
+
+\subsection{Experimental Design \& API Channels}
+All tests use Node.js scripts with concurrent Fetch requests. We justify the use of \textbf{POST} for QR scans because they log state-modifying actions; in REST architecture, any action that changes server state (like marking a student "in" or "out") must be a \texttt{POST} or \texttt{PUT}.
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Booking (\texttt{POST /api/allocations})}: Atomic integrity testing.
+    \item \textbf{Portal Load (\texttt{GET /api/members/:id})}: concurrent read latency.
+    % Testing.
+    \item \textbf{Auth Stress (\texttt{POST /api/auth/login})}: Evaluates bcrypt's CPU saturation.
+\end{itemize}
+
+
+\subsection{Comprehensive Scenarios \& Parameters}
+Table~\ref{tab:scenarios} details the specific scenarios configured in \texttt{constants.cjs} and their operational objectives.
+
+\begin{table}[H]
+\centering
+\caption{Stress Test Scenarios and Parameters}
+\label{tab:scenarios}
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|L{2.2cm}|C{1cm}|C{1.2cm}|L{2.8cm}|}
+\hline
+\rowcolor{headernavy}\color{white}\theadbf{Scenario} & \color{white}\theadbf{Parallel} & \color{white}\theadbf{Total Req} & \color{white}\theadbf{Objective} \\
+\hline
+Gate Rush (initial) & 20 & 1,000 & Baseline write reliability \\
+\hline
+\rowcolor{gray!10}Gate Rush (optimized) & 300 & 2,000 & Throughput after lock optimization \\
+\hline
+Booking & 50 & 50 & Race condition mitigation \\
+\hline
+\rowcolor{gray!10}Auth Stress (bcrypt) & 100 & 100 & CPU/event-loop saturation \\
+\hline
+Member Polling & 20 & 100 & High-volume read (Unified S1) \\
+\hline
+\rowcolor{gray!10}Gate Stream (Admin) & 10 & 60 & Admin monitoring load (Unified S2) \\
+\hline
+Maintenance Ops & 10 & 50 & Staff dashboard status checks (Unified S4) \\
+\hline
+\rowcolor{gray!10}Complaint Surge & 5 & 20 & Admission-day complain load (Unified S5) \\
+\hline
+Unified Suite & 100+ & 400+ & \textbf{Sustained Multi-Channel Parallel Load} \\
+\hline
+\end{tabular}
+\end{table}
+
+% ====================================================
+\subsection{The "Unified Sustained Stress" Suite}
+To simulate the absolute worst-case scenario (e.g., the first day of the semester), we implemented \texttt{unified-stress-test.cjs}. This script launches all scenarios (S1--S5) \textbf{simultaneously}. This tests the database's ability to interleave heavy read polling (Members/Maintenance) with intensive write activity (Complaints/Gate Scans) while bcrypt hashing saturates the CPU.
+
+
+
+% ====================================================
+\section{Experimental Results \& Integrity Validation}
+
+\subsection{Quantitative Analysis}
+
+\smallskip
+\noindent
+\hyperref[tab:audit]{\textcolor{red!70!black}{\textbf{ Refer to Table~{4} for detailed Experiment Outcomes and Verification Logs performed as testing of our system}}}
+
+\begin{table*}[t]
+\centering
+\label{tab:audit}
+\caption{Experiment Outcomes and Verification Logs}
+\label{tab:results}
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|L{3cm}|L{2.5cm}|L{3cm}|L{5.5cm}|}
+\hline
+\rowcolor{headerteal}\color{white}\theadbf{Experiment} & \color{white}\theadbf{Sample Size} & \color{white}\theadbf{Result / Metric} & \color{white}\theadbf{Verification Output} \\
+\hline
+Race Integrity & 50 concurrent & \textbf{1 Success, 49 Blocked} & \texttt{``Atomic Lock preserved capacity''} \\
+\hline
+\rowcolor{gray!10}Gate Rush (Optimized) & 300 parallel / 2,000 Req & \textbf{High I/O Ceiling} & No \texttt{SQLITE\_BUSY} errors recorded \\
+\hline
+Dashboard Read (S1/Portal) & 100 requests & \textbf{16ms Avg Latency} & Stable under sustained write load \\
+\hline
+\rowcolor{gray!10}Auth Stress (bcrypt) & 100 concurrent & \textbf{CPU: 95\%} & Latency spike on other channels ($\sim$350ms) \\
+\hline
+Gate Stream (S2) & 60 requests & \textbf{100\% Integrity} & Admin monitor reflects all gate activity \\
+\hline
+\rowcolor{gray!10}Maintenance Ops (S4) & 50 requests & \textbf{High Availability} & Zero failed polls during background writes \\
+\hline
+Complaint Surge (S5) & 20 parallel writes & \textbf{Verified Interleaving} & AuditLog shows zero corruption/overwrites \\
+\hline
+\rowcolor{gray!10}Failure Recovery & 10 crash simulations & \textbf{100\% Clean Recovery} & Post-recovery state matches pre-transaction \\
+\hline
+Unified Parallel Stress & 5 Scenarios simultaneously & \textbf{PASS} & System stable under global resource saturation \\
+\hline
+\end{tabular}
+\end{table*}
+\end{tabular}
+\end{table*}
+
+% \subsection{AutExperimentation }
+
+
+\subsection{Parameter Grid \& Methodology}
+To maintain strict reproducibility and validate our assumptions under variable load, an automated grid-search framework was developed. The framework orchestrates multiple Node.js workers and parses the resulting telemetry.
+
+The system systematically explored the breaking points of the backend by varying:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{CONCURRENCY}: The absolute number of simultaneous "workers" hitting the server (Range: 10 to 400).
+    \item \textbf{TOTAL\_REQUESTS}: The cumulative load pushed through the worker pool.
+    \item \textbf{TARGET\_CAPACITY \& NUM\_STUDENTS}: Explicit capacity over-demand to force synchronization races.
+\end{itemize}
+
+\subsection{Data-Driven Results \& Observations}
+
+
+\subsubsection{Read Stress (Concurrency vs System Latency):}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\columnwidth]{plots/read_latency_vs_concurrency.png}
+    \caption{Read Stress: Concurrency vs System Latency}
+\end{figure}
+
+\smallskip
+\noindent \textbf{This (Figure 1) analysis represents the degradation of P95 and Average Latency as concurrent "Gate Rush" traffic increases}. It models how long a \textbf{student waits at the terminal} when multiple gates are active, where \textbf{sub-second latency is critical for maintaining continuous human flow}. The observations indicate that latency increases \textbf{linearly with concurrency} but remains manageable due to \textbf{WAL-mode decoupling}. However, \textbf{tail latencies (P95) spike at extreme bounds}, suggesting \textbf{event-loop saturation}.
+
+\subsubsection{Read Stress (Error Volume vs Load Metrics):}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\columnwidth]{plots/read_error_heatmap.png}
+    \caption{Read Stress: Error Volume vs Load Metrics}
+\end{figure}
+
+\noindent \textbf{Figure 2 represents a correlation between HTTP error percentage and system load}, visualized through Total Requests and Concurrency. It helps identify the \textbf{exact tipping point where server limits are exhausted}, such as connection pool capacity or OS socket constraints. The observations show that \textbf{at high concurrency, fetch failures begin to appear}, which are typically caused by \textbf{Node.js maxSockets or OS ulimit limitations} rather than limitations of the database itself.
+
+\subsubsection{Mixed Workload (Read vs Write Degradation):}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.70\columnwidth]{plots/mixed_latency_comparison.png}
+    \caption{Mixed Workload: Read vs Write Degradation}
+\end{figure}
+
+\noindent \textbf{Figure 3 represents a side-by-side comparison of read response times and write (complaint) submission times under heavy parallel load}. It highlights how \textbf{admin dashboard reads and student write actions occur simultaneously}, helping determine whether \textbf{writes block readers}. The observations show that \textbf{read latency remains stable due to WAL implementation}, while \textbf{write operations experience higher latency}. This demonstrates that the database \textbf{supports concurrent readers during write operations}.
+
+\subsubsection{Atomic Integrity (Booking Race Conditions):}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\columnwidth]{plots/race_condition_blocks.png}
+    \caption{Atomic Integrity: Booking Race Conditions}
+\end{figure}
+
+\noindent \textbf{Figure 4 represents the relationship between successful allocations and blocked requests under fixed room capacity during high concurrency}. It demonstrates how the system \textbf{prevents overbooking when multiple students attempt access simultaneously}, ensuring that users do not read outdated capacity before writes are committed. The observations confirm that \textbf{excess requests are effectively blocked}, and the number of successful allocations \textbf{never exceeds the defined room limit}, validating the correctness of \textbf{BEGIN IMMEDIATE TRANSACTION for atomic locking}.
+
+\subsubsection{Atomicity (Failure \& System Crash Recovery):}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\columnwidth]{plots/failure_recovery_pie.png}
+    \caption{Atomicity: Failure \& System Crash Recovery}
+\end{figure}
+
+\noindent \textbf{This (Figure 5) represents the success rate of SQLite in reverting corrupted database states during mid-transaction crashes}. It ensures that \textbf{power loss or node failures do not create ghost records or invalid states} in the production database. The observations indicate a \textbf{100\% rollback success rate}, where \textbf{no room capacities are recorded} if the Node process fails before \textbf{COMMIT}.
+
+% \section{Analysis}
+\subsection{Overall Observations}
+The most significant architectural insight is the importance of \textit{lock granularity}. The initial implementation over-locked gate scans with \texttt{BEGIN IMMEDIATE}, serializing a parallelizable endpoint. Removing this revealed that locking must be used carefully for "check-then-act" patterns (allocated) but avoided for simple logs (scans).
+
+Furthermore, the automated grid-search confirmed that the \texttt{PRAGMA journal\_mode=WAL} perfectly isolates read queues from write contention. However, it also proved that under extreme load (>$400$ concurrent requests), the bottleneck shifts away from SQLite completely and exposes constraints within the Node.js event-loop and OS-level socket configurations.
+
+\subsection{Limitations \& Scalability}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{CPU Saturation}: Authentication (bcrypt) is our primary bottleneck, reaching 95\% CPU under high login load.
+    \item \textbf{SQLite Multi-Writer}: While WAL helps, SQLite still serializes writes. Institutional load exceeding 1,000 writes/sec would require a server-based RDBMS (PostgreSQL).
+    \item \textbf{OS Socket Limits}: Most operating systems strictly limit open files/sockets to 1,024, artificially capping maximum concurrency.
+    \item \textbf{Node.js Pool}: The default \texttt{http.Agent} has a restricted connection pool, which chokes internal micro-requests during bursts.
+    \item \textbf{Port Exhaustion}: Rapidly opening and closing 1,000+ connections depletes available ephemeral ports, leading to \texttt{EADDRNOTAVAIL} errors under extreme parallel testing.
+\end{itemize}
+
+\section{Ensuring Operations Correctness}
+The framework ensures system correctness (across  architectural pillars) by checking state integrity under continuous extreme load.
+
+\begin{itemize}
+    \item \textbf{Concurrent Usage (Gate Scans)}: Correctness is ensured by asserting that every concurrent student QR scan is successfully processed. The test validates that the backend handles event-loop concurrency without dropping requests/freezing.
+    \item \textbf{Race Condition Testing}: Correctness is explicitly measured by cross-referencing final \texttt{CurrentOccupancy} against \texttt{MaxCapacity}. Because the system enforces atomic \texttt{BEGIN IMMEDIATE} transactions, the post-test query confirms that allocations perfectly halt at capacity limits, eliminating overlapping read-modify-write anomalies.
+    \item \textbf{Failure Simulation}: Correctness is ensured by inducing unhandled Node.js exceptions mid-allocation. Post-crash assertions verify that no partial student profiles or ghost allocations remain, proving the SQLite rollback mechanics perfectly uphold ACID Atomicity.
+    \item \textbf{Stress Testing (Mixed Read/Write)}: Correctness is guaranteed by verifying that write operations (complaint submissions) do not block concurrent read sequences (dashboard queries). By enabling \texttt{PRAGMA journal\_mode=WAL}, the test asserts thousands of simultaneous reads maintain \texttt{HTTP 200} integrity while writes queue safely in the background.
+\end{itemize}
+
+\section{Extended Feature: System Tester Dashboard}
+We implemented a React-based \textbf{Stress Testing Dashboard} to provide visibility into system behavior under load.
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Process Registry}: The backend stores active child processes (stress scripts) in a \texttt{Map} for independent lifecycle management.
+    % \item \textbf{Real-Time Streaming}: Streams OS logs via \texttt{stdout} to the browser with sub-100ms latency using a \texttt{ReadableStream}.
+    \item \textbf{Real-Time Streaming}: Logs are piped from the OS via \texttt{stdout} and streamed to the browser using a \texttt{ReadableStream}, providing sub-100ms latency on log visualization.
+    \item \textbf{The "Kill Switch"}: Essential for high-concurrency tests, the dashboard sends a \texttt{SIGTERM} to the process group, promptly terminating all parallel workers to prevent resource exhaustion.
+\end{itemize}
+
+\section{Artifact Locations}
+\begin{itemize}
+    \item \textbf{Master Logs and Figure Directory}: 
+
+    \texttt{../app/scripts/logs/experiment\_20260328\_194239}
+    \item \textbf{Python Orchestrator Script}: 
+    
+    \texttt{../app/scripts/run\_experiments.py}
+    \item \textbf{Analysis \& Plotting Script}: 
+    
+    \texttt{../app/scripts/analysis/plot\_metrics.py}
+    \item \textbf{Execution Command}: 
+    
+    \texttt{python3 scripts/run\_experiments.py}
+\end{itemize}
+
+\section{Conclusion}
+Through the surgical application of SQLite WAL mode and atomic \texttt{BEGIN IMMEDIATE} transactions, we have successfully resolved the fundamental concurrency bottlenecks of the CheckInOut system. Our multi-channel stress testing verified that the system remains responsive even when saturated to 200+ parallel requests. The architectural transition ensures that CheckInOut is not merely a tracking tool, but a reliable backbone for institutional hostel management, capable of handling the extreme spikes of the IITGN student lifecycle with 100\% data integrity and sub-20ms responsiveness.
+
+
+
+
+\noindent\rule{\columnwidth}{0.5pt}
+
+\end{document}

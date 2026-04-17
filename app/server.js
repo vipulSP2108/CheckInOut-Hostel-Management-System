@@ -38,8 +38,11 @@ async function startServer() {
   app.use(cookieParser());
   app.use(express.json());
   
-  const auditLogStream = fs.createWriteStream(path.join(__dirname, 'logs', 'audit.log'), { flags: 'a' });
-  const accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs', 'access.log'), { flags: 'a' });
+  const logsDir = path.join(__dirname, 'logs');
+  if (!fs.existsSync(logsDir)) fs.mkdirSync(logsDir, { recursive: true });
+
+  const auditLogStream = fs.createWriteStream(path.join(logsDir, 'audit.log'), { flags: 'a' });
+  const accessLogStream = fs.createWriteStream(path.join(logsDir, 'access.log'), { flags: 'a' });
   app.use(morgan((tokens, req, res) => {
     const user = req.user ? req.user.username : 'anonymous';
     const method = tokens.method(req, res);
@@ -91,18 +94,20 @@ async function startServer() {
 
   app.get('/api/stats', authenticateToken, requireAdmin, async (req, res) => {
     try {
-      const db = getDB();
+      const { executeQuery } = await import('./src/db/database.js');
+      
       const [members, rooms, allocations, complaints, maintenance, visitors] = await Promise.all([
-        db.get("SELECT COUNT(*) as total, SUM(IsActive) as active FROM Member"),
-        db.get("SELECT COUNT(*) as total, SUM(CASE WHEN RoomStatus='Available' THEN 1 ELSE 0 END) as available FROM Room"),
-        db.get("SELECT COUNT(*) as total, SUM(CASE WHEN AllocationStatus='Active' THEN 1 ELSE 0 END) as active FROM Allocation"),
-        db.get("SELECT COUNT(*) as total, SUM(CASE WHEN Status='Open' THEN 1 ELSE 0 END) as open FROM Complaint"),
-        db.get("SELECT COUNT(*) as total, SUM(CASE WHEN Status='Pending' THEN 1 ELSE 0 END) as pending FROM MaintenanceRequest"),
-        db.get("SELECT COUNT(*) as total FROM Visitor"),
+        executeQuery({ sql: "SELECT COUNT(*) as total, SUM(IsActive) as active FROM Member", type: 'get' }),
+        executeQuery({ sql: "SELECT COUNT(*) as total, SUM(CASE WHEN RoomStatus='Available' THEN 1 ELSE 0 END) as available FROM Room", type: 'get' }),
+        executeQuery({ sql: "SELECT COUNT(*) as total, SUM(CASE WHEN AllocationStatus='Active' THEN 1 ELSE 0 END) as active FROM Allocation", type: 'get' }),
+        executeQuery({ sql: "SELECT COUNT(*) as total, SUM(CASE WHEN Status='Open' THEN 1 ELSE 0 END) as open FROM Complaint", type: 'get' }),
+        executeQuery({ sql: "SELECT COUNT(*) as total, SUM(CASE WHEN Status='Pending' THEN 1 ELSE 0 END) as pending FROM MaintenanceRequest", type: 'get' }),
+        executeQuery({ sql: "SELECT COUNT(*) as total FROM Visitor", type: 'get' }),
       ]);
       res.json({ members, rooms, allocations, complaints, maintenance, visitors });
     } catch (err) {
-      res.status(500).json({ error: 'Server error' });
+      console.error('Stats error:', err);
+      res.status(500).json({ error: 'Server error: ' + err.message });
     }
   });
 

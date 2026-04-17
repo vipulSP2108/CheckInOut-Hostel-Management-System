@@ -1,3 +1,6 @@
+select count(*) from Member;
+
+
 # Hostel Management System - CheckInOut
 
 A robust Hostel Management System built with React, Node.js, and SQLite, featuring high-concurrency optimizations and business-logic identifier migration.
