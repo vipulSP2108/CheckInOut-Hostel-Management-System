@@ -1,8 +1,9 @@
 import express from 'express';
 import { authenticateToken, requireOwnershipOrAdmin, requireAdmin } from '../middleware/auth.js';
 import { getDB, executeQuery } from '../db/database.js';
-import { checkGlobalUniqueness } from '../../sharding/integrity.js';
+import { checkGlobalUniqueness } from '../db/integrity.js';
 
+import bcrypt from 'bcryptjs';
 const router = express.Router();
 
 router.get('/', authenticateToken, requireAdmin, async (req, res) => {
@@ -42,7 +43,8 @@ router.get('/:id', authenticateToken, async (req, res) => {
 
 router.post('/', authenticateToken, requireAdmin, async (req, res) => {
   try {
-    const { Name, Age, Email, ContactNumber, IdentificationNumber, AllocatedDate, PurposeOfStay, Gender, DateOfBirth, QRCode, Department, YearOfStudy } = req.body;
+    const { Name, Age, Email, ContactNumber, IdentificationNumber, PurposeOfStay, Gender, DateOfBirth, QRCode, Department, YearOfStudy } = req.body;
+    const AllocatedDate = req.body.AllocatedDate || new Date().toISOString().split('T')[0];
     
     // Cross-Shard Integrity Check
     const isEmailUnique = await checkGlobalUniqueness('Member', 'Email', Email);
@@ -58,6 +60,19 @@ router.post('/', authenticateToken, requireAdmin, async (req, res) => {
       shardKey: IdentificationNumber,
       type: 'run'
     });
+
+    // Synchronize Login creation in Global SQLite Database
+    const db = getDB();
+    const passwordHash = await bcrypt.hash(ContactNumber || 'password123', 10);
+    try {
+      await db.run(
+        'INSERT OR REPLACE INTO Users (Username, PasswordHash, Role, IdentificationNumber) VALUES (?, ?, ?, ?)',
+        [IdentificationNumber, passwordHash, 'Regular', IdentificationNumber]
+      );
+    } catch (e) {
+      console.warn("User login sync warning:", e.message);
+    }
+
     res.status(201).json({ id: IdentificationNumber });
   } catch (error) {
     res.status(500).json({ error: 'Server error: ' + error.message });
@@ -94,6 +109,10 @@ router.delete('/:id', authenticateToken, requireAdmin, async (req, res) => {
     
     // Annihilate the core member row
     await executeQuery({ sql: 'DELETE FROM Member WHERE IdentificationNumber = ?', params: [id], shardKey: id, type: 'run' });
+    
+    // Annihilate login globally
+    const db = getDB();
+    await db.run('DELETE FROM Users WHERE IdentificationNumber = ?', [id]);
     
     res.json({ message: 'Member and traces annihilated across shards' });
   } catch (error) {

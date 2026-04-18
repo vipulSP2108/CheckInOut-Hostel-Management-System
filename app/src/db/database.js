@@ -142,4 +142,4 @@ export async function createConnection() {
 }
 
 // Export executeQuery from the router for use in routes
-export { executeQuery } from '../../sharding/router.js';
+export { executeQuery } from './router.js';

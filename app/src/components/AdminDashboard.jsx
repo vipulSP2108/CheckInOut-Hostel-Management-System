@@ -178,15 +178,10 @@ export default function AdminDashboard({ onLogout }) {
     const qr = memberForm.QRCode || `QR-${Date.now()}`;
     try {
       const res = await API('/api/members', 'POST', { ...memberForm, QRCode: qr });
-
-      const username = (memberForm.createLogin && memberForm.Username) ? memberForm.Username : memberForm.IdentificationNumber;
-      const password = (memberForm.createLogin && memberForm.Password) ? memberForm.Password : memberForm.ContactNumber;
-
-      if (username && password) {
-        await API('/api/auth/register', 'POST', { username, password, role: 'Regular', identificationNumber: res.id });
-      }
-
-      showToast('Member added'); closeModal(); fetchAll();
+      showToast('Member added'); 
+      closeModal(); 
+      setMemberForm({ Name: '', Email: '', ContactNumber: '', Department: '', YearOfStudy: '', PurposeOfStay: 'Resident Student', IdentificationNumber: '', Gender: 'Male', Age: '', DateOfBirth: '', AllocatedDate: '', createLogin: false, Username: '', Password: '' });
+      fetchAll();
     } catch (e) { showToast(String(e), 'error'); }
   };
   const handleAllocate = async () => {

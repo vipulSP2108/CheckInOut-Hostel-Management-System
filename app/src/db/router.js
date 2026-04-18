@@ -1,5 +1,5 @@
-import { getShardId, SHARD_NODES, GLOBAL_TABLES, SHARDED_TABLES } from './config/sharding.js';
-import { getDB } from '../src/db/database.js';
+import { getShardId, SHARD_NODES, GLOBAL_TABLES, SHARDED_TABLES } from '../config/sharding.js';
+import { getDB } from './database.js';
 import { executeMysqlQuery } from './mysql-pool.js';
 
 /**
@@ -39,12 +39,12 @@ export async function executeQuery(options) {
       if (isAggregation) {
         // Simple aggregation: sum up the totals (works for COUNT and SUM)
         return { 
-          total: results.reduce((acc, curr) => acc + (curr.total || 0), 0),
-          active: results.reduce((acc, curr) => acc + (curr.active || 0), 0),
-          available: results.reduce((acc, curr) => acc + (curr.available || 0), 0),
-          open: results.reduce((acc, curr) => acc + (curr.open || 0), 0),
-          pending: results.reduce((acc, curr) => acc + (curr.pending || 0), 0),
-          count: results.reduce((acc, curr) => acc + (curr.count || 0), 0),
+          total: results.reduce((acc, curr) => acc + (Number(curr.total) || 0), 0),
+          active: results.reduce((acc, curr) => acc + (Number(curr.active) || 0), 0),
+          available: results.reduce((acc, curr) => acc + (Number(curr.available) || 0), 0),
+          open: results.reduce((acc, curr) => acc + (Number(curr.open) || 0), 0),
+          pending: results.reduce((acc, curr) => acc + (Number(curr.pending) || 0), 0),
+          count: results.reduce((acc, curr) => acc + (Number(curr.count) || 0), 0),
         };
       }
       return results.find(r => r) || null;

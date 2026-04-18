@@ -1,4 +1,4 @@
-import { SHARD_NODES } from './config/sharding.js';
+import { SHARD_NODES } from '../config/sharding.js';
 import { executeMysqlQuery } from './mysql-pool.js';
 
 /**

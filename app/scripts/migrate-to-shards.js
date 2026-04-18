@@ -3,45 +3,29 @@ import { open } from 'sqlite';
 import fs from 'fs';
 import path from 'path';
 import bcrypt from 'bcryptjs';
-import { getShardId, GLOBAL_TABLES, SHARDED_TABLES } from '../sharding/config/sharding.js';
+import { getShardId, GLOBAL_TABLES } from '../src/config/sharding.js';
+import { executeMysqlQuery, getShardPools } from '../src/db/mysql-pool.js';
 
 const ORIGINAL_DB_PATH = './hostel.db';
 const GLOBAL_DB_PATH = './global_hostel.db';
-const SHARD_DATA_DIR = './sharding/data';
 
 async function migrate() {
-  console.log('--- Starting Migration ---');
+  console.log('--- Starting Migration to MySQL Cluster ---');
 
-  // 0. Clean up existing target databases
+  // 1. Clean up SQLite Global Database
   if (fs.existsSync(GLOBAL_DB_PATH)) fs.unlinkSync(GLOBAL_DB_PATH);
-  for (let i = 0; i < 3; i++) {
-    const shardDbDir = path.join(SHARD_DATA_DIR, `shard${i}`);
-    const shardDbPath = path.join(shardDbDir, 'shard.db');
-    if (fs.existsSync(shardDbPath)) fs.unlinkSync(shardDbPath);
-    if (!fs.existsSync(shardDbDir)) fs.mkdirSync(shardDbDir, { recursive: true });
-  }
-
+  
   const sourceDb = await open({ filename: ORIGINAL_DB_PATH, driver: sqlite3.Database });
   const globalDb = await open({ filename: GLOBAL_DB_PATH, driver: sqlite3.Database });
 
   const schema = fs.readFileSync('./sql/hostel.sql', 'utf8');
   
-  const APP_SCHEMA = `
+  const APP_SCHEMA_SQLITE = `
     CREATE TABLE IF NOT EXISTS FeeCategory (
       FeeCategoryID INTEGER PRIMARY KEY AUTOINCREMENT,
       CategoryName TEXT NOT NULL UNIQUE,
       DefaultAmount REAL NOT NULL,
       Description TEXT
-    );
-    CREATE TABLE IF NOT EXISTS FeePayment (
-      PaymentID INTEGER PRIMARY KEY AUTOINCREMENT,
-      IdentificationNumber TEXT NOT NULL,
-      FeeCategoryID INTEGER NOT NULL,
-      AmountPaid REAL NOT NULL,
-      PaymentDate DATETIME DEFAULT CURRENT_TIMESTAMP,
-      Status TEXT NOT NULL DEFAULT 'Paid',
-      FOREIGN KEY (IdentificationNumber) REFERENCES Member(IdentificationNumber),
-      FOREIGN KEY (FeeCategoryID) REFERENCES FeeCategory(FeeCategoryID)
     );
     CREATE TABLE IF NOT EXISTS Users (
       UserID INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -53,7 +37,6 @@ async function migrate() {
     );
   `;
 
-  // Improved transpile for SQLite (borrowed from database.js)
   const transpile = (s) => {
     let t = s;
     t = t.replace(/--.*$/gm, '');
@@ -70,50 +53,75 @@ async function migrate() {
     return t;
   };
 
+  // Initialize Global DB (SQLite)
   await globalDb.exec(transpile(schema));
-  await globalDb.exec(APP_SCHEMA);
-  
-  const shardDbs = [];
+  await globalDb.exec(APP_SCHEMA_SQLITE);
+
+  // Initialize MySQL Shards
+  const tableMatches = schema.match(/CREATE\s+TABLE[\s\S]*?\);/gi) || [];
+  const rawMysqlSchema = tableMatches.join('\n\n')
+    .replace(/INTEGER\s+PRIMARY\s+KEY\s+AUTOINCREMENT/gi, 'INT AUTO_INCREMENT PRIMARY KEY')
+    .replace(/CREATE\s+TABLE\s+(if\s+not\s+exists\s+)?/gi, 'CREATE TABLE IF NOT EXISTS ')
+    .replace(/ENUM\([\s\S]*?\)/gi, 'VARCHAR(255)');
+  const APP_SCHEMA_MYSQL = `
+    CREATE TABLE IF NOT EXISTS FeePayment (
+      PaymentID INT AUTO_INCREMENT PRIMARY KEY,
+      IdentificationNumber VARCHAR(50) NOT NULL,
+      FeeCategoryID INT NOT NULL,
+      AmountPaid FLOAT NOT NULL,
+      PaymentDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+      Status VARCHAR(50) NOT NULL DEFAULT 'Paid'
+    );
+  `;
+
+  console.log('Provisioning External MySQL Schemas...');
   for (let i = 0; i < 3; i++) {
-    const shardPath = path.join(SHARD_DATA_DIR, `shard${i}`, 'shard.db');
-    if (!fs.existsSync(path.dirname(shardPath))) fs.mkdirSync(path.dirname(shardPath), { recursive: true });
-    const sDb = await open({ filename: shardPath, driver: sqlite3.Database });
-    await sDb.exec(transpile(schema));
-    await sDb.exec(APP_SCHEMA);
-    shardDbs.push(sDb);
+    // Drop key tables to ensure idempotency
+    const drops = ['FeePayment', 'MaintenanceRequest', 'QRScanLog', 'Visitor', 'Complaint', 'Allocation', 'Member'];
+    for (const d of drops) {
+      await executeMysqlQuery(i, 'run', `DROP TABLE IF EXISTS ${d}`);
+    }
+    await executeMysqlQuery(i, 'run', rawMysqlSchema);
+    await executeMysqlQuery(i, 'run', APP_SCHEMA_MYSQL);
   }
 
-  // 2. Migrate Global Tables
-  for (const table of [...GLOBAL_TABLES, 'Users', 'FeeCategory']) {
-    if (table === 'AuditLog') continue; // Skip logs for now
-    console.log(`Migrating Global Table: ${table}`);
+  // 2. Migrate Global Tables to global_hostel.db AND MySQL shards
+  const globalsToMigrate = ['RoomType', 'Hostel', 'Room', 'FurnitureType', 'ComplaintCategory', 'FeeCategory'];
+  for (const table of globalsToMigrate) {
+    if (table === 'AuditLog' || table === 'Users') continue; 
+    console.log(`Migrating Global Table (Local): ${table}`);
     try {
       const rows = await sourceDb.all(`SELECT * FROM ${table}`);
       for (const row of rows) {
-        const keys = Object.keys(row);
-        const placeholders = keys.map(() => '?').join(',');
-        await globalDb.run(`INSERT INTO ${table} (${keys.join(',')}) VALUES (${placeholders})`, Object.values(row));
+         if (table === 'FeeCategory') continue; // was not in original DB
+         const keys = Object.keys(row);
+         const placeholders = keys.map(() => '?').join(',');
+         await globalDb.run(`INSERT INTO ${table} (${keys.join(',')}) VALUES (${placeholders})`, Object.values(row));
+         
+         // Replicate to all MySQL shards to satisfy Foreign Key constraints
+         for (let i = 0; i < 3; i++) {
+           await executeMysqlQuery(i, 'run', `INSERT IGNORE INTO ${table} (${keys.join(',')}) VALUES (${placeholders})`, Object.values(row));
+         }
       }
     } catch (e) {
       console.warn(`Skipping ${table}: ${e.message}`);
     }
   }
 
-  // 3. Migrate Sharded Tables (Member focused)
-  console.log('Migrating Sharded Tables...');
+  // 3. Migrate Sharded Data to MySQL
+  console.log('Migrating Member Data Over Network to MySQL...');
   const members = await sourceDb.all('SELECT * FROM Member');
+  let migratedCount = 0;
+
   for (const member of members) {
     const shardId = getShardId(member.IdentificationNumber);
-    const targetDb = shardDbs[shardId];
+    const id = member.IdentificationNumber;
 
     // Insert Member
     const mKeys = Object.keys(member);
-    await targetDb.run(`INSERT INTO Member (${mKeys.join(',')}) VALUES (${mKeys.map(() => '?').join(',')})`, Object.values(member));
+    await executeMysqlQuery(shardId, 'run', `INSERT INTO Member (${mKeys.join(',')}) VALUES (${mKeys.map(() => '?').join(',')})`, Object.values(member));
 
-    // Move related data
-    const id = member.IdentificationNumber;
-    
-    // Provision User account in Global DB
+    // Provision User account iteratively
     const password = member.ContactNumber || 'password123';
     const passwordHash = await bcrypt.hash(password, 10);
     await globalDb.run(
@@ -125,35 +133,46 @@ async function migrate() {
     const allocations = await sourceDb.all('SELECT * FROM Allocation WHERE IdentificationNumber = ?', [id]);
     for (const a of allocations) {
       const aKeys = Object.keys(a);
-      await targetDb.run(`INSERT INTO Allocation (${aKeys.join(',')}) VALUES (${aKeys.map(() => '?').join(',')})`, Object.values(a));
+      await executeMysqlQuery(shardId, 'run', `INSERT INTO Allocation (${aKeys.join(',')}) VALUES (${aKeys.map(() => '?').join(',')})`, Object.values(a));
     }
 
     // Complaints
     const complaints = await sourceDb.all('SELECT * FROM Complaint WHERE IdentificationNumber = ?', [id]);
     for (const c of complaints) {
       const cKeys = Object.keys(c);
-      await targetDb.run(`INSERT INTO Complaint (${cKeys.join(',')}) VALUES (${cKeys.map(() => '?').join(',')})`, Object.values(c));
+      await executeMysqlQuery(shardId, 'run', `INSERT INTO Complaint (${cKeys.join(',')}) VALUES (${cKeys.map(() => '?').join(',')})`, Object.values(c));
     }
 
     // Visitors
     const visitors = await sourceDb.all('SELECT * FROM Visitor WHERE IdentificationNumber = ?', [id]);
     for (const v of visitors) {
       const vKeys = Object.keys(v);
-      await targetDb.run(`INSERT INTO Visitor (${vKeys.join(',')}) VALUES (${vKeys.map(() => '?').join(',')})`, Object.values(v));
+      await executeMysqlQuery(shardId, 'run', `INSERT INTO Visitor (${vKeys.join(',')}) VALUES (${vKeys.map(() => '?').join(',')})`, Object.values(v));
     }
     
     // Maintenance
     const maintenance = await sourceDb.all('SELECT * FROM MaintenanceRequest WHERE RequestedBy = ?', [id]);
     for (const m of maintenance) {
       const mKeys = Object.keys(m);
-      await targetDb.run(`INSERT INTO MaintenanceRequest (${mKeys.join(',')}) VALUES (${mKeys.map(() => '?').join(',')})`, Object.values(m));
+      await executeMysqlQuery(shardId, 'run', `INSERT INTO MaintenanceRequest (${mKeys.join(',')}) VALUES (${mKeys.map(() => '?').join(',')})`, Object.values(m));
     }
+    
+    migratedCount++;
+    if (migratedCount % 25 === 0) console.log(`  Migrated ${migratedCount}/${members.length} members...`);
   }
 
-  console.log('--- Migration Completed Successfully ---');
+  // Provision Admin
+  const adminHash = await bcrypt.hash('admin123', 10);
+  await globalDb.run('INSERT OR IGNORE INTO Users (Username, PasswordHash, Role) VALUES (?, ?, ?)', ['admin', adminHash, 'Admin']);
+
+  console.log(`--- MySQL Migration Completed Successfully (${members.length} Records Sent) ---`);
   await sourceDb.close();
   await globalDb.close();
-  for (const s of shardDbs) await s.close();
+  const pools = getShardPools();
+  for (const pool of pools) await pool.end();
 }
 
-migrate().catch(console.error);
+migrate().catch((e) => {
+  console.error("Migration Fatal:", e);
+  process.exit(1);
+});
