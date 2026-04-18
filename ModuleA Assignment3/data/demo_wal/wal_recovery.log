@@ -1,0 +1,8 @@
+{"lsn": 1, "txn_id": "T-1B6F2646", "op": "BEGIN", "table": null, "key": null, "before": null, "after": null, "ts": "2026-04-05T16:25:03"}
+{"lsn": 2, "txn_id": "T-1B6F2646", "op": "INSERT", "table": "students", "key": 1, "before": null, "after": {"id": 1, "name": "Student_1", "gpa": 7.1, "dept": "CS"}, "ts": "2026-04-05T16:25:03"}
+{"lsn": 3, "txn_id": "T-1B6F2646", "op": "INSERT", "table": "students", "key": 2, "before": null, "after": {"id": 2, "name": "Student_2", "gpa": 7.2, "dept": "CS"}, "ts": "2026-04-05T16:25:03"}
+{"lsn": 4, "txn_id": "T-1B6F2646", "op": "INSERT", "table": "students", "key": 3, "before": null, "after": {"id": 3, "name": "Student_3", "gpa": 7.3, "dept": "CS"}, "ts": "2026-04-05T16:25:03"}
+{"lsn": 5, "txn_id": "T-1B6F2646", "op": "COMMIT", "table": null, "key": null, "before": null, "after": null, "ts": "2026-04-05T16:25:03"}
+{"lsn": 6, "txn_id": "T-CRASH", "op": "BEGIN", "table": null, "key": null, "before": null, "after": null, "ts": "2026-04-05T16:25:03"}
+{"lsn": 7, "txn_id": "T-CRASH", "op": "INSERT", "table": "students", "key": 99, "before": null, "after": {"id": 99, "name": "Student_99", "gpa": 7.9, "dept": "CS"}, "ts": "2026-04-05T16:25:03"}
+{"lsn": 8, "txn_id": "T-CRASH", "op": "ABORT", "table": null, "key": null, "before": null, "after": null, "ts": "2026-04-05T16:25:03"}

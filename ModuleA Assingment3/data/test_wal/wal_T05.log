@@ -1,7 +1,0 @@
-{"lsn": 1, "txn_id": "T-D6CE97B2", "op": "BEGIN", "table": null, "key": null, "before": null, "after": null, "ts": "2026-04-05T16:25:51"}
-{"lsn": 2, "txn_id": "T-D6CE97B2", "op": "INSERT", "table": "students", "key": 1, "before": null, "after": {"id": 1, "name": "Student_1", "gpa": 7.1, "dept": "CS"}, "ts": "2026-04-05T16:25:51"}
-{"lsn": 3, "txn_id": "T-D6CE97B2", "op": "INSERT", "table": "students", "key": 2, "before": null, "after": {"id": 2, "name": "Student_2", "gpa": 7.2, "dept": "CS"}, "ts": "2026-04-05T16:25:51"}
-{"lsn": 4, "txn_id": "T-D6CE97B2", "op": "INSERT", "table": "students", "key": 3, "before": null, "after": {"id": 3, "name": "Student_3", "gpa": 7.3, "dept": "CS"}, "ts": "2026-04-05T16:25:51"}
-{"lsn": 5, "txn_id": "T-D6CE97B2", "op": "INSERT", "table": "students", "key": 4, "before": null, "after": {"id": 4, "name": "Student_4", "gpa": 7.4, "dept": "CS"}, "ts": "2026-04-05T16:25:51"}
-{"lsn": 6, "txn_id": "T-D6CE97B2", "op": "INSERT", "table": "students", "key": 5, "before": null, "after": {"id": 5, "name": "Student_5", "gpa": 7.5, "dept": "CS"}, "ts": "2026-04-05T16:25:51"}
-{"lsn": 7, "txn_id": "T-D6CE97B2", "op": "COMMIT", "table": null, "key": null, "before": null, "after": null, "ts": "2026-04-05T16:25:51"}
