@@ -1,4 +1,0 @@
-{"lsn": 1, "txn_id": "T-361D28C6", "op": "BEGIN", "table": null, "key": null, "before": null, "after": null, "ts": "2026-04-05T16:19:20"}
-{"lsn": 2, "txn_id": "T-361D28C6", "op": "INSERT", "table": "students", "key": 100, "before": null, "after": {"id": 100, "name": "Student_100", "gpa": 8.0, "dept": "CS"}, "ts": "2026-04-05T16:19:20"}
-{"lsn": 3, "txn_id": "T-361D28C6", "op": "INSERT", "table": "students", "key": 200, "before": null, "after": {"id": 200, "name": "Student_200", "gpa": 9.0, "dept": "CS"}, "ts": "2026-04-05T16:19:20"}
-{"lsn": 4, "txn_id": "T-361D28C6", "op": "ABORT", "table": null, "key": null, "before": null, "after": null, "ts": "2026-04-05T16:19:20"}

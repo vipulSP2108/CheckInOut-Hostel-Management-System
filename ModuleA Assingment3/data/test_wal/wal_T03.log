@@ -1,5 +1,0 @@
-{"lsn": 1, "txn_id": "T-D03B2F0E", "op": "BEGIN", "table": null, "key": null, "before": null, "after": null, "ts": "2026-04-05T16:25:51"}
-{"lsn": 2, "txn_id": "T-D03B2F0E", "op": "INSERT", "table": "students", "key": 5, "before": null, "after": {"id": 5, "name": "Student_5", "gpa": 7.5, "dept": "CS"}, "ts": "2026-04-05T16:25:51"}
-{"lsn": 3, "txn_id": "T-D03B2F0E", "op": "COMMIT", "table": null, "key": null, "before": null, "after": null, "ts": "2026-04-05T16:25:51"}
-{"lsn": 4, "txn_id": "T-16FC5F9A", "op": "BEGIN", "table": null, "key": null, "before": null, "after": null, "ts": "2026-04-05T16:25:51"}
-{"lsn": 5, "txn_id": "T-16FC5F9A", "op": "ABORT", "table": null, "key": null, "before": null, "after": null, "ts": "2026-04-05T16:25:51"}
